@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation & Dropbox</title>
+    <style>
+        body {
+            background-color: rgb(204, 201, 201);
+        }
+
+        * {
+            box-sizing: border-box;
+
+        }
+
+        nav ul {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        nav ul li {
+            float: left;
+            width: 20%;
+            list-style: none;
+            border-left: 1px solid grey;
+            text-align: center;
+
+        }
+
+        nav ul li a {
+            background-color: orange;
+            text-decoration: none;
+            display: block;
+            color: black;
+            font-size: 25px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        nav ul li a:hover {
+            background-color: cadetblue;
+        }
+
+
+        nav ul ul {
+            display: none;
+        }
+
+        nav ul ul li {
+            width: 100%;
+            border-top: 1px solid grey;
+            position: relative;
+        }
+
+        nav ul li:hover>ul {
+            display: block;
+        }
+
+        nav ul ul ul {
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            left: 100%;
+            border-top: 1px solid grey;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Product</a>
+                <ul>
+                    <li><a href="">Shirts</a></li>
+                    <li><a href="">T-Shirts</a>
+                        <ul>
+                            <li><a href="">Polo</a></li>
+                            <li><a href="">Round-Neck</a></li>
+                            <li><a href="">V-Neck</a></li>
+                            <li><a href="">Plain</a></li>
+                            <li><a href="">Printed</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Jeans </a></li>
+                    <li><a href="">Accessories</a></li>
+                    <li><a href="">Shoes</a></li>
+                </ul>
+            </li>
+            <li><a href="">Enquiry</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">About</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>

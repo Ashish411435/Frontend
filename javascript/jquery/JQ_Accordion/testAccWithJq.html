@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Accordion</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .slides {
+            display: flex;
+        }
+
+        .slide {
+            width: 80px;
+            height: 500px;
+            display: flex;
+            position: relative;
+            overflow: hidden;
+            transition: 600ms all;
+        }
+
+        .slide h2 {
+            border: 1px solid black;
+            /* width: 600px; */
+            text-align: center;
+            transform: rotate(-90deg);
+            position: absolute;
+            top: 40%;
+            left: 0%;
+            display: block;
+            font-size: 16px;
+        }
+
+        .para {
+            display: none;
+            visibility: hidden;
+            overflow: hidden;
+            display: flex !important;
+        }
+
+        .show {
+            width: 90%;
+        }
+
+        .hide {
+            width: 10%;
+        }
+
+        .slide.show .para {
+            display: block;
+            visibility: visible;
+        }
+        .slide.show .slide h2{
+            display: none;
+        }
+
+
+        /* Begin media query */
+        @media screen and (max-width: 1210px) {
+
+            .slides {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .slide {
+                width: 100%;
+                height: 80px;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .slide h2 {
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                transform: rotate(0deg);
+                position: absolute;
+                top: 0%;
+                left: 0%;
+            }
+
+            .show {
+                height: 400px;
+            }
+
+            .hide {
+                height: 80px;
+            }
+
+        }
+
+        /* End media query */
+    </style>
+</head>
+
+<body>
+    <section class="accordion">
+        <div class="slides">
+            <div class="slide" style="background-color: purple; color: white;">
+                <h2 href="#;" class="btn">WEB DESIGN</h2>
+                <div class="para content">
+                    <div class="content-img" style="padding: 80px 30px;">
+                        <img src="images/web-design.png" width="350" alt="">
+                    </div>
+                    <div style="padding: 70px 30px; ">
+                        <h1 style="text-decoration: underline; font-size: 50px; padding: 0 20px;">Web Design</h1>
+                        <p class="" style="font-size: 45px; padding: 15px 10px;">Build a responsive and accessible web
+                            portfolio using HTML5, CSS3, and JavaScript</p>
+                        <h4 style="padding: 20px 20px; font-size: 20px; text-decoration: underline;">Book Your demo
+                            class </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" style="background-color: rgba(57, 51, 137, 0.95); color: white;">
+                <h2 class="btn">GRAPHIC DESIGN</h2>
+                <div class="para content">
+                    <div class="content-img" style="padding: 80px 30px;">
+                        <img src="images/graphics.png" width="350" alt="">
+                    </div>
+                    <div style="padding: 70px 30px; ">
+                        <h1 style="text-decoration: underline; font-size: 50px; padding: 0 20px;">Graphic Design</h1>
+                        <p class="" style="font-size: 45px; padding: 15px 10px;">Learn and apply the principles of
+                            graphic design towards a comprehensive branding project.</p>
+                        <h4 style="padding: 20px 20px; font-size: 20px; text-decoration: underline;">Book Your demo
+                            class </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" style="background-color: rgba(255, 46, 83, 0.95); color: white;">
+                <h2 class="btn">LEARN CODING</h2>
+                <div class="para content">
+                    <div class="content-img" style="padding: 80px 30px;">
+                        <img src="images/camera.png" width="350" alt="">
+                    </div>
+                    <div style="padding: 70px 30px; ">
+                        <h1 style="text-decoration: underline; font-size: 50px; padding: 0 20px;">Learn Coding</h1>
+                        <p class="" style="font-size: 45px; padding: 15px 10px;">Kickstart your career journey to create
+                            the next billion-dollar idea of the tech world.</p>
+                        <h4 style="padding: 20px 20px; font-size: 20px; text-decoration: underline;">Book Your demo
+                            class </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" style="background-color: rgba(212, 42, 43, 0.95); color: white;">
+                <h2 class="btn">VISUAL EFFECTS</h2>
+                <div class="para content">
+                    <div class="content-img" style="padding: 80px 30px;">
+                        <img src="images/visual-effects.png" width="350" alt="">
+                    </div>
+                    <div style="padding: 70px 30px; ">
+                        <h1 style="text-decoration: underline; font-size: 50px; padding: 0 20px;">Visual Effects</h1>
+                        <p class="" style="font-size: 45px; padding: 15px 10px;">The VFX pro course in the world's
+                            leading compositing package.</p>
+                        <h4 style="padding: 20px 20px; font-size: 20px; text-decoration: underline;">Book Your demo
+                            class </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" style="background-color: rgba(101, 163, 40, 0.85); color: white;">
+                <h2 class="btn">VIDEO EDITING</h2>
+                <div class="para content">
+                    <div class="content-img" style="padding: 80px 30px;">
+                        <img src="images/camera.png" width="350" alt="">
+                    </div>
+                    <div style="padding: 70px 30px; ">
+                        <h1 style="text-decoration: underline; font-size: 50px; padding: 0 20px;">Video Editing</h1>
+                        <p class="" style="font-size: 45px; padding: 15px 10px;">The VFX pro course in the world's
+                            leading compositing package.</p>
+                        <h4 style="padding: 20px 20px; font-size: 20px; text-decoration: underline;">Book Your demo
+                            class </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" style="background-color: rgba(41, 103, 162, 0.85);; color: white;">
+                <h2 class="btn">DIGITAL MARKETING</h2>
+                <div class="para content">
+                    <div class="content-img" style="padding: 80px 30px;">
+                        <img src="images/seo.png" width="350" alt="">
+                    </div>
+                    <div style="padding: 70px 30px; ">
+                        <h1 style="text-decoration: underline; font-size: 50px; padding: 0 20px;">Digital Marketing</h1>
+                        <p class="" style="font-size: 45px; padding: 15px 10px;">Digital marketing is the component of
+                            marketing that utilizes internet.</p>
+                        <h4 style="padding: 20px 20px; font-size: 20px; text-decoration: underline;">Book Your demo
+                            class </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" style="background-color: rgba(255, 66, 42, 0.85); color: white;">
+                <h2 class="btn">ANIMATION</h2>
+                <div class="para content">
+                    <div class="content-img" style="padding: 80px 30px;">
+                        <img src="images/panda.png" width="350" alt="">
+                    </div>
+                    <div style="padding: 70px 30px; ">
+                        <h1 style="text-decoration: underline; font-size: 50px; padding: 0 20px;">Animation</h1>
+                        <p class="" style="font-size: 50px; padding: 15px 10px;">Animation is every where. Students
+                            loves to create their own character.</p>
+                        <h4 style="padding: 20px 20px; font-size: 20px; text-decoration: underline;">Book Your demo
+                            class </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="jqueryFile/jquery-3.6.0.min.js"></script>
+    <script>
+        $(".btn").click(function () {
+            $(".slide").removeClass("show");
+            var slide = $(this).closest(".slide");
+            slide.addClass("show");
+        })
+    </script>
+</body>
+
+</html>

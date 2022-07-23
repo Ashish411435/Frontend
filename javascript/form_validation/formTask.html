@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <style>
+        body {}
+
+        .container {
+            width: 600px;
+            justify-content: center;
+            margin-left: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <form action="welcome.html" onsubmit="return getForm()" name="subForm" class="form-group">
+                <div class="row">
+                    <div class="form-group">
+                        <label for="myname">Full Name : </label>
+                        <input type="text" name="fullname" id="myname" placeholder="Enter Full Name"
+                            class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <label for="myemail">Email : </label>
+                        <input type="email" name="email" id="myemail" placeholder="Enter Your Email"
+                            class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="form-group">
+                        <label for="mymobile">Mobile :</label>
+                        <input type="mobile" name="mobile" id="mymobile" placeholder="Enter Mobile Number"
+                            class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="form-group" id="myGender">
+                        <label for="mygender">Gender : </label>
+                        <input type="radio" name="gender" id="gender_male" value="Male"> Male
+                        <input type="radio" name="gender" id="gender_female" value="Female"> Female
+                        <input type="radio" name="gender" id="gender_other" value="Other"> Other
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="form-group">
+                        <label for="mydob">D.O.B : </label>
+                        <input type="text" name="dob" id="mydob" placeholder="DD/MM/YYYY" class="form-control">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="form-check form-check-inline">
+                        <label for="myeducation" class="form-check-label">Education : </label>
+                        <input type="Checkbox" name="education" id="myeducation" value="B.Sc" class="form-check-input">
+                        B.Sc
+                        <input type="Checkbox" name="education" id="myeducation" value="B.A" class="form-check-input">
+                        B.A
+                        <input type="Checkbox" name="education" id="myeducation" value="B.Com" class="form-check-input">
+                        B.Com
+                        <input type="Checkbox" name="education" id="myeducation" value="BCA" class="form-check-input">
+                        BCA
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+
+                    <div class="form-group">
+                        <label for="mycity">City : </label>
+                        <select name="city" id="mycity" class="form-control">
+                            <option value="" selected>Select City</option>
+                            <option value="Ludhiana">Ludhiana</option>
+                            <option value="Amritsar">Amritsar</option>
+                            <option value="Patiala">Patiala</option>
+                            <option value="Ahmedgarh">Ahmedgarh</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="form-group">
+                        <label for="mydescription">Description : </label>
+                        <textarea name="description" id="mydescription" cols="50" rows="4"
+                            class="form-control"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+        </div>
+        </form>
+    </div>
+    </div>
+    <script>
+        function getForm() {
+            let myname = document.getElementById("myname").value;
+            let myemail = document.getElementById("myemail").value;
+            let mymobile = document.getElementById("mymobile").value;
+            let mygender = document.subForm.gender;
+            let mydob = document.getElementById("mydob").value;
+            let myeducation = document.getElementById("myeducation");
+            // let education = document.subForm.education;
+            let mycity = document.getElementById("mycity").value;
+            let mydescription = document.getElementById("mydescription").value;
+
+            if (myname == "") {
+                alert("Please Enter Your Name");
+                return false;
+            }
+            if (myemail == "") {
+                alert("Please Enter Your Email");
+                return false;
+            }
+            if (mymobile == "") {
+                alert("Please Enter Mobile Number");
+                return false;
+            }
+
+            /* ---Begin Radio Button---*/
+            // for (let i = 0; i < mygender.length; i++) {
+            //     alert("f");
+            //     if ((mygender[i].checked) == false) {
+            //         alert("i");
+            //         alert("Please Select Gender");
+            //         return false;
+            //     }
+            // }
+
+            if (!mygender[0].checked && !mygender[1].checked && !mygender[2].checked) {
+                alert("Please Select Gender");
+                return false;
+            }
+            /* ---End Radio Button--- */
+
+            if (mydob == "") {
+                alert("Please Enter D.O.B");
+                return false;
+            }
+
+            /* ---Begin CheckBox--- */
+            // To Check the validation of Checkbox both of the methods works given below :
+
+            // Method-1
+            if (!(myeducation.checked)) {
+                alert("Please Select Education");
+                return false;
+            }
+
+            // Method-2
+            // if(!education[0].checked && !education[1].checked && !education[2].checked && !education[3].checked)
+            // {
+            //     alert("Please Select Education");
+            //     return false;
+            // }
+
+            /* ---End CheckBox--- */
+
+            if (mycity == "") {
+                alert("Please Select City");
+                return false;
+            }
+            if (mydescription == "") {
+                alert("Write atleast minimum 10 words in description box");
+                return false;
+            }
+            // else {
+
+            // }
+
+
+
+
+        }
+    </script>
+</body>
+
+</html>

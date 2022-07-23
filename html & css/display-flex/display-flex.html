@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Flex</title>
+    <style>
+        .box {
+            width: 100%;
+            margin: auto;
+            display: flex;
+            /* flex-flow: row; */
+            flex-flow: row-reverse wrap;
+            /* flex-flow: column; */
+            /* flex-flow: column-reverse; */
+            background-color: rgb(252, 186, 186);
+
+        }
+
+        .box img {
+            width: 100%;
+            height: 200px;
+        }
+
+        .flex1 {
+            flex: 1;
+        }
+
+        .flex12 {
+            flex: 2;
+        }
+
+        .flex3 {
+            flex: 3;
+        }
+
+        .flex4 {
+            flex: 2;
+        }
+
+        .flex5 {
+            flex: 1;
+        }
+
+        .box2 {
+            width: 100%;
+            height: 300px;
+            background-color: khaki;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .box2 img {
+            width: 100%;
+            height: 200px;
+        }
+
+        .flex6 {
+            width: 200px;
+        }
+        .box3{
+            width: 100%;
+            height: 400px;
+            background-color: lightsalmon;
+            display: flex;
+            align-items: flex-start;
+            margin: auto;
+
+        }
+        .box3 img{
+            width: 100%;
+            height: 200px;
+        }
+        .flex7{
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="flex1"><img src="images/gwen-king-3OdajQGd9sk-unsplash.jpg" alt=""></div>
+        <div class="flex2"><img src="images/higor-hanschen-DomqHKN2Xik-unsplash.jpg" alt=""></div>
+        <div class="flex3"><img src="images/aaron-cass-GJuhDRbMj7g-unsplash.jpg" alt=""></div>
+        <div class="flex4"><img src="images/ac-de-leon--uWiIajRN0s-unsplash.jpg" alt=""></div>
+        <div class="flex5"><img src="images/jeet-dhanoa-H9P8JzQAw4g-unsplash.jpg" alt=""></div>
+    </div>
+
+    <div class="box2">
+        <div class="flex6"><img src="images/jeet-dhanoa-q82BAzAWGTQ-unsplash.jpg" alt=""></div>
+        <div class="flex6"><img src="images/jeet-dhanoa-sR1BaDlRSKM-unsplash.jpg" alt=""></div>
+        <div class="flex6"><img src="images/01.jpg" alt=""></div>
+        <div class="flex6"><img src="images/02.jpg" alt=""></div>
+        <div class="flex6"><img src="images/jeet-dhanoa-sR1BaDlRSKM-unsplash.jpg" alt=""></div>
+
+    </div>
+    <div class="box3">
+        <div class="flex7"><img src="images/gwen-king-3OdajQGd9sk-unsplash.jpg" alt=""></div>
+        <div class="flex7"><img src="images/higor-hanschen-DomqHKN2Xik-unsplash.jpg" alt=""></div>
+        <div class="flex7"><img src="images/aaron-cass-GJuhDRbMj7g-unsplash.jpg" alt=""></div>
+        <div class="flex7"><img src="images/ac-de-leon--uWiIajRN0s-unsplash.jpg" alt=""></div>
+    </div>
+</body>
+
+</html>

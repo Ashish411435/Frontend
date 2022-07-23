@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 1px solid black;
+            padding: 20px;
+        }
+        .accordion{
+            border: 1px solid red;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        .para-container{
+            border: 1px solid black;
+            height: 0px;
+            overflow: hidden;
+            transition: all 2s ease-in-out;
+        }
+        .show{
+            height: 70px;
+        }
+        .hide{
+            height: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="accordion">
+            <div class="section-overlay"></div>
+            <div class="para-container">
+                <p class="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias perferendis doloribus
+                    earum ut omnis error praesentium fugit, hic est nostrum incidunt veritatis aspernatur et molestiae,
+                    eum sed harum nihil sapiente.</p>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="section-overlay"></div>
+            <div class="para-container">
+                <p class="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias perferendis doloribus
+                    earum ut omnis error praesentium fugit, hic est nostrum incidunt veritatis aspernatur et molestiae,
+                    eum sed harum nihil sapiente.</p>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="section-overlay"></div>
+            <div class="para-container">
+                <p class="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias perferendis doloribus
+                    earum ut omnis error praesentium fugit, hic est nostrum incidunt veritatis aspernatur et molestiae,
+                    eum sed harum nihil sapiente.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let accordion_btn = document.querySelectorAll('.section-overlay');
+        let ParaContent = document.querySelectorAll('.para-container');
+
+        for(let i = 0; i <= accordion_btn.length; i++)
+        {
+            accordion_btn[i].addEventListener('click', res)
+        }
+        function res()
+        {
+            let item = this.nextElementSibling.classList;
+            for(let j = 0; j < ParaContent.length; j++)
+            {
+                if(ParaContent[j].classList.contains('show'))
+                {
+                    ParaContent[j].classList.remove('show');
+                    ParaContent[j].classList.add('hide');
+                }
+                else if(ParaContent[j].classList.contains('hide'))
+                {
+                    ParaContent[j].classList.remove('hide');
+                }
+            }
+            if(!item.contains('show') && !item.contains('hide'))
+            {
+                item.add("show");
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

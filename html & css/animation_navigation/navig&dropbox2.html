@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation & Dropbox-2</title>
+    <style>
+        body {
+            background-color: skyblue;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        nav ul {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        nav ul li {
+            float: left;
+            width: 20%;
+            border-radius: 50px;
+            list-style: none;
+            border: 2px solid rgb(243, 244, 245);
+            background-color: rgb(7, 71, 131);
+            padding-top: 15px;
+            padding-bottom: 15px;
+            text-align: center;
+        }
+
+        nav ul li:hover {
+            background-color: rgb(7, 131, 131);
+
+        }
+
+        nav ul li a {
+            background-color: rgb(235, 114, 114);
+            border: 2px solid rgb(187, 74, 74);
+            border-radius: 40%;
+            color: black;
+            font-size: 25px;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: rgb(197, 78, 34);
+
+        }
+        
+        nav ul ul {
+            display: none;
+        }
+        nav ul ul li {
+            width: 100%;
+            position: relative;
+            border: 3px solid lightslategrey;
+        }
+
+
+        nav ul li:hover>ul {
+            display: block;
+
+        }
+
+        nav ul ul ul {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 100%;
+        }
+
+        img{
+            width: 635px;
+            height: 200px;
+
+        }
+
+        .goku{
+            position: absolute;
+            right: 5px;
+            bottom: 5px;
+            
+        }
+        .vegito{
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Brands</a>
+                <ul>
+                    <li><a href="">Nike</a></li>
+                    <li><a href="">Air</a></li>
+                    <li><a href="">Jordan</a>
+                        <ul>
+                            <li><a href="">Sports</a></li>
+                            <li><a href="">Sneakers</a>
+                                <ul>
+                                    <li><a href="">Athletic Kicks Sneakers</a></li>
+                                    <li><a href="">Leather Sneakers</a></li>
+                                    <li><a href="">Canvas Sneakers</a></li>
+                                    <li><a href="">Slip-On Sneakers</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Casual</a></li>
+                            <li><a href="">High Neck</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Adidas</a></li>
+                    <li><a href="">Puma</a></li>
+                </ul>
+            </li>
+            <li><a href="">Contact</a>
+                <ul>
+                    <li><a href="">+1 ******254</a></li>
+                    <li><a href="">+1 ******453</a></li>
+                    <li><a href="">+1 ******525</a></li>
+                </ul>
+            </li>
+            <li><a href="">About</a></li>
+            <li><a href="">Help</a>
+                <ul>
+                    <li><a href="">Customer Care</a></li>
+                    <li><a href="">Frequently Asked Question</a></li>
+                    <li><a href="">Email</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+        <!-- <div class="goku">
+            <img src="ultra-instinct.gif">
+        </div>
+        
+        <div class="vegito">
+            <img src="vegito-final.gif">
+        </div> -->
+</body>
+
+</html>

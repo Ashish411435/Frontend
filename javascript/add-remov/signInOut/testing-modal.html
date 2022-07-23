@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .test{
+            color: red;
+        }
+        .hm{
+            display: none;
+        }
+        .blk{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="hello" class="hm">
+        Hello
+    </div>
+
+    <div id="hello2" class="hm">
+        Hello2
+    </div>
+
+    <a href="#;" onclick="mod('he1')" class="btn" id="btn1">Read More</a>
+    <a href="#;" onclick="mod('he2')" class="btn" id="btn2">Read More2</a>
+
+    <script>
+        var cl = document.getElementsByClassName('btn');
+        var cl2 = document.getElementsByClassName('hm');
+
+        for(let i = 0; i<=cl.length; i++){
+            cl[i].addEventListener("click", togle)
+        }
+        function togle(){
+            
+            for(let y = 0; y<=cl2.length; y++){
+                cl2[y].addEventListener = "test";
+            }
+
+            if(cl == 'hm'){
+                
+            }
+        }
+        
+    </script>
+</body>
+</html>

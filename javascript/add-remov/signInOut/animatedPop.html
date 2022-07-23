@@ -1,0 +1,87 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Dialog Box PopUp</title>
+    <link rel="stylesheet" href="animatedPop.css">
+</head>
+
+<body>
+    <button class="signbtn1 btns">Sign In</button>
+    <div class="hide">
+        <div class="container1 sameInBoth">
+            <form action="#;">
+                <h1>Sign In</h1>
+                <div>
+                    <label for="">Username : </label>
+                    <input type="text" name="username" id="myusername">
+                </div>
+                <div>
+                    <label for="">Password : </label>
+                    <input type="text" name="password" id="mypassword">
+                </div>
+                <div>
+                    <button>Sign In</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <button class="signbtn2 btns">Sign Up</button>
+    <div class="hide">
+        <div class="container2 sameInBoth">
+            <form action="#;">
+                <h1>Sign Up</h1>
+                <div>
+                    <label for="">Full Name : </label>
+                    <input type="text" name="name" id="myname">
+                </div>
+                <div>
+                    <label for="">Email : </label>
+                    <input type="text" name="email" id="myemail">
+                </div>
+                <div>
+                    <label for="">Mobile : </label>
+                    <input type="number" name="mobile" id="mymobile">
+                </div>
+                <div>
+                    <label for="">Username : </label>
+                    <input type="text" name="username" id="myusername">
+                </div>
+                <div>
+                    <label for="">Password : </label>
+                    <input type="text" name="password" id="mypassword">
+                </div>
+                <div>
+                    <button>Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let btns = document.getElementsByClassName('btns');
+        let clname = document.getElementsByClassName('hide');
+
+        for (let i = 0; i <= btns.length; i++) {
+            btns[i].addEventListener('click', val);
+        }
+
+        function val() {
+            let res = this.nextElementSibling.className;
+            for (let j = 0; j < clname.length; j++) {
+                clname[j].className = 'hide';
+            }
+
+            if (res == 'hide') {
+                this.nextElementSibling.classList.add('show');
+            }
+        }
+    </script>
+
+</body>
+
+</html>

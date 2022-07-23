@@ -1,0 +1,78 @@
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While Task</title>
+</head>
+
+<body>
+    <script>
+        /*
+            1
+            12
+            123
+            1234
+            12345
+        */
+
+        let i = 1;
+        while (i <= 5) {
+            let x = 1;
+            while (x <= i) {
+                document.write(x);
+                x++
+            }
+            document.write("<br/>");
+            i++;
+        }
+
+        document.write("<br/>")
+        /*
+            12345
+            2345
+            345
+            45
+            5
+        */
+
+        let a = 1;
+        while (a <= 5) {
+            let b = a;
+            while (b <= 5) {
+                document.write(b);
+                b++;
+            }
+            document.write("<br/>");
+            a++;
+        }
+        
+        document.write("<br/>");
+        
+        /*
+            5
+            45
+            345
+            2345
+            12345
+        */
+        let myNumber = 5;
+
+        while(myNumber>=1){
+            let mySecondNumber = myNumber;
+            while(mySecondNumber <=5){
+                document.write(mySecondNumber);
+                mySecondNumber++;
+            }
+            document.write("<br/>");
+            myNumber--;
+        }
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Element Sibling Task</title>
+    <style>
+        .none{
+            display: none;
+        }
+        .show{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+   <button id="clk">ClickMe</button>
+   <p class="none">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint ratione suscipit autem ducimus maiores aut quo iusto perspiciatis quas exercitationem!</p>
+   
+   <script>
+       let btn = document.getElementById('clk');
+       btn.addEventListener('click', tap);
+       
+       function tap()
+       {
+           product = this.nextElementSibling.className;
+           if(product == 'none')
+           {
+               this.nextElementSibling.classList.add('show');
+           }else{
+            this.nextElementSibling.classList.remove('show');
+           }
+       }
+   </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="txt"></div>
+    
+    <a href="#;" onclick="helloBye('hello')">Hello</a>
+    <a href="#;" onclick="helloBye('bye')">Bye</a>
+
+    <script>
+        function helloBye(prmt){
+            if(prmt == 'hello'){
+                txt.innerHTML = "Hello"
+            }else if(prmt == 'bye'){
+                txt.innerHTML = "Bye"
+            }
+        }
+    </script>
+</body>
+</html>

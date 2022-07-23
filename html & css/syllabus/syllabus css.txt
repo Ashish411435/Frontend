@@ -1,0 +1,61 @@
+Cascading Style Sheets
+
+CSS Comments                /* comment*/ done
+CSS Colors                  done  color:red
+CSS Backgrounds		    done  background-color:blue; TRBL
+CSS Borders		    done  border-top:1px solid blue,
+CSS Margins		    done  margin-top, margin-bottom, margin-left, margin-right
+CSS Padding		    done  padding-top, padding-bottom, padding-right, padding-left
+CSS Height/Width	    done  width:100px, height:200px;
+CSS Outline		    done  outline:4px solid blue; TRBL
+CSS Text		    done  text-align:center,RBL,J, font-wight:bold
+CSS Fonts		    done  font-family:sans-serif
+CSS Icons		    done (font-awesome)
+CSS Links		    done :hover, :active, :visited
+CSS Lists 		    ul li done
+CSS Tables		    done <TABLE><TR><TD></TD></TR></TABLE>
+CSS Display		    done, display:flex, display:grid, display:block, display:inline-block
+CSS Visibility
+CSS Max-width		    done?
+CSS Position		    done  pisition:absoulte, relative, fixed
+CSS Overflow		    done  overflow-y:hidden,scroll, overflow-x:hidden, overflow:hidden;
+CSS Float		    done  float:left,right,none
+CSS Combinators		    > + ~
+CSS Pseudo-class			done :hover, :first-child?
+CSS Pseudo-element			::first-line, ::first-letter ::before, ::after, ::marker, ::selection
+CSS Opacity					done?
+CSS Navigation Bar			done
+CSS Dropdowns				done
+CSS Image Gallery			done
+CSS Image Sprites			done pending ??
+CSS Attr Selectors			[class*="col"], [alt="harman"]?
+CSS Forms					pedning?
+CSS Website Layout			col-1, col-2 done
+CSS Units					px, %, vw, vh, pt, fr, em pending
+CSS Specificity				done div.abc, div .abc?
+CSS !important				color:red!important pedning
+
+text Shadow Effects			done?
+box shadow					done?
+CSS Web Fonts				done?
+CSS Transitions				done?
+CSS Animations				done
+CSS Tooltip					pending
+object-fit Property  		fill, cover, contain pending
+object-position				pending?
+CSS Pagination				done 1 2 3 4?
+CSS Multiple Columns		pending ?
+CSS Variables				pending
+CSS Box Sizing				done
+CSS Media Queries			done @media
+
+
+
+
+
+
+
+
+
+
+

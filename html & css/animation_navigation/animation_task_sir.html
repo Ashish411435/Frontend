@@ -1,0 +1,88 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Animation</title>
+   <style>
+.animation{
+  border:2px solid black  ;
+  height: 1000px;
+ width:1500px ;
+ display:flex ;
+ flex-flow:row ;
+}
+.animation1{
+    width: 100px;
+    height: 10px;
+    border: 1px solid blue ;
+margin: 20px;
+animation-name: move;
+    animation-duration: 2s;
+    animation-delay: 100ms;
+    animation-iteration-count: infinite;
+}
+.animation2{
+    width: 200px;
+    height: 10px;
+    border: 1px solid rgb(0, 255, 0) ;
+margin: 20px;
+animation-name: move;
+    animation-duration: 2s;
+    animation-delay: 200ms;
+    animation-iteration-count: infinite;
+}
+.animation3{
+    width: 100px;
+    height: 10px;
+    border: 1px solid rgb(255, 0, 13) ;
+margin: 20px;
+animation-name: move;
+    animation-duration: 2s;
+    animation-delay: 300ms;
+    animation-iteration-count: infinite;
+}
+.animation4{
+    width: 200px;
+    height: 10px;
+    border: 1px solid rgb(0, 255, 255) ;
+margin: 20px;
+animation-name: move;
+    animation-duration: 2s;
+    animation-delay: 400ms;
+    animation-iteration-count: infinite;
+}
+.animation5{
+    width: 100px;
+    height: 10px;
+    border: 1px solid rgb(255, 217, 0) ;
+    margin: 20px;
+    animation-name: move;
+    animation-duration: 2s;
+    animation-delay: 500ms;
+    animation-iteration-count: infinite;
+}
+
+@keyframes move {
+    0%{
+        height: 10px;
+    }
+    50%{
+        height: 200px;
+    }
+}
+
+   </style>
+     
+    </head>    
+    <body>
+ <div class="animation ">
+<div class="animation1"></div>
+<div class="animation2"></div>
+<div class="animation3"></div>
+<div class="animation4"></div>
+<div class="animation5"></div>
+ </div>        
+    </body>
+    </html>

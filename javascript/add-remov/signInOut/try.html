@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container1 {
+            width: 300px;
+            height: 200px;
+            margin: auto;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        .container2 {
+            width: 300px;
+            height: 250px;
+            margin: auto;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        .hide {
+            visibility: hidden;
+            /* display: none; */
+        }
+
+        .show {
+            visibility: visible;
+            /* display: block; */
+        }
+
+        .btn1 {
+            position: absolute;
+            top: 10px;
+            right: 95px;
+
+        }
+
+        .btn2 {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="container1"> -->
+    <button class="signBt btn1">Sign In</button>
+    <div class="hide">
+        <div class=" container1 ">
+            <form action="#;">
+                <h1>Sign In</h1>
+                <div>
+                    <label for="">Username</label>
+                    <input type="text" name="username" id="myusername">
+                </div>
+                <br>
+                <div>
+                    <label for="">Password</label>
+                    <input type="text" name="password" id="mypassword">
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- </div> -->
+    <!-- <div class="container2"> -->
+    <button class="signBt btn2">Sign Up</button>
+    <div class="hide">
+        <div class="container2">
+            <form action="#;">
+                <h1>Sign Up</h1>
+                <div>
+                    <label for="">Full name</label>
+                    <input type="text" name="fullname" id="myfullname">
+                </div>
+                <br>
+                <div>
+                    <label for="">Email</label>
+                    <input type="text" name="email" id="myemail">
+                </div>
+                <br>
+                <div>
+                    <label for="">Password</label>
+                    <input type="text" name="password" id="mypassword">
+                </div>
+                <br>
+                <div>
+                    <label for="">Mobile</label>
+                    <input type="text" name="mobile" id="mymobile">
+                </div>
+            </form>
+        </div>
+    </div>
+        <!-- </div> -->
+
+        <script>
+            let signBt = document.getElementsByClassName('signBt');
+            let clname = document.getElementsByClassName('hide');
+
+            for (let i = 0; i <= signBt.length; i++) {
+                signBt[i].addEventListener('click', val);
+            }
+
+            function val() {
+                let res = this.nextElementSibling.className;
+                // alert(res);
+                for (j = 0; j < clname.length; j++) {
+                    clname[j].className = 'hide';
+                }
+                if (res == 'hide') {
+                    this.nextElementSibling.classList.add('show');
+                }
+            }
+        </script>
+</body>
+
+</html>

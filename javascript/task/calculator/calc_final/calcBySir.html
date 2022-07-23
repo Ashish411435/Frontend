@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+        width: 400px;
+        height: 280px;
+        background-color: white;
+        border: 5px solid black;
+    }
+
+    .box1 {
+        width: 100px;
+        height: 70px;
+        font-size: 50px;
+        text-align: center;
+        background-color: grey;
+        float: left;
+    }
+
+    .box1:hover {
+        background-color: black;
+        color: white;
+    }
+
+    .box2 {
+        background-color: white;
+        border: 5px solid black;
+        width: 400px;
+        height: 50px;
+        font-size: 50px;
+    }
+
+    .container {
+        width: 400px;
+    }
+</style>
+
+<body>
+    <div class="box2" id="results"></div>
+    <div class="box">
+        <button class="box1" onclick="a(1)">1</button>
+        <button class="box1" onclick="a(2)">2</button>
+        <button class="box1" onclick="a(3)">3</button>
+        <button class="box1" onclick="a('+')">+</button>
+        <button class="box1" onclick="a(4)">4</button>
+        <button class="box1" onclick="a(5)">5</button>
+        <button class="box1" onclick="a(6)">6</button>
+        <button class="box1" onclick="a('-')">-</button>
+        <button class="box1" onclick="a(7)">7</button>
+        <button class="box1" onclick="a(8)">8</button>
+        <button class="box1" onclick="a(9)">9</button>
+        <button class="box1" onclick="a('*')">*</button>
+        <button class="box1" onclick="a('.')" id="deci">.</button>
+        <button class="box1" onclick="a(0)">0</button>
+        <button class="box1" onclick="a('/')">/</button>
+        <button class="box1" onclick="d('=')">=</button>
+    </div>
+    <script>
+        let x = 0;
+
+        function a(b) {
+
+            // if (x == 0) {
+                c = results.innerHTML += b;
+                if (b == ".") {
+                    deci.setAttribute("disabled", "disabled");
+                } else {
+                    if (b == "+" || b == "-" || b == "*" || b == "/") {
+                        deci.removeAttribute("disabled", "enabled");
+                    }
+                }
+
+            } 
+        // }
+        function d(b) {
+
+            deci.removeAttribute("disabled", "enabled");
+            c = results.innerHTML = eval(c);
+            x = 1;
+        }
+    </script>
+</body>
+
+</html>

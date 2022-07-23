@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+
+        *{
+            box-sizing: border-box;
+        }
+        nav{
+            width: 400px;
+            margin: auto;
+        }
+        nav ul{
+            padding: 0px;
+            margin: 0px;
+        }
+        nav ul li{
+            list-style: none;
+            border-top: 1px solid white;
+            position: relative;
+        }
+        nav ul li a{
+            display: block;
+            background-color: red;
+            padding: 20px;
+            color: white;
+            text-decoration: none;
+        }
+        nav ul ul{
+            position: absolute;
+            left: -100px;
+            top: 58px;
+            width: 100%;
+            display: none;
+        }
+        .bl{
+            display: block;
+            animation-name: move;
+            animation-duration: 300ms;
+            animation-fill-mode: forwards;
+        }
+        .bl2{
+            display: block;
+            animation-name: move2;
+            animation-duration: 300ms;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes move {
+            0%{
+                left: -100px;
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+                left: 0px;  
+            }
+        }
+        @keyframes move2 {
+            0%{
+                left: 0px;
+                opacity: 1;
+                visibility: visible;
+            }
+            100%{
+                left: -100px;
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="dropdow()">Home</a>
+                <ul id="drop">
+                    <li><a href="index.html">Dropdown</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <script>
+        i = 0;
+        function dropdow(){
+            if(i==0){
+                drop.classList.add('bl');
+                drop.classList.remove('bl2');
+                i=1;
+            }
+            else{
+                drop.classList.add('bl2');
+                drop.classList.remove('bl');
+                i=0;
+            }
+        }
+    </script>
+
+</body>
+</html>

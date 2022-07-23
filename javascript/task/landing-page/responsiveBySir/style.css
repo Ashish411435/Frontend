@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: 0px;
+    margin: 0px;
+}
+p,h1,h2,h3,h4,h5,h6,ul,li,a{
+    padding: 0px;
+    margin: 0px;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* 12 Grids */
+
+.container{
+    width: 1200px;
+    margin: auto;
+}
+.row, .row::after, .row::before{
+    display: block;
+    content: " ";
+    clear: both;
+}
+.img-fluid{
+    width: 100%;
+}
+.col-lg-1{
+    width: calc(100% / 12);
+}
+.col-lg-2{
+    width: calc(100% / 12 * 2);
+}
+.col-lg-3{
+    width: calc(100% / 12 * 3);
+}
+.col-lg-4{
+    width: calc(100% / 12 * 4);
+}
+.col-lg-5{
+    width: calc(100% / 12 * 5);
+}
+.col-lg-6{
+    width: calc(100% / 12 * 6);
+}
+.col-lg-7{
+    width: calc(100% / 12 * 7);
+}
+.col-lg-8{
+    width: calc(100% / 12 * 8);
+}
+.col-lg-9{
+    width: calc(100% / 12 * 9);
+}
+.col-lg-10{
+    width: calc(100% / 12 * 10);
+}
+.col-lg-11{
+    width: calc(100% / 12 * 11);
+}
+.col-lg-12{
+    width: calc(100% / 12 * 12);
+}
+[class |= "col"]{
+    float: left;
+    padding: 15px;
+}
+/* End 12 Grids */
+
+.text-center{
+    text-align: center;
+}
+.text-justify{
+    text-align: justify;
+}
+.text-right{
+    text-align: right;
+}
+.text-left{
+    text-align: left;
+}
+
+.mt10{
+    margin-top: 10px;
+}
+.mt20{
+    margin-top: 20px;
+}
+.mt30{
+    margin-top: 30px;
+}
+.mt40{
+    margin-top: 40px;
+}
+.mt50{
+    margin-top: 50px;
+}
+.mt60{
+    margin-top: 60px;
+}
+.mt70{
+    margin-top: 70px;
+}
+.mt80{
+    margin-top: 80px;
+}
+.mt90{
+    margin-top: 90px;
+}
+.mt100{
+    margin-top: 100px;
+}
+
+.md-none{
+    display:block;
+}
+
+/* header start */
+.bars{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    /* display: inline-block; */
+    border-radius: 5px;
+    border: 1px solid red;
+    float: right;
+}
+.bars i{
+    color: red;
+}
+.brand-logo{
+    color: red;
+    font-family: 'roboto';
+    font-size: 30px;
+    font-weight: bold;
+}
+header{
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.dn{
+    display: none;
+}
+header ul{
+    float: right;
+}
+header ul li{
+    float: left;
+}
+header ul li a{
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: 'roboto';
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+header ul li:last-child a{
+    background-color: red;
+    border-radius: 30px;
+    color: white;
+
+}
+#slider{
+    background-image: url(../images/bg0.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+/* header end */

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PracticeAccordion</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .container{
+            border: 1px solid black;
+            width: 800px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .content{
+            height: 0px;
+            overflow: hidden;
+            transition: all 1s ease-in-out;
+        }
+        .show{
+            height: 80px;
+            padding: 10px;
+        }
+        .hide{
+            height: 0px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="contentBox">
+            <button class="btn">Click Me</button>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas molestias veritatis eos odio
+                    cupiditate eius mollitia non. Dolore temporibus a repellat sed in fuga, atque, quo maxime voluptatum
+                    ducimus animi!</p>
+            </div>
+        </div>
+        <div class="contentBox">
+            <button class="btn">Click Me</button>
+            <div class="content">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam quis voluptates tempore nisi alias,
+                    repellendus tenetur ducimus labore assumenda suscipit minus ea id vel incidunt laboriosam
+                    repudiandae
+                    magni, illum amet?</p>
+            </div>
+        </div>
+        <div class="contentBox">
+            <button class="btn">Click Me</button>
+            <div class="content">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam quis voluptates tempore nisi alias,
+                    repellendus tenetur ducimus labore assumenda suscipit minus ea id vel incidunt laboriosam
+                    repudiandae
+                    magni, illum amet?</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let btn = document.querySelectorAll('.btn');
+        let accordion = document.querySelectorAll('.content');
+
+        for(let i = 0; i < btn.length; i++)
+        {
+            btn[i].addEventListener("click", func);
+        }
+        function func()
+        {
+            let item = this.nextElementSibling.classList;
+
+            for(let j = 0; j < accordion.length; j++)
+            {
+                if(accordion[j].classList.contains('show'))
+                {
+                    accordion[j].classList.remove('show');
+                    accordion[j].classList.add('hide');
+                }
+                else if(accordion[j].classList.contains('hide'))
+                {
+                    accordion[j].classList.remove('hide');
+                }
+            }
+            if(!item.contains('show') && !item.contains('hide'))
+            {
+                item.add('show');
+            }
+        }
+        
+
+    </script>
+</body>
+
+</html>

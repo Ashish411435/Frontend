@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Acc</title>
+
+    <style>
+        .classBtn {
+            padding: 5px;
+            border-radius: 20px 50px;
+            margin: 10px;
+        }
+
+        .classBtn::after {
+            content: "+";
+            font-size: 20px;
+        }
+        .con.show .content-body{
+            height: 50px;
+        }
+
+        .content-body {
+            height: 0px;
+            overflow: hidden;
+            transition: all 1s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <section class="con">
+            <button class="classBtn"></button>
+            <div class="content-body">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis earum illum suscipit. Suscipit
+                    quisquam consequatur dolore non possimus eum praesentium, beatae, tempore laboriosam eos minima enim
+                    officiis error numquam inventore!</p>
+            </div>
+        </section>
+        <section class="con">
+            <button class="classBtn"></button>
+            <div class="content-body">
+                <p>Odio cum maxime nemo facilis at sint in, quidem amet doloribus voluptatum explicabo commodi ipsam
+                    blanditiis, et aspernatur repudiandae natus unde officiis, tempore temporibus ullam. Consectetur
+                    tempore provident praesentium ad.</p>
+            </div>
+        </section>
+        <section class="con">
+            <button class="classBtn"></button>
+            <div class="content-body">
+                <p>Ut laboriosam corrupti eveniet, totam ducimus distinctio tempora voluptate consequatur nemo
+                    repellendus consequuntur sapiente dolorum. Est, accusantium alias distinctio nesciunt voluptatibus
+                    reiciendis consequatur! Commodi, et incidunt. Amet blanditiis recusandae quasi!</p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        let con = document.getElementsByClassName('con');
+        let classBtn = document.getElementsByClassName('classBtn');
+        for(let i = 0; i < con.length; i++)
+        {
+            con[i].addEventListener("click", function(){
+                this.classList.toggle('show');
+            })
+        }
+    </script>
+</body>
+
+</html>

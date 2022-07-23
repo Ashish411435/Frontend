@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion From Jquery</title>
+    <!-- Begin Font Awesome Icon -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!--  Font Awesome Icon -->
+
+    <!-- Begin Google Font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <!-- End Google Font links -->
+
+    <!-- Start Linked Css File -->
+    <link rel="stylesheet" href="defaultCss.css">
+    <link rel="stylesheet" href="resposiveCss.css">
+    <!-- End Linked Css File -->
+
+    <style>
+        * {
+            font-family: 'Rubik', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="col-lg-12">
+        <nav class="navBar col-lg-12 col-md- d-flex pt5 pb10 xm-space-btw">
+            <div class="brandLogo col-lg-1 ml20 sm-pt10">
+                <img src="images/logo.svg" alt="" class="brandLogoImg" width="100%">
+            </div>
+            <div id="nav-hamburger" class="d-none md-d-none xm-d-block">
+                <i class="fa fa-bars" id="" aria-hidden="true"></i>
+            </div>
+            <div class="col-lg-10 nav-content-parent">
+                <ul id="onClickHam" class="nav-content d-flex ml20 mt35">
+                    <li class="ml4rem md-ml3rem sm-ml3rem"><a href="" class="fs20 md-fs18 fwBold colorNavy">ABOUT</a>
+                    </li>
+                    <li class="ml4rem md-ml3rem sm-ml3rem"><a href="" class="fs20 md-fs18 fwBold colorNavy">STUDENTS</a>
+                    </li>
+                    <li class="ml4rem md-ml3rem sm-ml3rem"><a href="" class="fs20 md-fs18 fwBold colorNavy">COURSES</a>
+                    </li>
+                    <li class="ml4rem md-ml3rem sm-ml3rem"><a href="" class="fs20 md-fs18 fwBold colorNavy">JOIN
+                            TEAM</a></li>
+                    <li class="ml4rem md-ml3rem sm-ml3rem"><a href="" class="fs20 md-fs18 fwBold colorNavy">CONTACT</a>
+                    </li>
+                    <li class="bookDemo bgRed ml4rem text-center pt15 pb15 pl20 pr40 md-ml3rem sm-ml3rem"><a href=""
+                            class="colorWhite fs20 sm-fs15 fwBold">BOOK YOUR DEMO CLASS</a></li>
+                </ul>
+            </div>
+        </nav>
+        </section>
+    </header>
+
+    <!-- Begin Accordion Section -->
+    <section class="accordion col-lg-12" id="accordion-section">
+        <div class="slides col-lg-12" id="accordion-slides">
+
+            <!-- Begin Accord WEB-DESIGN -->
+            <div class="slide btn accord-web" style="background-color: purple; color: white;">
+
+                <!-- Begin Accordion Heading -->
+                <h2 class="accord-heading">WEB DESIGN</h2>
+                <!-- End Accordion Heading -->
+
+                <span class="accord-cross-icon" style="font-size: 40px; position: absolute; right: 20px; top: 5px;"><i
+                        class="fa fa-times-circle-o" aria-hidden="true"></i></span>
+
+                <!-- Begin Accord Slide Content -->
+                <div class="para content" style="justify-content: space-between;">
+                    <div class="content-img col-lg-6" style="padding: 50px 30px;">
+                        <img src="images/web-design.png" width="350" alt="">
+                    </div>
+                    <div class="col-lg-6 accord-content-right" style="padding: 50px 30px; ">
+                        <h1 style="text-decoration: underline; font-size: 50px; padding: 0 20px;">Web Design</h1>
+                        <p class="" style="font-size: 41px; padding: 10px 10px;">Build a responsive and accessible web
+                            portfolio using HTML5, CSS3, and JavaScript</p>
+                        <h4 style="padding: 20px 20px; font-size: 20px; text-decoration: underline;">Book Your demo
+                            class </h4>
+                    </div>
+                </div>
+                <!-- End Accord Slide Content -->
+            </div>
+            <!-- End Accord WEB-DESIGN -->
+
+            <!-- Begin Accord GRAPHIC-DESIGN -->
+            <div class="slide btn accord-graphic" style="background-color: rgba(57, 51, 137, 0.95); color: white;">
+
+                <!-- Begin Accordion Heading -->
+                <h2 class="accord-heading">GRAPHIC DESIGN</h2>
+                <!-- End Accordion Heading -->
+
+                <span class="accord-cross-icon" style="font-size: 40px; position: absolute; right: 20px; top: 5px;"><i
+                        class="fa fa-times-circle-o" aria-hidden="true"></i></span>
+
+                        <!-- Begin Accord Slide Content -->
+                <div class="para content">
+                    <div class="content-img col-lg-6" style="padding: 50px 30px;">
+                        <img src="images/graphics.png" width="350" alt="">
+                    </div>
+                    <div class="col-lg-6 accord-content-right" style="padding: 50px 30px; ">
+                        <h1 style="text-decoration: underline; font-size: 50px; padding: 0 20px;">Graphic Design</h1>
+                        <p class="" style="font-size: 35px; padding: 10px 10px;">Learn and apply the principles of
+                            graphic design towards a comprehensive branding project.</p>
+                        <h4 style="padding: 20px 20px; font-size: 20px; text-decoration: underline;">Book Your demo
+                            class </h4>
+                    </div>
+                </div>
+                        <!-- End Accord Slide Content -->
+            </div>
+            <!-- End Accord GRAPHIC-DESIGN -->
+
+            <!-- Begin Accord Learn-Coding -->
+            <div class="slide btn accord-learnCoding" style="background-color: rgba(255, 46, 83, 0.95); color: white;">
+
+                <!-- Begin Accordion Heading -->
+                <h2 class="accord-heading">LEARN CODING</h2>
+                <!-- End Accordion Heading -->
+
+                <span class="accord-cross-icon" style="font-size: 40px; position: absolute; right: 20px; top: 5px;"><i
+                        class="fa fa-times-circle-o" aria-hidden="true"></i></span>
+
+                        <!-- Begin Accord Slide Content -->
+                <div class="para content">
+                    <div class="content-img col-lg-6" style="padding: 50px 30px;">
+                        <img src="images/camera.png" width="350" alt="">
+                    </div>
+                    <div class="col-lg-6 accord-content-right" style="padding: 50px 30px; ">
+                        <h1 style="text-decoration: underline; font-size: 50px; padding: 0 20px;">Learn Coding</h1>
+                        <p class="" style="font-size: 38px; padding: 10px 10px;">Kickstart your career journey to create
+                            the next billion-dollar idea of the tech world.</p>
+                        <h4 style="padding: 20px 20px; font-size: 20px; text-decoration: underline;">Book Your demo
+                            class </h4>
+                    </div>
+                </div>
+                        <!-- End Accord Slide Content -->
+            </div>
+            <!-- End Accord Learn-Coding -->
+            
+            <!-- Begin Accord Visual-Effects -->
+            <div class="slide btn accord-visual" style="background-color: rgba(212, 42, 43, 0.95); color: white;">
+
+                <!-- Begin Accordion Heading -->
+                <h2 class="accord-heading">VISUAL EFFECTS</h2>
+                <!-- End Accordion Heading -->
+
+                <span class="accord-cross-icon" style="font-size: 40px; position: absolute; right: 20px; top: 5px;"><i
+                        class="fa fa-times-circle-o" aria-hidden="true"></i></span>
+                        
+                        <!-- Begin Accord Slide Content -->
+                <div class="para content">
+                    <div class="content-img col-lg-6" style="padding: 50px 30px;">
+                        <img src="images/visual-effects.png" width="350" alt="">
+                    </div>
+                    <div class="col-lg-6 accord-content-right" style="padding: 50px 30px; ">
+                        <h1 style="text-decoration: underline; font-size: 50px; padding: 0 20px;">Visual Effects</h1>
+                        <p class="" style="font-size: 38px; padding: 10px 10px;">The VFX pro course in the world's
+                            leading compositing package.</p>
+                        <h4 style="padding: 20px 20px; font-size: 20px; text-decoration: underline;">Book Your demo
+                            class </h4>
+                    </div>
+                </div>
+                        <!-- End Accord Slide Content -->
+            </div>
+            <!-- End Accord Visual-Effects -->
+
+            <!-- Begin Accord Video-Editing -->
+            <div class="slide btn accord-videoEditing"
+                style="background-color: rgba(101, 163, 40, 0.85); color: white;">
+
+                <!-- Begin Accordion Heading -->
+                <h2 class="accord-heading">VIDEO EDITING</h2>
+                <!-- End Accordion Heading -->
+
+                <span class="accord-cross-icon" style="font-size: 40px; position: absolute; right: 20px; top: 5px;"><i
+                        class="fa fa-times-circle-o" aria-hidden="true"></i></span>
+
+                        <!-- Begin Accord Slide Content -->
+                <div class="para content">
+                    <div class="content-img col-lg-6" style="padding: 50px 30px;">
+                        <img src="images/camera.png" width="350" alt="">
+                    </div>
+                    <div class="col-lg-6 accord-content-right" style="padding: 50px 30px; ">
+                        <h1 style="text-decoration: underline; font-size: 50px; padding: 0 20px;">Video Editing</h1>
+                        <p class="" style="font-size: 40px; padding: 10px 10px;">The VFX pro course in the world's
+                            leading compositing package.</p>
+                        <h4 style="padding: 20px 20px; font-size: 20px; text-decoration: underline;">Book Your demo
+                            class </h4>
+                    </div>
+                </div>
+                        <!-- End Accord Slide Content -->
+            </div>
+            <!-- End Accord Video-Editing -->
+
+            <!-- Begin Accord Digital-Marketing -->
+            <div class="slide btn accord-digital" style="background-color: rgba(41, 103, 162, 0.85); color: white;">
+
+                <!-- Begin Accordion Heading -->
+                <h2 class="accord-heading">DIGITAL MARKETING</h2>
+                <!-- End Accordion Heading -->
+
+                <span class="accord-cross-icon" style="font-size: 40px; position: absolute; right: 20px; top: 5px;"><i
+                        class="fa fa-times-circle-o" aria-hidden="true"></i></span>
+
+                        <!-- Begin Accord Slide Content -->
+                <div class="para content">
+                    <div class="content-img col-lg-6" style="padding: 50px 30px;">
+                        <img src="images/seo.png" width="350" alt="">
+                    </div>
+                    <div class="col-lg-6 accord-content-right" style="padding: 50px 30px; ">
+                        <h1 style="text-decoration: underline; font-size: 50px; padding: 0 20px;">Digital Marketing</h1>
+                        <p class="" style="font-size: 40px; padding: 10px 10px;">Digital marketing is the component of
+                            marketing that utilizes internet.</p>
+                        <h4 style="padding: 20px 20px; font-size: 20px; text-decoration: underline;">Book Your demo
+                            class </h4>
+                    </div>
+                </div>
+                        <!-- End Accord Slide Content -->
+            </div>
+            <!-- End Accord Digital-Marketing -->
+            
+            <!-- Begin Accord Animation -->
+            <div class="slide btn accord-animation" style="background-color: rgba(255, 66, 42, 0.85); color: white;">
+
+                <!-- Begin Accordion Heading -->
+                <h2 class="accord-heading">ANIMATION</h2>
+                <!-- End Accordion Heading -->
+
+                <span class="accord-cross-icon" style="font-size: 40px; position: absolute; right: 20px; top: 5px;"><i
+                        class="fa fa-times-circle-o" aria-hidden="true"></i></span>
+                        <!-- Begin Accord Slide Content -->
+                <div class="para content">
+                    <div class="content-img col-lg-6" style="padding: 60px 30px;">
+                        <img src="images/panda.png" width="350" alt="">
+                    </div>
+                    <div class="col-lg-6 accord-content-right" style="padding: 50px 30px; ">
+                        <h1 style="text-decoration: underline; font-size: 50px; padding: 0 20px;">Animation</h1>
+                        <p class="" style="font-size: 42px; padding: 10px 10px;">Animation is every where. Students
+                            loves to create their own character.</p>
+                        <h4 style="padding: 20px 20px; font-size: 20px; text-decoration: underline;">Book Your demo
+                            class </h4>
+                    </div>
+                </div>
+                        <!-- End Accord Slide Content -->
+            </div>
+            <!-- End Accord Animation -->
+
+        </div>
+    </section>
+    <!-- End Accordion Section -->
+
+    <script src="jqueryFile/jquery-3.6.0.min.js"></script>
+    <script>
+        /* Begin Hamburger Action */
+        var onClickHam = document.getElementById("onClickHam");
+        var hamBar = document.getElementById("nav-hamburger");
+        var i = 0;
+        hamBar.addEventListener("click", function () {
+            if (i == 0) {
+                onClickHam.classList.add("navContentSlideShow");
+                onClickHam.classList.remove("navContentSlideHide");
+                i = 1;
+            } else {
+                onClickHam.classList.add("navContentSlideHide");
+                onClickHam.classList.remove("navContentSlideShow");
+                i = 0;
+            }
+        })
+
+        /* End Hamburger Action */
+
+        /* --- Begin Accordion --- */
+        // $(".btn").click(function () {
+        //     $(".slide").removeClass("show");
+        //     var slide = $(this).closest(".slide");
+        //     slide.addClass("show");
+        // })
+
+
+
+        var slide = document.querySelectorAll('.slide');
+        var btn = document.querySelectorAll('.btn');
+        var content = document.querySelectorAll('.para');
+        for (let i = 0; i < btn.length; i++) {
+            btn[i].addEventListener("click", function () {
+                let item = this.closest(".slide");
+                for (let j = 0; j < slide.length; j++) {
+                    if (slide[j].classList.contains('show')) {
+                        slide[j].classList.remove('show');
+                        slide[j].classList.add('hide');
+                    } else if (slide[j].classList.contains('hide')) {
+                        slide[j].classList.remove('hide');
+                    }
+                }
+                if (!item.classList.contains('show') && !item.classList.contains('hide')) {
+                    item.classList.add('show');
+                }
+            });
+        }
+
+        /* --- End Accordion --- */
+
+        /* ---Begin Accordion Cross-icon Action---  */
+        $(".accord-cross-icon").click(function () {
+            if ($(".slide").contains("show")) {
+                $(".slide").removeClass('show');
+                $(".slide").addClass('hide');
+            }
+            else if($(".slide").contains("hide"))
+            {
+                $(".slide").removeClass("hide");
+            }
+        })
+        /* ---End Accordion Cross-icon Action---  */
+    </script>
+</body>
+
+</html>

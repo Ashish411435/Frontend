@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 800px;
+            border: 1px solid black;
+            margin: auto;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        .cont {
+            /* height: 200px; */
+            border: 1px solid black;
+        }
+
+        .para {
+            height: 0px;
+            overflow: hidden;
+            transition: 1s;
+        }
+
+        /* .container:hover .para{
+            height: 70px;
+        } */
+
+        .show {
+            height: 70px;
+        }
+
+        .hide {
+            height: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="cont">
+            <div class="para">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi unde nobis reiciendis doloremque
+                    eaque,
+                    illum optio odit dolores distinctio ex? Praesentium maxime amet voluptas possimus quia eum deleniti
+                    fuga
+                    quibusdam.
+                </p>
+            </div>
+            <span>
+                <h3>
+                    Hello Singh / Web Developer
+                </h3>
+            </span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="cont">
+            <div class="para">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi unde nobis reiciendis doloremque
+                    eaque,
+                    illum
+                    optio odit dolores distinctio ex? Praesentium maxime amet voluptas possimus quia eum deleniti fuga
+                    quibusdam.
+                </p>
+            </div>
+            <span>
+                <h3>
+                    Hello Singh / Web Developer
+                </h3>
+            </span>
+        </div>
+    </div>
+
+    <script>
+        let parentBtn = document.querySelectorAll('.cont');
+        let paraContent = document.querySelectorAll('.para');
+
+        for (let i = 0; i < parentBtn.length; i++) {
+            parentBtn[i].addEventListener('click', func);
+        }
+
+        function func() {
+            let item = this.childNode.classList;
+
+            for (let j = 0; j < paraContent.length; j++) {
+                if (paraContent[j].classList.contains('show')) {
+                    paraContent[j].classList.remove('show');
+                    paraContent[j].classList.add('hide');
+                } else if (paraContent[j].classList.contains('hide')) {
+                    paraContent[j].classList.remove('hide');
+                }
+            }
+            if (!item.contains('show') && !item.contains('hide')) {
+                item.add('show');
+            }
+        }
+    </script>
+</body>
+
+</html>

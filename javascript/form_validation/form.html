@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form action="thanks.html" onsubmit="return val()">
+        <div class="">
+            <input type="text" id="myname" placeholder="Enter Name">
+        </div>
+        <div class="">
+            <input type="checkbox" id="education" value="BA"> BA
+        </div>
+        <div class="">
+            <button type="submit">Submit Form</button>
+        </div>
+    </form>
+    <script>
+        function val(){ 
+            let myname = document.getElementById("myname").value;
+            let edu = document.getElementById("education");
+            if(myname == ""){
+                alert("Please Enter Your Name");
+                return false;
+            }
+            if(!edu.checked){
+                alert("Please Enable Checkbox");
+                return false;
+            }
+        }
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,384 @@
+/* Begin Accordion media query */
+@media screen and (max-width: 1210px) {
+
+    .slides {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .slide {
+        width: 100%;
+        height: 80px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .slide h2 {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transform: rotate(0deg);
+        position: absolute;
+        top: 40%;
+        left: 0%;
+    }
+
+    .show {
+        height: 400px;
+    }
+
+    .hide {
+        height: 80px;
+    }
+
+    /* Begin Web-Design Section  */
+    .accordion {
+        padding-top: 100px;
+    }
+
+    /* End Web-Design Section  */
+}
+/* ---> End Customized Css <--- */
+
+.brandLogo{
+    /* border: 1px solid black; */
+    width: 100px;
+    margin-left: 5%;
+}
+/* End Accordion media query */
+/* ---End Accordion Section--- */
+
+
+/* ---Begin for Medium Screens--- */
+@media screen and (max-width: 1180px) {
+    .col-md-1{
+        width: calc(100% / 12 * 1);
+    }
+    .col-md-2{
+        width: calc(100% / 12 * 2);
+    }
+    .col-md-3{
+        width: calc(100% / 12 * 3);
+    }
+    .col-md-4{
+        width: calc(100% / 12 * 4);
+    }
+    .col-md-5{
+        width: calc(100% / 12 * 5);
+    }
+    .col-md-6{
+        width: calc(100% / 12 * 6);
+    }
+    .col-md-7{
+        width: calc(100% / 12 * 7);
+    }
+    .col-md-8{
+        width: calc(100% / 12 * 8);
+    }
+    .col-md-9{
+        width: calc(100% / 12 * 9);
+    }
+    .col-md-10{
+        width: calc(100% / 12 * 10);
+    }
+    .col-md-11{
+        width: calc(100% / 12 * 11);
+    }
+    .col-md-12{
+        width: calc(100% / 12 * 12);
+    }
+
+    .md-ml3rem{
+        margin-left: 3rem;
+    }
+    .md-fs18{
+        font-size: 18px;
+    }
+    .md-d-none{
+        display: none;
+    }
+    .md-d-block{
+        display: block;
+    }
+
+    /* ---Begin Accordion--- */
+    .content-img{
+        padding-top: 5px!important;
+    }
+    /* End Accordion */
+
+}
+
+/* Width 980px for small screens */
+@media screen and (max-width: 980px) {
+    .col-sm-1{
+        width: calc(100% / 12 * 1);
+    }
+    .col-sm-2{
+        width: calc(100% / 12 * 2);
+    }
+    .col-sm-3{
+        width: calc(100% / 12 * 3);
+    }
+    .col-sm-4{
+        width: calc(100% / 12 * 4);
+    }
+    .col-sm-5{
+        width: calc(100% / 12 * 5);
+    }
+    .col-sm-6{
+        width: calc(100% / 12 * 6);
+    }
+    .col-sm-7{
+        width: calc(100% / 12 * 7);
+    }
+    .col-sm-8{
+        width: calc(100% / 12 * 8);
+    }
+    .col-sm-9{
+        width: calc(100% / 12 * 9);
+    }
+    .col-sm-10{
+        width: calc(100% / 12 * 10);
+    }
+    .col-sm-11{
+        width: calc(100% / 12 * 11);
+    }
+    .col-sm-12{
+        width: calc(100% / 12 * 12);
+    }
+
+
+    .sm-pt10{
+        padding-top: 10px;
+    }
+    .sm-pt20{
+        padding-top: 20px;
+    }
+    .sm-pl10{
+        padding: 10px;
+    }
+    .sm-pl20{
+        padding: 20px;
+    }
+    .sm-pl30{
+        padding: 30px;
+    }
+
+    .sm-ml3rem{
+        margin-left: 2rem;
+    }
+    .sm-fs18{
+        font-size: 15px;
+    }
+    .sm-d-none{
+        display: none;
+    }
+    .sm-d-block{
+        display: block;
+    }
+
+    /* ---Begin Accordion--- */
+    .content-img{
+        padding-top: 5px!important;
+    }
+    .accord-content-right{
+        padding: 25px 15px!important;
+    }
+    /* End Accordion */
+}
+
+@media screen and (max-width: 895px) {
+    .xm-d-none{
+        display: none;
+    }
+    .xm-d-block{
+        display: block;
+    }
+    .xm-space-btw{
+        justify-content: space-between;
+    }
+
+    /* ---Begin Header--- */
+    /* begin Navigation Slide */
+    .nav-content{
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        position: absolute;
+        top: 65px;
+        left: -900px;
+        background: rgb(190, 47, 119);
+        margin-left: 0%;
+    }
+    .nav-content li a:hover{
+        color: rgb(248, 161, 205);
+    }
+    .navContentSlideShow{
+        animation: navBarSlideShow 700ms linear forwards;
+    }
+    @keyframes navBarSlideShow {
+        0%{
+            left: -900px;
+            opacity: 0;
+        }
+        100%{
+            left: 0px;
+            opacity: 1;
+            /* display: block; */
+        }
+    }
+    .navContentSlideHide{
+        animation: navBarSlideHide 700ms linear forwards;
+    }
+    @keyframes navBarSlideHide {
+        0%{
+            left: 0px;
+            opacity: 1;
+        }
+        100%{
+            left: -900px;
+            opacity: 0;
+        }
+    }
+    
+    /* End Navigation Slide */
+
+    .bookDemo {
+        margin-top: 0px;
+        background-color: hotpink;
+    }
+    .bookDemo a:hover{
+        color: white!important;
+    }
+    .bookDemo:hover{
+        background-color: brown;
+    }
+
+    .nav-content li{
+        padding-top: 10px;
+        padding-left: 0;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+    
+    .nav-content li a{
+        color: white;
+    }
+    /* ---End Header--- */
+}
+
+
+/* Begin For extra Small Mobiles */
+@media screen and (max-width: 780px) {
+
+    /* ---Begin Accordion--- */
+    .accordion {
+        padding-top: 100px;
+    }
+    .content-img{
+        padding: 40px 10px!important;
+        padding-top: 50px!important;
+        padding-bottom: 20px!important;
+    }
+    .content-img img{
+        width: 250px!important;
+    }
+    .accord-content-right{
+        padding: 45px 15px!important;
+        padding-top: 65px!important;
+        padding-bottom: 20px!important;
+    }
+    .accord-content-right h1{
+        font-size: 35px!important;
+
+    }
+    .accord-content-right p{
+        font-size: 25px!important;
+    }
+    .accord-content-right h4{
+    }
+    /* End Accordion */
+}
+/* End For extra Small Mobiles */
+
+
+/* ---Begin For extra Small Mobiles--- */
+@media screen and (max-width: 560px) {
+
+    /* ---Begin Accordion--- */
+    .content-img{
+        padding: 40px 10px!important;
+        padding-top: 50px!important;
+        padding-bottom: 20px!important;
+    }
+    .content-img img{
+        width: 220px!important;
+    }
+    .accord-content-right{
+        padding: 45px 15px!important;
+        padding-top: 75px!important;
+        padding-bottom: 20px!important;
+    }
+    .accord-content-right h1{
+        font-size: 25px!important;
+    }
+    .accord-content-right p{
+        font-size: 20px!important;
+    }
+    
+    /* End Accordion */
+}
+/* End For extra Small Mobiles */
+
+@media screen and (max-width: 425px) {
+
+    .slides {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .slide {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .slide h2 {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transform: rotate(0deg);
+        position: absolute;
+        top: 40%;
+        left: 0%;
+    }
+
+    .para {
+        display: flex !important;
+        flex-direction: column!important;
+    }
+    .para .content-img{
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        padding: 0!important;
+    }
+    .para .content-img img{
+        width: 100%!important;
+    }
+    .para .accord-content-right{
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        padding: 40px 30px!important;
+    }
+
+    .show {
+        height: 100%;
+    }
+
+    .hide {
+        height: 80px;
+    }
+}

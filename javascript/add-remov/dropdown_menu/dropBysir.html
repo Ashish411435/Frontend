@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box
+        }
+        header{
+            width: 1200px;
+            margin: auto;
+        }
+        header ul{
+            padding: 0px;
+            margin: 0px;
+        }
+        header ul li{
+            list-style: none;
+            float: left;
+            width: 20%;
+            border-left: 1px solid white
+        }
+        header ul li a{
+            display: block;
+            background-color: rebeccapurple;
+            color: white;
+            padding: 20px;
+            text-align: center
+        }
+        header ul ul li{
+            width: 100%;
+            border-top: 1px solid white
+        }
+        .close{
+            display: none;
+        }
+        .dis{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="#;" class="btn">Home</a>
+                <ul class="close">
+                    <li><a href="">Dropw</a></li>
+                    <li><a href="">Dropw</a></li>
+                </ul>
+            </li>
+            <li><a href="#;" class="btn">About</a>
+                <ul class="close">
+                    <li><a href="">Dropw</a></li>
+                    <li><a href="">Dropw</a></li>
+                </ul>
+            </li>
+            <li><a href="#;" class="btn">About</a>
+                <ul class="close">
+                    <li><a href="">Dropw</a></li>
+                    <li><a href="">Dropw</a></li>
+                </ul>
+            </li>
+            <li><a href="#;" class="btn">About</a>
+                <ul class="close">
+                    <li><a href="">Dropw</a></li>
+                    <li><a href="">Dropw</a></li>
+                </ul>
+            </li>
+            <li><a href="#;" class="btn">About</a>
+                <ul class="close">
+                    <li><a href="">Dropw</a></li>
+                    <li><a href="">Dropw</a></li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    
+    <script>
+        var bt = document.getElementsByClassName('btn');
+        var cl = document.getElementsByClassName('close');
+        
+        for(let i = 0; i<=bt.length; i++){
+            bt[i].addEventListener("click",tog);
+        }
+        
+        function tog(){
+            item = this.nextElementSibling.className;
+            
+            for (y = 0; y < cl.length; y++) {
+              cl[y].className = 'close';
+            }
+            
+            if (item == 'close') {              
+              this.nextElementSibling.classList.add('dis');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website2</title>
+    <!-- Begin Font Awesome Icons -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- End Font Awesome Icons -->
+
+    <!-- Begin CSS links Files -->
+    <link rel="stylesheet" href="defaultStyle.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsiveStyle.css">
+    <!-- End CSS links Files -->
+
+    <!-- Begin Google-Fonts Link -->
+    <!-- End Google-Fonts Link -->
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <nav>
+            <div class="d-flex ">
+                <!-- Begin Navbar-Logo -->
+                <div class="navbar-logo ml50">
+                    <a href="" class="colorLightRed">LaunchPage</a>
+                </div>
+                <!-- End Navbar-Logo -->
+
+                <!-- Begin Hamburger Bar -->
+                <div class="navbar-hamburgerBar d-none lg-none md-block pt10 pb10 pl20 pr20 b-radius10"
+                    onclick="resBarMenu()"> <i class="fa fa-bars colorRed" aria-hidden="true"></i></div>
+                <!-- End Hamburger Bar -->
+
+                <!-- Begin navbar-list -->
+                <div class="navbar-list mt10" id="navigationMenu">
+                    <ul class=" lg-flex d-flex md-flex">
+                        <li class="ml30"><a href="#home">Home</a></li>
+                        <li class="ml30"><a href="#about">About</a></li>
+                        <li class="ml30"><a href="#testimonials">Testimonials</a></li>
+                        <li class="ml30"><a href="#portfolio">Work</a></li>
+                        <li class="ml30"><a href="#team">Team</a></li>
+                        <li class="ml30"><a href="#features">Features</a></li>
+                        <li class="ml30"><a href="#pricing">Pricing</a></li>
+                        <li class="ml30 discover-btn bg-red-dull"><a href="#contact" class="colorWhite">Get Started</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- End navbar-list -->
+            </div>
+        </nav>
+    </div>
+    <!-- ---Begin Home Section--- -->
+    <section class="class-home" id="home">
+        <div class="home-section-overlay"></div>
+        <div class="home-section-content-container col-lg-12 d-flex">
+            <!-- Home Content Left-->
+            <div class="col-lg-6 col-md-6 content-left pt10 pl50 colorWhite">
+                <h1 class="mb20 colorWhite fwbold">Award-Winning Agency Based In Manchested</h1>
+                <p class="mb30 colorWhite ">Excepteur sint occaecat cupidatat nonet proident, vante nisn culpa
+                    qui officia deserunt etimus
+                    quis
+                    autem nets lorem entimus velis netsad.</p>
+                <div class="pop-up-video">
+                    <div class="play-btn bg-white ml10"><i class="fa fa-play colorRed" aria-hidden="true"></i></div>
+                    <p>Watch Presentation Video</p>
+                </div>
+            </div>
+            <!-- End Home Content left   -->
+
+            <!-- Begin Home-Content-Right -->
+            <div class="col-lg-6 col-sm-12 ">
+                <div class="col-lg-9 col-md-10 content-right  ml100 md-ml50 colorWhite">
+                    <h2 class="fwbold text-center mt30 mb10">Get Your Free 14-Day Trial</h2>
+                    <p class="fw400 text-center">Velis demo enim quia tempor magnet</p>
+
+                    <!-- Begin Home Form Section -->
+                    <div class="form-section mt30 pt20 pl10">
+                        <form action="#;">
+                            <input type="text" class="input-user pl20" name="companyName" id="myCompanyName"
+                                placeholder="Company Name*" required>
+                            <input type="email" class="input-email pl20" name="companyName" id="myCompanyName"
+                                placeholder="Email Address*" required>
+                            <select class="select-option pl20" name="whatFor" id="mySelect" required>
+                                <option>We need LaunchPage for...</option>
+                                <option value="Our Support Team">Our Support Team</option>
+                                <option value="Our Sales Department">Our Sales Department</option>
+                            </select>
+                            <button type="submit" class="bg-red">Start My Free 14-Day Trial</button>
+                            <p class="text-center fs14">No Credit Card 'No Installation Required'</p>
+                        </form>
+                    </div>
+                    <!-- End Home Form Section -->
+                </div>
+            </div>
+            <!-- End Home-Content-Right -->
+        </div>
+    </section>
+    <!-- ---End Home Section--- -->
+
+    <!-- ---Begin Partner Section--- -->
+    <div class="partner-section">
+        <div class="partner-section-content d-flex">
+            <h3>As featured in : </h3>
+            <div class="partner-imgs d-flex">
+                <img src="images/cssWinner.png" class="partner-img-fluid" alt="">
+                <img src="images/cssSiteOfTheDay.png" class="partner-img-fluid" alt="">
+                <img src="images/cssDesignAwards.png" class="partner-img-fluid" alt="">
+                <img src="images/cssAwardFWA.png" class="partner-img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- ---End Partner Section--- -->
+
+
+    <!-- Begin About Section -->
+    <div class="class-about" id="about">
+        <div class="about-heading">
+            <h2>What We Do</h2>
+            <p>Discover how our amazing team can help your business.</p>
+        </div>
+        <div class="about-content d-flex">
+            <div class="scroll-eff-left" j>
+                <i class="fa fa-bar-chart bg-dark-sky-blue" aria-hidden="true"></i>
+                <h2>Google Analytics</h2>
+                <p>Curabitur quam etsum lacus net netsum nulat iaculis etsimun vitae etsum nisle varius netsum.</p>
+            </div>
+            <div>
+                <i class="fa fa-heart-o bg-red-dull" aria-readonly="true"></i>
+                <h2>Brand Awareness</h2>
+                <p>Curabitur quam etsum lacus net netsum nulat iaculis etsimun vitae etsum nisle varius netsum.</p>
+            </div>
+            <div class="scroll-eff-right">
+                <i class="fa fa-anchor bg-green-dull" aria-hidden="true"></i>
+                <h2>Graphic Design</h2>
+                <p>Curabitur quam etsum lacus net netsum nulat iaculis etsimun vitae etsum nisle varius netsum.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Begin Section White -->
+    <div class="section-white d-flex">
+        <div class="section-white-img scroll-eff-left">
+            <img src="images/about001.jpg" class="white-img" alt="">
+        </div>
+        <div class="section-white-content scroll-eff-right mt20 ml60">
+            <h1 class="mb30">Discover how we can help you to grow your business fast.</h1>
+            <p class="mb20">Velis demo enim ipsam voluptatem quia voluptas sit aspernatur netsum lorem fugit, seditum
+                netis velas matrix net nesciunt.</p>
+            <ul>
+                <li class="mb10"><i class="fa fa-check colorRed" aria-hidden="true"></i> Quias netus magni netsum eos
+                    qui ratione sequi.
+                </li>
+                <li class="mb10"><i class="fa fa-check colorRed" aria-hidden="true"></i> Venis ratione sequi netus enim
+                    quia tempor magni.</li>
+                <li class="mb40"><i class="fa fa-check colorRed" aria-hidden="true"></i> Enim ipsam netus voluptatem
+                    quia voluptas.</li>
+            </ul>
+            <a href="#;">Discover More</a>
+        </div>
+    </div>
+    <!-- End Section White -->
+
+    <!-- Begin Section Grey -->
+    <div class="section-grey d-flex">
+        <div class="section-grey-content scroll-eff-left">
+            <div class="grey-content-left d-flex">
+                <div class="grey-i-icon">
+                    <i class="fa fa-line-chart colorLightBlue" aria-hidden="true"></i>
+                </div>
+                <div>
+                    <h4>Customize your workflow</h4>
+                    <p>Manage any process and be ready to address any challenge with total ease.</p>
+                </div>
+            </div>
+            <div class="grey-content-left d-flex">
+                <div class="grey-i-icon">
+                    <i class="fa fa-modx colorLightRed" aria-hidden="true"></i>
+                </div>
+                <div>
+                    <h4>Customize your workflow</h4>
+                    <p>Manage any process and be ready to address any challenge with total ease.</p>
+                </div>
+            </div>
+            <div class="grey-content-left d-flex">
+                <div class="grey-i-icon">
+                    <i class="fa fa-rocket colorLightGreen" aria-hidden="true"></i>
+                </div>
+                <div>
+                    <h4>Customize your workflow</h4>
+                    <p>Manage any process and be ready to address any challenge with total ease.</p>
+                </div>
+            </div>
+        </div>
+        <div class="section-grey-img scroll-eff-right ml60 mt20">
+            <img src="images/about002.jpg" class="grey-img" alt="">
+        </div>
+    </div>
+    <!-- End Section Grey -->
+
+    <!-- Begin Section About-Ending -->
+    <section class="about-ending about-ending-bg">
+        <div class="about-ending-bg-overlay"></div>
+        <div class="about-ending-heading">
+            <h2>Fun Facts About Our Agency</h2>
+        </div>
+        <div class="about-ending-i-icons d-flex">
+            <div>
+                <i class="fa fa-diamond" aria-hidden="true"></i>
+                <h1 class="ml20 mt20">1050+</h1>
+                <p class="ml20 mt10">Projects Completed</p>
+            </div>
+            <div>
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                <h1 class="ml20 mt20">217k</h1>
+                <p class="ml20 mt10">Happy Clients</p>
+            </div>
+            <div>
+                <i class="fa fa-trophy" aria-hidden="true"></i>
+                <h1 class="ml20 mt20">1210</h1>
+                <p class="ml20 mt10">Design Awards</p>
+            </div>
+            <div>
+                <i class="fa fa-anchor" aria-hidden="true"></i>
+                <h1 class="ml20 mt20">2137</h1>
+                <p class="ml20 mt10">Line of Codes</p>
+            </div>
+        </div>
+    </section>
+    <!-- End Section About-Ending -->
+    <!-- End About Section -->
+
+
+    <!-- Begin Testimonials Section -->
+    <div class="class-testimonials d-flex" id="testimonials">
+        <div class="testimonials-content-left col-lg-5">
+            <h1>What People Are Saying.</h1>
+            <p>Quis autem velis ets reprehender net etid quiste nets voluptate. Utise wisi enim minim veniam, quis etsad
+                aspernatis netsum stationes nets.</p>
+            <div class="d-flex mt50">
+                <span class="trust-pilot">
+                    <h3 class="mb10">TrustPilot</h3>
+                    <i class="fa fa-star colorYellow" aria-hidden="true"></i>
+                    <i class="fa fa-star colorYellow" aria-hidden="true"></i>
+                    <i class="fa fa-star colorYellow" aria-hidden="true"></i>
+                    <i class="fa fa-star colorYellow" aria-hidden="true"></i>
+                    <i class="fa fa-star colorYellow" aria-hidden="true"></i>
+                </span>
+                <span class="feefo ml10">
+                    <h3 class="mb10">Feefo</h3>
+                    <i class="fa fa-star colorYellow" aria-hidden="true"></i>
+                    <i class="fa fa-star colorYellow" aria-hidden="true"></i>
+                    <i class="fa fa-star colorYellow" aria-hidden="true"></i>
+                    <i class="fa fa-star colorYellow" aria-hidden="true"></i>
+                    <i class="fa fa-star colorYellow" aria-hidden="true"></i>
+                </span>
+            </div>
+
+        </div>
+        <div class="testimonials-content-right col-lg-6 ml70">
+            <div class="testimAccordion testimonial-1 testimonial-click pt20 pl30 pr20 pb20 mb20">
+                <p class="testim-para-content mb30 colorGrey fs19">Nemo enim ipsam voluptatem quia voluptas situm ets
+                    aspernatis netsum
+                    loris fugit, sed quia magni
+                    dolores eos quis ratione sequi etum nets vesciunt neque.</p>
+                <span class="d-flex">
+                    <img src="images/testimonialsImg1.jpg" class="testimonial-img" alt="">
+                    <p class="ml30 mt20 fs20 fwbold">
+                        Alexandra Smith / <span class="colorLightGreen">Manager - SmartCoders</span>
+                    </p>
+                </span>
+            </div>
+            <div class="testimAccordion testimonial-2 testimonial-click pt20 pl30 pr20 pb20 mb20">
+                <p class="testim-para-content mb30 colorGrey fs20">Nemo enim ipsam voluptatem quia voluptas situm ets
+                    aspernatis netsum
+                    loris fugit, sed quia magni
+                    dolores eos quis ratione sequi etum nets vesciunt neque.</p>
+                <span class="d-flex">
+                    <img src="images/testimonialsImg1.jpg" class="testimonial-img" alt="">
+                    <p class="ml30 mt20 fs20 fwbold">
+                        John Doe / <span class="colorLightGreen">CEO - Epic Design</span>
+                    </p>
+                </span>
+            </div>
+            <div class="testimAccordion testimonial-3 testimonial-click pt20 pl30 pr20 pb20">
+                <p class="testim-para-content mb30 colorGrey fs20">Nemo enim ipsam voluptatem quia voluptas situm ets
+                    aspernatis netsum
+                    loris fugit, sed quia magni
+                    dolores eos quis ratione sequi etum nets vesciunt neque.</p>
+                <span class="d-flex">
+                    <img src="images/testimonialsImg1.jpg" class="testimonial-img" alt="">
+                    <p class="ml30 mt20 fs20 fwbold">
+                        Christina Pages / <span class="colorLightGreen">Designer - New Fashion</span>
+                    </p>
+                </span>
+            </div>
+
+        </div>
+    </div>
+    <!-- End Testimonials Section -->
+
+
+    <!-- Begin Portfolio Section -->
+    <section class="class-portfolio" id="portfolio">
+        <div class="portfolio-heading col-lg-12">
+            <div class="port-heading-content">
+                <h1 class="">Our Portfolio</h1>
+                <span class="">
+                    <p>Discover the latest projects accomplished for my clients</p>
+                </span>
+            </div>
+        </div>
+        <div class="portfolio-content d-flex">
+            <div class="col-lg-4 portfolio-content-left">
+                <div class="inner">
+                    <div class="img-overlay">
+                        <img src="images/port_left_img1.jpg" alt="" class="port-imgs">
+                    </div>
+                    <div class="overlay-icon"><i class="fa fa-search-plus" aria-hidden="true"></i></div>
+                </div>
+                <div class="inner">
+                    <div class="img-overlay">
+                        <img src="images/port_left_img2.jpg" alt="" class="port-imgs">
+                    </div>
+                    <div class="overlay-icon"><i class="fa fa-search-plus" aria-hidden="true"></i></div>
+                </div>
+            </div>
+            <div class="col-lg-4 portfolio-content-center">
+                <div class="inner">
+                    <div class="img-overlay">
+                        <img src="images/port_center_img.jpg" alt="" class="port-imgs">
+                    </div>
+                    <div class="overlay-icon"><i class="fa fa-search-plus" aria-hidden="true"></i></div>
+                </div>
+            </div>
+            <div class="col-lg-4 portfolio-content-right">
+                <div class="inner">
+                    <div class="img-overlay">
+                        <img src="images/port_right_img1.jpg" alt="" class="port-imgs">
+                    </div>
+                    <div class="overlay-icon"><i class="fa fa-search-plus" aria-hidden="true"></i></div>
+                </div>
+                <div class="inner">
+                    <div class="img-overlay">
+                        <img src="images/port-right-img2.jpg" alt="" class="port-imgs">
+                    </div>
+                    <div class="overlay-icon"><i class="fa fa-search-plus" aria-hidden="true"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Portfolio Section -->
+
+
+    <!-- Begin Team Section -->
+    <section class="class-team" id="team">
+        <div class="team-heading-section">
+            <h1 class="text-center fs35 mb20 colorDarkBlue">Meet Our Team</h1>
+            <p class="text-center fs20 colorGrey">Discover more about our high performing team.</p>
+        </div>
+        <!-- Begin Team Content Section -->
+        <div class="team-content-section d-flex">
+            <div class="col-lg-4 team-content-1 bg-white pb60">
+                <div class="team-inner-content">
+                    <img src="images/team001.jpg" alt="" class="team-imgs">
+                </div>
+                <h1 class="pt20 text-center fs21 colorDarkBlue">CHRISTINA HAWKINS</h1>
+                <div class="team-section-postName">
+                    <p class="fs18 fwbold colorLightGrey text-center  pt10  ">Head of SEO</p>
+                </div>
+                <p class="fs18 pt20 text-center colorGrey">
+                    Johnathan is our co-founder and has developed search strategies for a variety of clients for over 5
+                    years.
+                </p>
+            </div>
+            <div class="col-lg-4 team-content-2 bg-white pb60">
+                <div class="team-inner-content">
+                    <img src="images/team002.jpg" alt="" class="team-imgs">
+                </div>
+                <h1 class="pt20 text-center fs21 colorDarkBlue">ANDRES JOHANSON</h1>
+                <div class="team-section-postName">
+                    <p class="fs18 fwbold colorLightGrey text-center  pt10  ">Marketing Manager</p>
+                </div>
+                <p class="fs18 pt20 text-center colorGrey">
+                    Andres fell in love with marketing at the school and looks forward to being part of the industry for
+                    years.
+                </p>
+            </div>
+            <div class="col-lg-4 team-content-3 bg-white pb60">
+                <div class="team-inner-content">
+                    <img src="images/team003.jpg" alt="" class="team-imgs">
+                </div>
+                <h1 class="pt20 text-center fs21 colorDarkBlue">ALEXANDRA SMITHS</h1>
+                <div class="team-section-postName">
+                    <p class="fs18 fwbold colorLightGrey text-center  pt10  ">SEO Specialist</p>
+                </div>
+                <p class="fs18 pt20 text-center colorGrey">
+                    Graduating with a degree in Spanish, English and French, she has always loved writing.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- End Team Section -->
+
+    <!-- Begin Award-Winning Section -->
+    <section class="award-winning-section">
+        <div class="award-winning-bg-overlay"></div>
+        <div class="col-lg-8 award-winning-content m-auto text-center">
+            <h1 class="fwbold fs35 mb20 colorWhite">Award-Winning Agency</h1>
+            <p class="fs20 mb50 colorWhite">Utise wisi enim minim veniam, quis et stationes ullamcorper
+                nets suscipit ets lobotis nisle consequat nihis etim aspernatur netsum.</p>
+            <div class="award-btns">
+                <a class="award-winning-btn fs18 bg-white fwbold colorLightRed " href="">Discover More</a>
+                <a class="award-winning-btn fs18 bg-white fwbold ml30 colorLightRed " href="">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+    <!-- End Award-Winning Section -->
+
+
+    <!-- Begin Features -->
+    <section class="class-features" id="features">
+        <div class="col-lg-8 m-auto mb30 features-heading-section">
+            <h1 class="text-center fs35 colorDarkBlue mb20">Amazing Features</h1>
+            <p class="text-center fs18 colorGrey">Quis autem velis ets reprehender net etid quiste voluptate.</p>
+        </div>
+        <div class="col-lg-12 features-content-section m-auto ml20 ">
+            <div class="d-flex pt10 pb10 pl10 pr10">
+                <div class="fs50 pt10 colorLightGreen"><i class="fa fa-cogs" aria-hidden="true"></i></div>
+                <div class="ml20">
+                    <h1 class="mb10 colorDarkBlue pl10 pr10 pt10 pb10">Support 24 / 7</h1>
+                    <p class="colorGrey fs18 pl10 pr10 pb10">Utise wisi enim minim veniam, quis tation ullamcorper
+                        suscipit et loboti nisl consequat nihis.
+                    </p>
+                </div>
+            </div>
+            <div class="d-flex pt10 pb10 pl10 pr10">
+                <div class="fs45 pt10 colorLightBlue"><i class="fa fa-users" aria-hidden="true"></i></div>
+                <div class="ml20">
+                    <h1 class="mb10 colorDarkBlue pl10 pr10 pt10 pb10">User Friendly</h1>
+                    <p class="colorGrey fs18 pl10 pr10 pb10">Utise wisi enim minim veniam, quis tation ullamcorper
+                        suscipit et loboti nisl consequat nihis.
+                    </p>
+                </div>
+            </div>
+            <div class="d-flex pt10 pb10 pl10 pr10">
+                <div class="fs45 pt10 colorOrange"><i class="fa fa-bell-o" aria-hidden="true"></i></div>
+                <div class="ml20">
+                    <h1 class="mb10 colorDarkBlue pl10 pr10 pt10 pb10">Notification</h1>
+                    <p class="colorGrey fs18 pl10 pr10 pb10">Utise wisi enim minim veniam, quis tation ullamcorper
+                        suscipit et loboti nisl consequat nihis.
+                    </p>
+                </div>
+            </div>
+            <div class="d-flex pt10 pb10 pl10 pr10">
+                <div class="fs50 colorTealBlue"><i class="fa fa-gift" aria-hidden="true"></i></div>
+                <div class="ml20">
+                    <h1 class="mb10 colorDarkBlue pl10 pr10 pt10 pb10">Accesibility</h1>
+                    <p class="colorGrey fs18 pl10 pr10 pb10">Utise wisi enim minim veniam, quis tation ullamcorper
+                        suscipit et loboti nisl consequat nihis.
+                    </p>
+                </div>
+            </div>
+            <div class="d-flex pt10 pb10 pl10 pr10">
+                <div class="fs50 pt5 colorPurple"><i class="fa fa-linux" aria-hidden="true"></i></div>
+                <div class="ml20">
+                    <h1 class="mb10 colorDarkBlue pl10 pr10 pt10 pb10">Cost Control</h1>
+                    <p class="colorGrey fs18 pl10 pr10 pb10">Utise wisi enim minim veniam, quis tation ullamcorper
+                        suscipit et loboti nisl consequat nihis.
+                    </p>
+                </div>
+            </div>
+            <div class="d-flex pt10 pb10 pl10 pr10">
+                <div class="fs45 colorLightGreen"><i class="fa fa-comments-o" aria-hidden="true"></i></div>
+                <div class="ml20">
+                    <h1 class="mb10 colorDarkBlue pl10 pr10 pt10 pb10">Chat With Friends</h1>
+                    <p class="colorGrey fs18 pl10 pr10 pb10">Utise wisi enim minim veniam, quis tation ullamcorper
+                        suscipit et loboti nisl consequat nihis.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Features -->
+
+    <!-- Begin Pricing Section -->
+    <section class="class-pricing-section pt50 pb30 pr20 pl20 d-flex" id="pricing">
+        <div class="col-lg-4 pl40 pricing-content-left">
+            <h1 class="fs35 mb40 colorDarkBlue">Great pricing plans tailored to your needs.</h1>
+            <p class="fs20 colorGrey">Quis autem velis ets reprehender net etid quiste voluptate. Utise wisi enim minim
+                veniam, quis et
+                stationes nets.</p>
+        </div>
+        <div class="col-lg-8 pricing-content-right pt80 pb80 pl60 text-center d-flex">
+            <div class="pricing-content-right-1 col-lg-6 pt50 pb70 pl40 pr40 bg-white">
+                <p class="fs17 fwbold mb10">MONTHLY</p>
+                <h1 class="fs70 text-center mb5">$19</h1>
+                <p class="pb5 fwbold mb60 colorGrey">Per Month</p>
+                <span class="mt50">
+                    <a class="fs23 fwbold pt15 pb15 pr15 pl15 mt50 colorRed" href="">Get Started</a>
+                </span>
+                <p class="colorGrey mt60">First two weeks free.
+                    Amazing freatures.</p>
+
+            </div>
+            <div class="pricing-content-right-2 col-lg-6 text-center pt50 pb70 pl40 pr40 bg-red-dull colorWhite ml50">
+                <p class="fs17 fwbold mb10">ANNUALY</p>
+                <h1 class="fs70 text-center mb5">$29</h1>
+                <p class="pb5 fwbold mb60 colorWhite">Per Year</p>
+                <span class="mt50">
+                    <a class="fs23 fwbold pt15 pb15 pr15 pl15 mt50 colorRed colorWhite" href="">Get Started</a>
+                </span>
+                <p class="mt60 colorWhite">First two weeks free.
+                    Save 45% with this plan
+                    Amazing freatures.</p>
+            </div>
+        </div>
+    </section>
+    <section class="class-qna" id="qna">
+        <div class="qna-heading-section text-center">
+            <h1>Frequently Asked Questions</h1>
+            <p>Quis autem velis ets reprehender net etid quiste voluptate.</p>
+        </div>
+        <div class="qna-content-section">
+            <div>
+                <h1>Velit ut tortizi pretium viverra suspendisse?</h1>
+                <p>Utise wisi enim minim veniam, quis et stationes ullamcorper nets suscipit ets lobotis nisle consequat
+                    nihis etim. Quis autem velis ets reprehender net etid quiste voluptate velite esse sedis.</p>
+            </div>
+            <div>
+                <h1>Nibh sit amet aliquam commodo?</h1>
+                <p>Utise wisi enim minim veniam, quis et stationes ullamcorper nets suscipit ets lobotis nisle consequat
+                    nihis etim. Quis autem velis ets reprehender net etid quiste voluptate velite esse sedis.</p>
+            </div>
+            <div>
+                <h1>Maecenas volutpat blandit etiam?</h1>
+                <p>Utise wisi enim minim veniam, quis et stationes ullamcorper nets suscipit ets lobotis nisle consequat
+                    nihis etim. Quis autem velis ets reprehender net etid quiste voluptate velite esse sedis.</p>
+            </div>
+            <div>
+                <h1>Elementum curabitur vitae?</h1>
+                <p>Utise wisi enim minim veniam, quis et stationes ullamcorper nets suscipit ets lobotis nisle consequat
+                    nihis etim. Quis autem velis ets reprehender net etid quiste voluptate velite esse sedis.</p>
+            </div>
+        </div>
+    </section>
+    <!-- End Pricing Section -->
+
+
+    <!-- Begin Contact Section -->
+    <section class="class-contact" id="contact">
+        <div class="contact-section-bg-overlay"></div>
+        <div class="contact-heading text-center">
+            <h1>Contact Us</h1>
+            <p>Have any queries? Get in touch today.</p>
+        </div>
+        <div class="contact-form-section text-center m-auto">
+            <form class="text-center" action="#;">
+                <div class="col-lg-10 d-flex m-auto">
+                    <div class="col-lg-6 m-auto">
+                        <input class="name" type="text" name="name" id="yourName" placeholder="Your Name*">
+                        <input class="email" type="text" name="eamil" id="myEmail" placeholder="Email Address*">
+                    </div>
+                    <div class="col-lg-6">
+                        <input type="text" name="mobile" id="myMobile" placeholder="Phone Number*">
+                        <select name="choose" id="mychoose">
+                            <option>Choose Option</option>
+                            <option value="individual">Individual</option>
+                            <option value="corporate">Corporate</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-9 m-auto">
+                    <textarea name="msg" id="myMsg" cols="20" rows="10" placeholder="Your Message..."></textarea>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 contact-form-btn mt20 ">
+                    <button class="submit">Get In Touch</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- End Contact Section -->
+
+    <!-- Begin Footer -->
+    <section class="" id="footer">
+        <div class="footer-content d-flex col-lg-10">
+            <div class="footer-content-left col-lg-6">
+                <p><i class="fa fa-copyright" aria-hidden="true"></i> 2020 <strong>LaunchPage.</strong> Designed by <u
+                        style="color: #e52f37;"> Epic-Themes</u></p>
+            </div>
+            <div class="footer-content-right d-flex col-lg-6">
+                <p>Follow us :</p>
+                <div class="colorTealBlue"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+                <div class="colorLightRed"><i class="fa fa-pinterest" aria-hidden="true"></i></div>
+                <div class="colorBlue"><i class="fa fa-facebook-square" aria-hidden="true"></i></div>
+                <div class="colorRed"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                <div class="colorSkyBlue"><i class="fa fa-skype" aria-hidden="true"></i></div>
+            </div>
+        </div>
+    </section>
+    <!-- End Footer -->
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop SignIn SignOut Box with animation</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container1 same-container">
+        <div class="section1 same-section" id="signInPop">
+            <form action="#">
+                <h1>Sign In</h1>
+                <div>
+                    <label for="">Username : </label><br>
+                    <input type="text" name="username" id="myusername" placeholder="Enter Username">
+                </div>
+                <br>
+                <div>
+                    <label for="">Password : </label> <br>
+                    <input type="text" name="password" id="mypassword" placeholder="Enter Password">
+                </div>
+                <br>
+                <button>Sign In</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="container2 same-container">
+        <div class="section2 same-section" id="signUpPop">
+            <form action="#">
+                <h1>Sign Up</h1>
+                <div>
+                    <label for="">Full Name : </label><br>
+                    <input type="text" name="name" id="myname" placeholder="Enter Full Name">
+                </div>
+                <br>
+                <div>
+                    <label for="">Mobile : </label><br>
+                    <input type="number" name="mobile" id="mymobile" placeholder="Enter Mobile Number">
+                </div>
+                <br>
+                <div>
+                    <label for="">Email : </label><br>
+                    <input type="email" name="mail" id="myemail" placeholder=" Email Address">
+                </div>
+                <br>
+                <div>
+                    <label for="">Password : </label> <br>
+                    <input type="text" name="password" id="mypassword" placeholder=" Enter Password">
+                </div>
+                <br>
+                <button>Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="btns">
+        <button class="signInBtn" onclick="pop()">Sign In</button>
+        <button class="signOutBtn" onclick="pop2()">Sign Out</button>
+    </div>
+
+
+
+    <script>
+        let i = 0;
+
+        function pop() {
+            if (i == 0) {
+                signInPop.classList.add('show');
+                signInPop.classList.remove('hide');
+                signUpPop.classList.remove('con2show');
+                signUpPop.classList.remove('con2hide');
+                i = 1;
+            } else {
+                signInPop.classList.add('hide');
+                signInPop.classList.remove('show');
+                i = 0;
+            }
+        }
+        j = 0;
+
+        function pop2() {
+            if (j == 0) {
+                signInPop.classList.remove('hide');
+                signInPop.classList.remove('show');
+                signUpPop.classList.add('con2show');
+                signUpPop.classList.remove('con2hide');
+                j = 1;
+
+            } else {
+                signUpPop.classList.add('con2hide');
+                signUpPop.classList.remove('con2show');
+                j = 0;
+            }
+
+            if (i == 0) {
+                signUpPop.classList.add('con2show');
+                signUpPop.classList.remove('con2hide');
+                i = 1;
+            } else {
+                // signInPop.classList.remove('hide');
+                // signInPop.classList.remove('show');
+                signUpPop.classList.add('con2hide');
+                signUpPop.classList.add('con2show');
+                i = 0;
+            }
+        }
+    </script>
+</body>
+
+</html>

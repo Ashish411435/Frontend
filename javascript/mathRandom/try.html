@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="racing-cars.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" </head>
+
+<body>
+    <header>
+        <div class="container mt50">
+            <div class="col-lg-12">
+                <h1> THE RACING CARS</h1>
+            </div>
+        </div>
+    </header>
+
+    <section id="sec1">
+        <div class="cars">
+            <img src="car1..png" id="car1">
+            <img src="car2.png" id="car2">
+            <img src="car3.png" id="car3">
+            <img src="car4.png" id="car4">
+        </div>
+
+        <img src="racing-track.png" width="100%">
+    </section>
+    <section>
+        <div class="container">
+            <div class="start" onclick="move()">START</div>
+        </div>
+    </section>
+    <script>
+        var a1 = document.getElementById("car1");
+        var a = 0;
+        var b = 0;
+        var c = 0;
+        var d = 0;
+        function randomNumber(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+        var func = setInterval(function () {
+            if (a < 1200) {
+                a += randomNumber(10, 15);
+                b += randomNumber(10, 15);
+                c += randomNumber(10, 15);
+                d += randomNumber(10, 15);
+                car1.style.left = a + "px";
+                car2.style.left = b + "px";
+                car3.style.left = c + "px";
+                car4.style.left = d + "px";
+            }
+            else {
+                if (a > b && a > c && a > d) {
+                    alert("Car 1 wins");
+                }
+                else if (b > a && b > c && b > d) {
+                    alert("Car 2 wins");
+                }
+                else if (c > a && c > b && c > d) {
+                    alert("Car 3 wins");
+                }
+                else {
+                    alert("Car 4 wins")
+                }
+                clearInterval(func);
+            }
+        }, 30);
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: slategrey;
+}
+.box{
+    border: 5px solid white;
+    margin: 100px auto;
+    width: 800px;
+    display: grid;
+    grid-template-columns: repeat(4, auto) ;
+    grid-auto-rows: minmax(100px, auto);
+}
+.box1{
+    border: 3px solid rgb(248, 92, 92);
+    padding: 15px;
+    background-color: rgb(248, 224, 224);
+
+}
+.box2{
+    border: 2px solid rgb(114, 252, 114);
+    padding: 15px;
+    background-color: rgb(213, 247, 213);
+
+}
+.box3{
+    border:2px solid rgb(145, 145, 255);
+    padding: 15px;
+    background-color: rgb(221, 221, 247);
+
+}
+.box4{
+    border:2px solid rgb(212, 116, 116);
+    padding: 15px;
+    background-color: rgb(245, 208, 208);
+
+}
+.box5{
+    border: 3px solid rgb(250, 199, 124);
+    padding: 15px;
+    background-color: rgb(248, 239, 224);
+
+}
+.box6{
+    border:2px solid darksalmon;
+    padding: 15px;
+}
+.box7{
+    border:2px solid rgb(196, 155, 103);
+    padding: 15px;
+    background-color: rgb(228, 212, 192);
+}
+.box8{
+    border: 3px solid skyblue;
+    padding: 15px;
+    background-color: rgb(164, 241, 241);
+}
+.box9{
+    border:2px solid  seagreen;
+    padding: 15px;
+    background-color: rgb(140, 160, 106);
+}
+.box10{
+    border: 3px solid sienna;
+    padding: 15px;
+    background-color: rgb(163, 125, 107);
+}
+.box11{
+    border:2px solid  deeppink;
+    padding: 15px;
+    background-color: pink;
+}
+.box12{
+    border:2px solid  rgb(187, 180, 90);
+    padding: 15px;
+    background-color: rgb(248, 248, 189);
+}
+.box13{
+    border: 3px solid mediumseagreen;
+    padding: 15px;
+    background-color: aquamarine;
+}
+.merge{
+    background-color: rgb(77, 145, 212);
+    border: 5px solid white;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}

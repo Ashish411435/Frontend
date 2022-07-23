@@ -1,0 +1,213 @@
+#btn1 {
+    position: absolute;
+    top: 18px;
+    left: 20px;
+    /* left: 355px; */
+    animation-name: anim1;
+    animation-duration: 700ms;
+    animation-fill-mode: forwards;
+}
+
+#btn2 {
+    position: absolute;
+    left: 545px;
+    top: -150px;
+    /* top: 18px; */
+
+    animation-name: anim2;
+    animation-duration: 700ms;
+    animation-fill-mode: forwards;
+}
+
+#btn3 {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    /* right: 355px; */
+
+    animation-name: anim3;
+    animation-duration: 700ms;
+    animation-fill-mode: forwards;
+
+}
+
+#btn4 {
+    position: absolute;
+    top: 208px;
+    left: 20px;
+    /* left: 355px; */
+
+    animation-name: anim4;
+    animation-duration: 700ms;
+    animation-fill-mode: forwards;
+
+}
+
+#btn5 {
+    position: absolute;
+    left: 350px;
+    top: 15px;
+    /* left: 545px; */
+    /* top: 208px; */
+
+    animation-name: anim5;
+    animation-duration: 700ms;
+    animation-fill-mode: forwards;
+
+}
+
+#btn6 {
+    position: absolute;
+    top: 208px;
+    right: 20px;
+    /* right: 355px; */
+
+    animation-name: anim6;
+    animation-duration: 700ms;
+    animation-fill-mode: forwards;
+
+
+}
+
+#btn7 {
+    position: absolute;
+    bottom: 22px;
+    left: 20px;
+    /* left: 355px; */
+
+    animation-name: anim7;
+    animation-duration: 700ms;
+    animation-fill-mode: forwards;
+
+}
+
+#btn8 {
+    position: absolute;
+    left: 545px;
+    /* bottom: 22px; */
+    bottom: -150px;
+
+    animation-name: anim8;
+    animation-duration: 700ms;
+    animation-fill-mode: forwards;
+
+}
+
+#btn9 {
+    position: absolute;
+    bottom: 22px;
+    right: 20px;
+    /* right: 355px; */
+
+    animation-name: anim9;
+    animation-duration: 700ms;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes anim1 {
+    0% {
+        left: 20px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 355px;
+        opacity: 1;
+    }
+}
+
+@keyframes anim2 {
+    0% {
+        top: -150px;
+        opacity: 0;
+    }
+
+    100% {
+        top: 18px;
+        opacity: 1;
+    }
+}
+
+@keyframes anim3 {
+    0% {
+        right: 20px;
+        opacity: 0;
+    }
+
+    100% {
+        right: 355px;
+        opacity: 1;
+    }
+}
+
+@keyframes anim4 {
+    0% {
+        left: 20px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 355px;
+        opacity: 1;
+    }
+}
+
+@keyframes anim5 {
+    0% {
+        left: 350px;
+        top: 15px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 545px;
+        top: 208px;
+        opacity: 1;
+    }
+}
+
+@keyframes anim6 {
+    0% {
+        right: 20px;
+        opacity: 0;
+    }
+
+    100% {
+        right: 355px;
+        opacity: 1;
+    }
+}
+@keyframes anim7 {
+    0% {
+        left: 20px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 355px;
+        opacity: 1;
+    }
+}
+@keyframes anim8 {
+    0% {
+        bottom: 150px;
+        opacity: 0;
+    }
+
+    100% {
+        bottom: 22px;
+        opacity: 1;
+    }
+}
+@keyframes anim9 {
+    0% {
+        right: 20px;
+        opacity: 0;
+    }
+
+    100% {
+        right: 355px;
+        opacity: 1;
+    }
+}

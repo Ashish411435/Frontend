@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tryAccordion</title>
+
+    <style>
+        
+        .para{
+            overflow: hidden;
+            height: 0px;
+        }
+        button{
+            margin-bottom: 10px;
+        }
+        .show{
+            animation-name: animDown;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+        .hide{
+            animation-name: animUp;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+        @keyframes animDown {
+            0%{
+                height: 0px;
+            }
+            100%{
+                height: 50px;
+            }
+        }
+        @keyframes animUp {
+            0%{
+                height: 50px;
+            }
+            100%{
+                height: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button class="btn">Click Me</button>
+        <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt praesentium vitae obcaecati veritatis, ullam totam, expedita atque sunt autem sint aliquid illo placeat, nobis recusandae voluptate dolor dignissimos alias modi?</p>
+    </div>
+    <div class="container">
+        <button class="btn">Click Me</button>
+        <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, modi illum. Omnis laudantium ex, cum maiores magnam porro earum consequuntur mollitia iusto culpa facere! Atque aperiam libero quis architecto reiciendis!</p>
+    </div>
+    <div class="container">
+        <button class="btn">Click Me</button>
+        <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ab iure autem officia laborum qui placeat, ad neque saepe eaque, quis aut eum, officiis velit! Voluptatem aspernatur tempore velit itaque.</p>
+    </div>
+
+    <script>
+        let btns = document.querySelectorAll('.btn');
+        let paraContent = document.querySelectorAll('.para'); 
+
+        for(let i = 0; i <= btns.length; i++)
+        {
+            btns[i].addEventListener('click', res);
+        }
+        function res(){
+            let item = this.nextElementSibling.classList;
+
+            for(let j = 0; j < paraContent.length; j++)
+            {
+                if(paraContent[j].classList.contains('show'))
+                {
+                    paraContent[j].classList.remove('show');
+                    paraContent[j].classList.add('hide');
+                }
+                else if(paraContent[j].classList.contains('hide'))
+                {
+                    paraContent[j].classList.remove('hide');
+                }
+            }
+            if(!item.contains('show') && !item.contains('hide'))
+            {
+                item.add('show');
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

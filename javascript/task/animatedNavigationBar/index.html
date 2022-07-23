@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Navigation Bar</title>
+    <style>
+        nav ul {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        nav ul li {
+            float: left;
+            list-style: none;
+            width: 20%;
+            font-size: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+        }
+
+        nav ul ul li {
+            width: 100%;
+            position: relative;
+            top: 10px;
+            /* border: 1px solid black; */
+        }
+
+        .animClassIn:nth-child(odd){
+            position: relative;
+            left: -40px;
+            animation-name: animOdd;
+            animation-fill-mode: forwards;
+            animation-duration: 600ms;
+        }
+        .animClassIn:nth-child(even){
+            position: relative;
+            left: 40px;
+            animation-name: animEven;
+            animation-fill-mode: forwards;
+            animation-duration: 600ms;
+        }
+
+        /* .animClassIn{
+            position: relative;
+            left: -40px;
+            animation-name: animIn;
+            animation-fill-mode: forwards;
+            animation-duration: 700ms;
+        } */
+        @keyframes animIn {
+            0%{
+                left: -40px;
+                opacity: 0; 
+            }
+            100%{
+                left: 0px;
+                opacity: 1; 
+            }
+        }
+
+        .disNone {
+            display: none;
+        }
+
+        .disBlock {
+            display: block;
+        }
+
+        .container {
+            width: 700px;
+            margin: auto;
+        }
+
+        @keyframes animOdd {
+            0%{
+                left: -40px;
+                opacity: 0; 
+            }
+            100%{
+                left: 0px;
+                opacity: 1; 
+            }
+        }
+        @keyframes animEven {
+            0%{
+                left: 40px;
+                opacity: 0; 
+            }
+            100%{
+                left: 0px;
+                opacity: 1; 
+            }
+        }
+        @keyframes animOdd2 {
+            0%{
+                left: 0px;
+                opacity: 1; 
+            }
+            100%{
+                left: -40px;
+                opacity: 0; 
+            }
+        }
+        @keyframes animEven2 {
+            0%{
+                left: 0px;
+                opacity: 1; 
+            }
+            100%{
+                left: 40px;
+                opacity: 0; 
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li>
+                    <a href="#;" class="parentBtn">Home</a>
+                    <ul class="disNone">
+                        <li class="animClassIn"><a href="#;">Home1</a></li>
+                        <li class="animClassIn"><a href="#;">Home1</a></li>
+                        <li class="animClassIn"><a href="#;">Home1</a></li>
+                        <li class="animClassIn"><a href="#;">Home1</a></li>
+                    </ul>
+                </li>
+                <li><a href="#;" class="parentBtn"> About</a>
+                    <ul class="disNone">
+                        <li class="animClassIn"><a href="#;">About1</a></li>
+                        <li class="animClassIn"><a href="#;">About1</a></li>
+                        <li class="animClassIn"><a href="#;">About1</a></li>
+                        <li class="animClassIn"><a href="#;">About1</a></li>
+                    </ul>
+                </li>
+                <li><a href="#;" class="parentBtn"> Contact</a>
+                    <ul class="disNone">
+                        <li class="animClassIn"><a href="#;">Contact1</a></li>
+                        <li class="animClassIn"><a href="#;">Contact1</a></li>
+                        <li class="animClassIn"><a href="#;">Contact1</a></li>
+                        <li class="animClassIn"><a href="#;">Contact1</a></li>
+                    </ul>
+                </li>
+                <li><a href="#;" class="parentBtn">Feedback</a>
+                    <ul class="disNone">
+                        <li class="animClassIn"><a href="#;">Feedback1</a></li>
+                        <li class="animClassIn"><a href="#;">Feedback1</a></li>
+                        <li class="animClassIn"><a href="#;">Feedback1</a></li>
+                        <li class="animClassIn"><a href="#;">Feedback1</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <script>
+        let parentBtn = document.getElementsByClassName('parentBtn');
+        let displayNone = document.getElementsByClassName('disNone');
+
+        for (let i = 0; i <= parentBtn.length; i++) {
+            parentBtn[i].addEventListener('click', val);
+        }
+
+        function val() {
+            let item = this.nextElementSibling.className;
+
+            for (let j = 0; j < displayNone.length; j++) {
+                displayNone[j].className = "disNone";
+            }
+            if (item == 'disNone') {
+                this.nextElementSibling.classList.add('disBlock');
+            }
+            if(item == 'disBlock')
+            {
+                this.nextElementSibling.classList.add('animClassOut');
+            }
+        }
+    </script>
+</body>
+
+</html>

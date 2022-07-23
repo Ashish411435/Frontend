@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        .container {
+            width: 800px;
+            margin: auto;
+        }
+
+        .form-group {
+            width: 100%;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .form-group label {
+            font-size: 23px;
+        }
+
+        .form-group input {
+            font-size: 23px;
+            padding: 10px;
+        }
+
+        .form-group button {
+            font-size: 20px;
+            padding: 10px;
+            border-radius: 20px 20px;
+            outline: none;
+            border: 1px solid salmon;
+            text-align: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="thanks.html" onsubmit="return getForm()" name="myForm">
+            <div class="form-group">
+                <label for="myName">Username : </label>
+                <input type="text" name="fullname" id="myName">
+            </div>
+            <div class="form-group">
+                <label for="myPassword">Password : </label>
+                <input type="text" name="password" id="myPassword">
+            </div>
+            <div class="form-group" id="myGender">
+                <label for="mygender">Gender : </label>
+                <input type="radio" name="gender" id="gender_male" value="Male"> Male
+                <input type="radio" name="gender" id="gender_female" value="Female"> Female
+                <input type="radio" name="gender" id="gender_other" value="Other"> Other
+            </div>
+            <div class="form-group">
+                <label for="mydob">Date of Birth</label>
+                <input type="text" name="dob" id="mydob">
+            </div>
+            <div class="form-group">
+                <button type="submit" id="submitBtn">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="jqueryFile/jquery-3.6.0.min.js"></script>
+    <script>
+        $("#submitBtn").click(function getForm() {
+            if ($("#myName").val() == "") {
+                alert("Please Enter Your Name");
+                return false;
+            }
+            if ($("#myPassword").val() == "") {
+                alert("Enter Password");
+                return false;
+            }
+            if ($("#myPassword").val().length <= 10) {
+                alert("Password Is Too Short");
+                return false;
+            }
+
+            if (!($("input[name = 'gender']:checked").val())) {
+                alert("Please Select Gender");
+                return false;
+            }
+            if($("#mydob").val() == "")
+            {
+                alert("Please Enter Date Of Birth");
+                return false;
+            }
+
+        });
+    </script>
+</body>
+
+</html>

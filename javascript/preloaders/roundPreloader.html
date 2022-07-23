@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #05091f;
+        }
+
+        #mainDiv {
+
+            width: 500px;
+            height: 500px;
+            margin: auto;
+        }
+
+        #circ {
+            border: 5px solid transparent;
+            border-top: 5px solid rgb(121, 203, 250);
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            animation: rotate 4s linear infinite;
+            position: relative;
+            left: 30%;
+            top: 30%;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                border-right: 5px solid rgb(121, 203, 250);
+            }
+
+            50% {
+                border-bottom: 5px solid rgb(121, 203, 250);
+            }
+
+            100% {
+                transform: rotate(360deg);
+                border-left: 5px solid rgb(121, 203, 250);
+            }
+        }
+
+        h5{
+            /* font-size: 1.2rem; */
+            font-family: cursive;
+            color: white;
+            position: absolute;
+            top: 31.5%;
+            left: 45%;
+            transform: translate(-30%, -30%);
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div id="mainDiv">
+            <div id="circ">
+            </div>
+            <h5>Loading...</h5>
+        </div>
+    </section>
+</body>
+
+</html>

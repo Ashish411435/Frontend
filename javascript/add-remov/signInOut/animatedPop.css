@@ -1,0 +1,160 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    font-family: cursive;
+}
+.sameInBoth h1{
+    color: rgb(45, 31, 109);
+}
+.container1 {
+    width: 350px;
+    height: 350px;
+    margin: auto;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 5px;
+    background: rgb(6, 76, 101);
+    background: linear-gradient(90deg, rgba(6, 76, 101, 1) 1%, rgba(73, 195, 212, 1) 44%, rgba(8, 124, 154, 1) 69%, rgba(6, 98, 111, 1) 95%);
+
+    position: absolute;
+    top: -320px;
+    left: 500px;
+    transition: 0.5s;
+}
+
+
+.sameInBoth div {
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.sameInBoth label{
+    color: rgb(36, 19, 109);
+}
+
+.sameInBoth input {
+    margin-top: 7px;
+    font-size: 21px;
+    padding: 5px;
+    border: 1px solid rgb(6, 76, 101);
+    border-radius: 5px;
+}
+
+.sameInBoth button {
+    font-size: 21px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(6, 76, 101);
+    color: white;
+    padding: 5px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container2 {
+    width: 400px;
+    height: 500px;
+    margin: auto;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 5px;
+    background: rgb(6, 76, 101);
+    background: linear-gradient(90deg, rgba(6, 76, 101, 1) 1%, rgba(73, 195, 212, 1) 44%, rgba(8, 124, 154, 1) 69%, rgba(6, 98, 111, 1) 95%);
+
+    position: absolute;
+    top: -500px;
+    left: 500px;
+    transition: 0.5s;
+}
+.container2 label{
+    font-size: 17px;
+}
+.container2 input{
+    font-size: 18px;
+}
+
+.signbtn1{
+    font-size: 22px;
+    border: none;
+    border-radius: 5px;
+    background: rgb(6, 76, 101);
+    background: linear-gradient(90deg, rgba(6, 76, 101, 1) 1%, rgba(73, 195, 212, 1) 44%, rgba(8, 124, 154, 1) 69%, rgba(6, 98, 111, 1) 95%);
+    position: absolute;
+    top: 10px;
+    right: 120px;
+}
+.signbtn2{
+    font-size: 22px;
+    border: none;
+    border-radius: 5px;
+    background: rgb(6, 76, 101);
+    background: linear-gradient(90deg, rgba(6, 76, 101, 1) 1%, rgba(73, 195, 212, 1) 44%, rgba(8, 124, 154, 1) 69%, rgba(6, 98, 111, 1) 95%);
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.hide{
+    visibility: hidden;
+}
+.hide .container1{
+    animation-name: ani2;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+.hide .container2{
+    animation-name: ani2;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+.show{
+    visibility: visible;   
+    
+}
+.show .container1{
+    animation-name: ani;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+.show .container2{
+    animation-name: animUp;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+
+
+@keyframes ani {
+    0%{
+        top: -320px;
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        top: 100px;
+    }
+}
+
+@keyframes ani2 {
+    0%{
+        opacity: 1;
+        top: 100px;
+    }
+    100%{
+        opacity: 0;
+        top: -320px;
+    }
+}
+
+@keyframes animUp {
+    0%{
+        top: -500px;
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        top: 50px;
+    }
+}
+

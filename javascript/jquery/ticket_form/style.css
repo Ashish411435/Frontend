@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+input::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+body {
+    height: 100vh;
+    background-image: url(images/bg-img-3.webp);
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+#formContainer {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px 30px;
+    padding-top: 20px;
+    /* text-align: center; */
+    width: 550px;
+    margin: auto;
+    background-color: black;
+    background-image: url();
+    color: white;
+    position: absolute;
+    right: 0;
+    background-image: url(images/ticket_img-2.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.inpDiv {
+    /* border: 3px solid rgb(158, 135, 6); */
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.inpDiv label {
+    font-size: 25px;
+    color: rgb(158, 135, 6);
+}
+
+input {
+    border: 2px solid rgb(158, 135, 6);
+    border-radius: 20px;
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 18px;
+    background-color: rgb(192, 192, 192);
+}
+
+#btn {
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgb(158, 135, 6);
+    box-shadow: 3px 3px 3px rgb(163, 148, 59);
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#btn:hover {
+    background-color: black;
+}
+
+.resetBtn {
+    display: inline-block;
+    font-size: 20px;
+    padding: 11px 20px;
+    border-radius: 20px;
+    background-color: rgb(189, 168, 49);
+    box-shadow: 3px 3px 3px rgb(163, 148, 59);
+    margin-top: 20px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: white;
+    margin-left: 30px;
+    text-decoration: none;
+}
+
+.resetBtn:hover {
+    background-color: black;
+}
+
+
+/* Begin Ticket Show */
+#ticketShow {
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 500px;
+    margin: auto;
+    padding: 10px 10px 30px 10px;
+    text-align: center;
+    position: absolute;
+    top: 100px;
+    left: 30%;
+    background-image: url(images/ticket_img-2.jpg);
+    background-position: center center;
+    background-size: cover;
+    transform: scale(0);
+}
+
+#ticketHeading {
+    color: rgb(158, 135, 6);
+    margin-bottom: 20px;
+    text-decoration: 5px rgb(158, 135, 6) underline;
+}
+
+#ticketShow .sty {
+    border: 2px solid rgb(128, 109, 5);
+    border-radius: 20px;
+    margin: auto;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* color: white; */
+    color: rgb(185, 158, 4);
+    font-size: 25px;
+}
+
+.show {
+    animation: popTicket 500ms linear forwards !important;
+}
+
+@keyframes popTicket {
+    0% {
+        transform: scale(0);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+
+    80% {
+        transform: scale(0.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#ticketShow.show .mainContainer {
+    opacity: 0.5;
+}
+
+.hide{
+    animation: popInTicket 500ms linear forwards !important;
+}
+@keyframes popInTicket {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+/* End Ticket Show */

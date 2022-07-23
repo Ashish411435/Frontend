@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        .nav-bar ul li {
+            float: left;
+            list-style: none;
+            width: 130px;
+            height: 30px;
+            font-size: 18px;
+        }
+
+        .nav-bar ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+        }
+
+        .nav-bar ul li a:hover {
+            color: rgb(172, 171, 171);
+
+        }
+
+        .nav-bar ul ul li {
+            width: 100%;
+            position: relative;
+            top: 10px;
+            left: -40px;
+        }
+        .disNone{
+            display: none;
+        }
+        .disShow{
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav-bar">
+            <ul>
+                <li class="hover-color"><a href="#" class="btn">Home</a>
+                    <ul class="disNone">
+                        <li><a href="">Home1</a></li>
+                        <li><a href="">Home2</a></li>
+                        <li><a href="">Home3</a></li>
+                        <li><a href="">Home4</a></li>
+                    </ul>
+                </li>
+                <li class="hover-color"><a href="#" class="btn">Products</a>
+                    <ul class="disNone">
+                        <li class="hover-color"><a href="#;">Clothes</a></li>
+                        <li class="hover-color"><a href="#;">Shoes</a></li>
+                        <li class="hover-color"><a href="#;">Mobiles</a></li>
+                        <li class="hover-color"><a href="#;">Laptops</a></li>
+                    </ul>
+                </li>
+                <li class="hover-color"><a href="#;" class="btn">About</a>
+                    <ul class="disNone">
+                        <li><a href="">About1</a></li>
+                        <li><a href="">About2</a></li>
+                        <li><a href="">About3</a></li>
+                        <li><a href="">About4</a></li>
+                    </ul>
+                </li>
+                <li class="hover-color"><a href="#;" class="btn">Contact</a>
+                    <ul class="disNone">
+                        <li><a href="">Contact1</a></li>
+                        <li><a href="">Contact2</a></li>
+                        <li><a href="">Contact3</a></li>
+                        <li><a href="">Contact4</a></li>
+                    </ul>
+                </li>
+                <li class="hover-color"><a href="#;" class="btn">Help</a>
+                    <ul class="disNone">
+                        <li><a href="">Help1</a></li>
+                        <li><a href="">Help2</a></li>
+                        <li><a href="">Help3</a></li>
+                        <li><a href="">Help4</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        let btn = document.getElementsByClassName('btn');
+        let clname = document.getElementsByClassName('disNone');
+        
+        for(let i = 0; i <= btn.length; i++)
+        {
+            btn[i].addEventListener('click', val);
+        }
+        function val(){
+            let items = this.nextElementSibling.className;
+            for(let j = 0; j < clname.length; j++)
+            {
+                clname[j].className = 'disNone';
+            }
+
+            if(items == 'disNone')
+            {
+                this.nextElementSibling.classList.add('disShow');
+            }
+        }
+    </script>
+</body>
+
+</html>

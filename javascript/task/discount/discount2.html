@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount</title>
+    <style>
+        body {
+            background: rgb(71, 52, 52);
+            background: linear-gradient(90deg, rgba(71, 52, 52, 1) 12%, rgba(128, 17, 17, 1) 52%, rgba(81, 29, 35, 1) 74%, rgba(58, 30, 30, 1) 99%);
+        }
+
+        .container {
+            width: 500px;
+            margin: auto;
+            position: relative;
+            top: 100px;
+            color: white;
+            font-size: 20px;
+        }
+        button{
+            background-color: blue;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <label for="">Name : </label>
+            <br>
+            <input type="text" name="name" id="myname">
+        </div>
+        <br>
+        <div>
+            <label for="">Age 1 - 12 : </label>
+            <br>
+            <input type="number" onkeydown="totalPayable()" name="child" id="mychild">
+        </div>
+        <div id="childAlt"></div>
+        <br>
+        <div>
+            <label for="">Age 13-18 : </label>
+            <br>
+            <input type="number" onkeydown="totalPayable()" name="teen" id="myteen">
+        </div>
+        <div id="teenAlt"></div>
+
+        <br>
+        <div>
+            <label for="">Above 18 : </label>
+            <br>
+            <input type="number" onkeydown="totalPayable()" name="adult" id="myadult">
+        </div>
+        <div id="adultAlt"></div>
+        <br>
+        <div>
+            <label for="">Apply Discount Voucher : </label><br>
+            <input type="text" name="discount" id="mydiscount">
+        </div>
+        <br>
+        <div class="btn">
+            <!-- <input type="button" value="Get Total Payable Amount" onclick="totalPayable()" name="" id=""> -->
+            <button value="Get Total Payable Amount" onclick="totalPayable()">Get Total Payable Amount</button>
+        </div>
+    </div>
+
+    <script>
+        function totalPayable() {
+            var name = document.getElementById("myname").value;
+            var child = parseInt(document.getElementById("mychild").value);
+            var teen = parseInt(document.getElementById("myteen").value);
+            var adult = parseInt(document.getElementById("myadult").value);
+            var voucher = document.getElementById("mydiscount").value;
+
+            var Nalt = childAlt.innerHTML
+
+            // Logic
+            var totalAmount = (child * 50) + (teen * 100) + (adult * 150);
+
+            if (voucher == "discount10") {
+                var discount = (totalAmount * 10) / 100;
+                var finalAmount = totalAmount - discount;
+                document.write(name + " your total Payable amount is = " + finalAmount);
+            } else if (voucher == "discount20") {
+                var discount = (totalAmount * 20) / 100;
+                var finalAmount = totalAmount - discount;
+                document.write(name + " your total Payable amount is = " + finalAmount);
+            } else if (voucher == "") {
+                if (totalAmount > 1000) {
+                    var discount = (totalAmount * 10) / 100;
+                    var finalAmount = totalAmount - discount;
+                    document.write(name + " your total Payable amount is = " + finalAmount);
+                } else {
+                    document.write(name + " your total Payable amount is = " + totalAmount);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

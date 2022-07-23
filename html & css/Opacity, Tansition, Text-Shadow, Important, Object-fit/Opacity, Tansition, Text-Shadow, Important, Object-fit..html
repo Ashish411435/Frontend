@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Css elements</title>
+    <style>
+        body{
+            background-image: url(images/profile.jfif);
+        }
+        h2{
+            color: yellow;
+            font-size: 40px;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            opacity: 0.6;
+            color: white;
+            text-shadow: 5px 5px 5px red;  /* text-shadow: xpx ypx blur color */
+            box-shadow: 5px 5px 5px red;
+            font-size: 35px;
+            transition: 1s ease-in-out;
+        }
+        .box:hover{
+            width: 200px;
+            height: 200px;
+            background-color: black;
+         }
+
+         .object-fit{
+            width: 100px;
+            height: 100px;
+         }
+         img{
+             width: 100%;
+             height: 100%;
+             object-fit: cover;
+         }
+    </style>
+</head>
+<body>
+    <h2>
+        Opacity, Tansition, Text-Shadow, Important, Object-fit.
+    </h2>
+    <div class="box ">
+        Hello
+    </div>
+    <div class="object-fit">
+        <img src="images/nature pic.jfif" alt="">
+    </div>
+</body>
+</html>

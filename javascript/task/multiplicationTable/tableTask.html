@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 400px;
+            margin: auto;
+            position: relative;
+            top: 100px;
+        }
+        .type-btn{
+            margin:10px 0px 0px 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <label for="mynum">Enter Number : </label>
+            <input type="number" name="num" id="mynum" placeholder="Enter Number">
+        </div>
+        <br>
+        <div class="type-btn">
+            <input type="button" onclick="multiplication()" value="Get Answer" name="" id="">
+        </div>
+    </div>
+    <script>
+        function multiplication() {
+
+            var number = document.getElementById("mynum").value;
+
+            for (var i = 1; i <= 10; i++) {
+                var result = "<p>" + number + " * " +  i + " = " + number * i + "</p>";
+                document.write(result);
+            }
+        }
+    </script>
+</body>
+
+</html>

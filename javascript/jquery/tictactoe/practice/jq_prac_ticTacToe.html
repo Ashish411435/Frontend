@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe From Jquery</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            border: 1px solid black;
+            width: 400px;
+            margin: auto;
+        }
+        .btn{
+            width: 100px;
+            height: 100px;
+            float: left;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button class="btn" id="btn1" onclick="play(this)"></button>
+        <button class="btn" id="btn2" onclick="play(this)"></button>
+        <button class="btn" id="btn3" onclick="play(this)"></button>
+        <button class="btn" id="btn4" onclick="play(this)"></button>
+        <button class="btn" id="btn5" onclick="play(this)"></button>
+        <button class="btn" id="btn6" onclick="play(this)"></button>
+        <button class="btn" id="btn7" onclick="play(this)"></button>
+        <button class="btn" id="btn8" onclick="play(this)"></button>
+        <button class="btn" id="btn9" onclick="play(this)"></button>
+    </div>
+
+    <script src="jqueryFile/jquery-3.6.0.min.js"></script>
+    <script>
+        var bool = false;
+        $(".btn").click(function () {
+            if (bool == false) {
+                $(this).text("X");
+                bool = true;
+            } else {
+                $(this).text("O");
+                bool = false;
+            }
+            $(this).attr("disabled", "disabled");
+            result();
+        });  
+        
+    </script> 
+</body>
+
+</html>

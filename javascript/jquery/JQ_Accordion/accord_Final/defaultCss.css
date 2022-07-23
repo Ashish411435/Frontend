@@ -1,0 +1,357 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+p,h1,h2,h3,h4,h5,h6,ul,li,a{
+    padding: 0px;
+    margin: 0px;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.col-lg-1 {
+    width: calc(100% / 12 * 1);
+}
+
+.col-lg-2 {
+    width: calc(100% / 12 * 2);
+}
+
+.col-lg-3 {
+    width: calc(100% / 12 * 3);
+}
+
+.col-lg-4 {
+    width: calc(100% / 12 * 4);
+}
+
+.col-lg-5 {
+    width: calc(100% / 12 * 5);
+}
+
+.col-lg-6 {
+    width: calc(100% / 12 * 6);
+}
+
+.col-lg-7 {
+    width: calc(100% / 12 * 7);
+}
+
+.col-lg-8 {
+    width: calc(100% / 12 * 8);
+}
+
+.col-lg-9 {
+    width: calc(100% / 12 * 9);
+}
+
+.col-lg-10 {
+    width: calc(100% / 12 * 10);
+}
+
+.col-lg-11 {
+    width: calc(100% / 12 * 11);
+}
+
+.col-lg-12 {
+    width: calc(100% / 12 * 12);
+}
+
+.border1 {
+    border: 1px solid black;
+}
+
+.text-center{
+    text-align: center;
+}
+
+/* ---Begin Position Properties--- */
+/* End Position Properties */
+
+/* ---Begin Display Properties--- */
+.d-flex {
+    display: flex;
+}
+.d-none{
+    display: none;
+}
+.d-block{
+    display: block;
+}
+/* End Display Properties */
+
+/* ---Begin Colors--- */
+.colorWhite{
+    color: white;
+}
+.colorBlack{
+    color: black;
+}
+.colorNavy{
+    color: navy;
+}
+.colorRed{
+    color: red;
+}
+/* End Colors */
+
+/* ---Begin Background-Colors--- */
+.bgRed{
+    background-color: rgb(255, 35, 35);
+}
+.bgBlack{
+    background-color: #000;
+}
+/* End Background-Colors */
+
+/* Begin Padding */
+.pd10{
+    padding: 10px;
+}
+
+/* ---Padding Top--- */
+.pt5{
+    padding-top: 5px;
+}
+.pt15{
+    padding-top: 15px;
+}
+.pt20{
+    padding-top: 20px;
+}
+/* End Padding Top */
+
+/* ---Begin Padding Bottom--- */
+.pb10{
+    padding-bottom: 10px;
+}
+.pb15{
+    padding-bottom: 15px;
+}
+.pb20{
+    padding-bottom: 20px;
+}
+/* End Padding Bottom */
+
+/* ---Begin Padding Left--- */
+.pl20{
+    padding-left: 20px;
+}
+/* End Padding Left */
+
+/* ---Begin Padding right--- */
+.pr40{
+    padding-right: 40px;
+}
+/* ---End Padding right--- */
+/* End Padding */
+
+/* ---Begin Margin--- */
+.ml10{
+    margin-left: 10px;
+}
+.ml20{
+    margin-left: 20px;
+}
+.ml50{
+    margin-left: 50px;
+}
+.ml4rem{
+    margin-left: 4rem;
+}
+
+.mt35{
+    margin-top: 35px;
+}
+/* End Margin */
+
+
+/* Begin font Properties */
+.fwBold{
+    font-weight: bold;
+}
+.fs20{
+    font-size: 20px;
+}
+.fs22{
+    font-size: 22px;
+}
+/* End font Properties */
+
+/* Begin Justify Properties */
+.space-around{
+    justify-content: space-around;
+}
+.space-btw {
+    justify-content: space-between;
+}
+.space-even{
+    justify-content: space-evenly;
+}
+/* End Justify Properties */
+/* ---End Default Css--- */
+
+
+/* ---> Begin Customized Css <--- */
+
+/* Start Header */
+header {
+    background-color: white !important;
+    position: fixed;
+    z-index: 999999999;
+}
+
+.navBar {
+    border-bottom: 1px solid rgb(4, 4, 87);
+    position: relative;
+    justify-content: space-around!important;
+}
+
+.bookDemo {
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    margin-top: -30px;
+    position: relative;
+}
+
+.bookDemo::before {
+    content: ">";
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 25%;
+    right: 10px;
+}
+
+.nav-content li a:hover{
+    color: red;
+}
+
+/* Begin Navigation Bar */
+#nav-hamburger{
+    /* border: 1px solid black; */
+    font-size: 45px;
+    position: absolute;
+    top: 25px;
+    right: 60px;
+    color: red;
+}
+#nav-hamburger:hover{
+    color: brown;
+    transform: scale(1.1);
+}
+
+/* End Navigation Bar */
+
+/* ---End Header--- */
+
+/* --- Begin Accordion Section --- */
+.accordion {
+    padding-top: 100px;
+}
+#accordion-section{
+    background-image: url(images/bgImage.jpg);
+    background-size: cover;
+    background-repeat: no-repeat ;
+    z-index: -2!important;
+}
+.slides {
+    display: flex;
+}
+
+.slide {
+    /* border: 1px solid white; */
+    width: 6%;
+    height: 510px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    transition: 600ms all;
+    opacity: 1!important;
+    z-index: 99!important;
+}
+/* Start accrodion Strips */
+.accord-web:hover{
+    background-color: rgb(158, 23, 158)!important;
+}
+.accord-graphic:hover{
+    background-color: rgba(53, 44, 179, 0.95)!important;
+}
+.accord-learnCoding:hover{
+    background-color: rgb(248, 26, 67)!important;
+
+}
+.accord-visual:hover{
+    background-color: rgba(126, 27, 27, 0.95)!important;
+}
+.accord-videoEditing:hover{
+    background-color: rgba(63, 99, 28, 0.85)!important;
+}
+.accord-digital:hover{
+    background-color: rgba(18, 67, 114, 0.85)!important;
+}
+.accord-animation:hover{
+    background-color: rgba(206, 31, 8, 0.85)!important;
+}
+/* Start accrodion Strips */
+.accord-cross-icon{
+    display: none;
+}
+.accord-cross-icon:hover{
+    color: black;
+}
+
+.slide h2 {
+    /* border: 1px solid black; */
+    text-align: center;
+    transform: rotate(270deg);
+    transform-origin: 0 0;
+    position: absolute;
+    top: 60%;
+    left: 35%;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.para {
+    display: none;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex !important;
+    justify-content: space-evenly!important;
+}
+
+.show {
+    width: 64%;
+}
+
+.hide {
+    width: 6%;
+    overflow: hidden;
+}
+
+.slide.show .para {
+    display: block;
+    visibility: visible;
+}
+.slide.show .btn {
+    visibility: hidden;
+    display: none;
+}
+
+.slide.show .accord-cross-icon{
+    display: block;
+}
+.slide.show .accord-heading{
+    display: none;
+}
+
+/* End Accordion Section */

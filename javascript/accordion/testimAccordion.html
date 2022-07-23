@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* ---Begin Section testimonials--- */
+#testimonials {
+    /* border: 1px solid black; */
+    background-color: #f1faff;
+    font-family: 'Nunito', sans-serif;
+    padding: 90px 40px;
+    padding-bottom: 50px;
+
+    display: flex;
+}
+/* Begin Testimonials-Content-Left */
+.testimonials-content-left{
+    /* border: 1px solid black; */
+    padding-top: 80px;
+    padding-left: 50px;
+    padding-right: 20px;
+}
+.testimonials-content-left h1{
+    font-size: 35px;
+    margin-bottom: 40px;
+    color: #071e55;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: 1px;
+}
+.testimonials-content-left p{
+    color: grey;
+    font-size: 18px;
+}
+.trust-pilot{
+    /* border: 1px solid black; */
+    font-size: 18px;
+    padding: 5px
+}
+.feefo{
+    border-left: 1px solid grey;
+    font-size: 18px;
+    margin-left: 20px;
+    padding: 5px;
+    padding-left: 30px;
+}
+/* End Testimonials-content-left */
+
+/* Begin Testimonials-content-right */
+.testimonial-img{
+    width: 70px;
+    border-radius: 50%;
+}
+.testimonial-1, .testimonial-2, .testimonial-3{
+    /* border: 1px solid black; */
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 3px 3px 3px 3px  rgb(231, 231, 231);
+    border-left: 6px solid #27b36a;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.testim-para-content{
+    height: 0px;
+    overflow: hidden;
+    transition: 2s;
+}
+.testim-show{
+    height: 30px;
+}
+.testim-hide{
+    height: 0px;
+}
+
+/* End Testimonials-content-right */
+
+/* ---End Section testimonials--- */
+    </style>
+</head>
+<body>
+        <!-- Begin Testimonials Section -->
+        <div class="class-testimonials d-flex" id="testimonials">
+            <div class="testimonials-content-left col-lg-5">
+                <h1>What People Are Saying.</h1>
+                <p>Quis autem velis ets reprehender net etid quiste nets voluptate. Utise wisi enim minim veniam, quis etsad
+                    aspernatis netsum stationes nets.</p>
+                <div class="d-flex mt50">
+                    <span class="trust-pilot">
+                        <h3 class="mb10">TrustPilot</h3>
+                        <i class="fa fa-star colorYellow" aria-hidden="true"></i>
+                        <i class="fa fa-star colorYellow" aria-hidden="true"></i>
+                        <i class="fa fa-star colorYellow" aria-hidden="true"></i>
+                        <i class="fa fa-star colorYellow" aria-hidden="true"></i>
+                        <i class="fa fa-star colorYellow" aria-hidden="true"></i>
+                    </span>
+                    <span class="feefo ml10">
+                        <h3 class="mb10">Feefo</h3>
+                        <i class="fa fa-star colorYellow" aria-hidden="true"></i>
+                        <i class="fa fa-star colorYellow" aria-hidden="true"></i>
+                        <i class="fa fa-star colorYellow" aria-hidden="true"></i>
+                        <i class="fa fa-star colorYellow" aria-hidden="true"></i>
+                        <i class="fa fa-star colorYellow" aria-hidden="true"></i>
+                    </span>
+                </div>
+    
+            </div>
+            <div class="testimonials-content-right col-lg-6 ml60">
+                <div class="testimonial-1 pt20 pl30 pr20 pb20 mb20 testimAccordion">
+                    <p class="testim-para-content mb30 colorGrey fs20">Nemo enim ipsam voluptatem quia voluptas situm ets aspernatis netsum
+                        loris fugit, sed quia magni
+                        dolores eos quis ratione sequi etum nets vesciunt neque.</p>
+                    <span class="d-flex">
+                        <img src="images/testimonialsImg1.jpg" class="testimonial-img" alt="">
+                        <p class="ml30 mt20 fs20 fwbold">
+                            Alexandra Smith / <span class="colorLightGreen">Manager - SmartCoders</span>
+                        </p>
+                    </span>
+                </div>
+                <div class="testimonial-2  pt20 pl30 pr20 pb20 mb20 testimAccordion">
+                    <p class="testim-para-content mb30 colorGrey fs20">Nemo enim ipsam voluptatem quia voluptas situm ets aspernatis netsum
+                        loris fugit, sed quia magni
+                        dolores eos quis ratione sequi etum nets vesciunt neque.</p>
+                    <span class="d-flex">
+                        <img src="images/testimonialsImg1.jpg" class="testimonial-img" alt="">
+                        <p class="ml30 mt20 fs20 fwbold">
+                            John Doe / <span class="colorLightGreen">CEO - Epic Design</span>
+                        </p>
+                    </span>
+                </div>
+                <div class="testimonial-3 pt20 pl30 pr20 pb20 testimAccordion">
+                    <p class="testim-para-content mb30 colorGrey fs20">Nemo enim ipsam voluptatem quia voluptas situm ets aspernatis netsum
+                        loris fugit, sed quia magni
+                        dolores eos quis ratione sequi etum nets vesciunt neque.</p>
+                    <span class="d-flex">
+                        <img src="images/testimonialsImg1.jpg" class="testimonial-img" alt="">
+                        <p class="ml30 mt20 fs20 fwbold">
+                            Christina Pages / <span class="colorLightGreen">Designer - New Fashion</span>
+                        </p>
+                    </span>
+                </div>
+    
+            </div>
+        </div>
+        <!-- End Testimonials Section -->
+
+        <script>
+            let testimAccordion = document.querySelectorAll('.testimAccordion');
+            let paraContent = document.querySelectorAll('.testim-para-content');
+
+            for(let i = 0; i < testimAccordion.length; i++)
+            {
+                testimAccordion[i].addEventListener("click", func);
+            }
+            function func(){
+                let item = this.nextElementSibling.classList;
+
+                for(let j =0; j < paraContent.length; j++)
+                {
+                    if(paraContent[j].classList.contains('testim-show'))
+                    {
+                        paraContent[j].classList.remove('testim-show');
+                        paraContent[j].classList.add('testim-hide');
+                    }
+                    else if(paraContent[j].classList.contains('testim-hide'))
+                    {
+                        paraContent[j].classList.remove('testim-hide');
+                    }
+                }
+                if(!item.contains('testim-show') && !item.contains('testim-hide'))
+                {
+                    item.add('testim-show');
+                }
+            }
+        </script>
+</body>
+</html>

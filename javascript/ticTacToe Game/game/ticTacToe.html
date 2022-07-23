@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="ticTacToe.css">
+    <link rel="stylesheet" href="ticTacToeWinningLine.css">
+    <style>
+        body {
+            background-color: black;
+            background: rgb(29, 72, 90);
+            background: radial-gradient(circle, rgba(29, 72, 90, 1) 0%, rgba(25, 121, 115, 1) 34%, rgba(27, 76, 103, 1) 51%, rgba(23, 44, 94, 1) 78%, rgba(30, 45, 98, 1) 100%);
+        }
+
+        .section {
+            width: 570px;
+            height: 590px;
+            margin: auto;
+            border: 10px solid rgb(29, 72, 90);
+            border-top: none;
+            border-bottom: none;
+            border-left: 20px solid rgb(16, 51, 66);
+            border-right: 20px solid rgb(16, 51, 66);
+            border-radius: 10%;
+        }
+
+        .allBtn {
+            background-color: orangered;
+            background: rgb(90, 29, 29);
+            background: linear-gradient(90deg, rgba(90, 29, 29, 1) 0%, rgba(121, 25, 25, 1) 34%, rgba(103, 27, 27, 1) 51%, rgba(94, 23, 23, 1) 78%, rgba(98, 30, 30, 1) 100%);
+            width: 190px;
+            height: 190px;
+            border: 0px;
+            color: white;
+            /* float: left; */
+            border: 10px solid rgb(29, 72, 90);
+            font-size: 100px;
+            border-radius: 25px;
+        }
+
+        .showWinner {
+            width: 150px;
+            height: 120px;
+            color: white;
+            border-radius: 20px;
+            padding: 50px;
+            margin: auto;
+            background-color: green;
+            background: rgb(29, 72, 90);
+            background: radial-gradient(circle, rgba(29, 72, 90, 1) 0%, rgba(25, 121, 115, 1) 34%, rgba(27, 76, 103, 1) 51%, rgba(23, 44, 94, 1) 78%, rgba(30, 45, 98, 1) 100%);
+            position: absolute;
+            top: -300px;
+            left: 1000px;
+            visibility: hidden;
+
+        }
+
+        .showAnim {
+            visibility: visible;
+            animation-name: animWinnerBox;
+            animation-duration: 600ms;
+            animation-fill-mode: forwards;
+        }
+
+        .showWinner {
+            text-align: center;
+            font-size: 30px;
+            font-family: cursive;
+        }
+
+        @keyframes animWinnerBox {
+            0% {
+                top: -300px;
+                opacity: 0;
+            }
+
+            100% {
+                top: 150px;
+                opacity: 1;
+            }
+        }
+
+        .resetBtn button {
+            background: rgb(29, 72, 90);
+            color: white;
+            font-size: 15px;
+            width: 100px;
+            height: 40px;
+            border: 2px solid rgb(33, 81, 102);
+            border-radius: 10px;
+            position: absolute;
+            bottom: 50px;
+            right: 100px;
+            font-family: cursive;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section">
+        <button id="btn1" class="allBtn" onclick="gm(this)"></button>
+        <button id="btn2" class="allBtn" onclick="gm(this)"></button>
+        <button id="btn3" class="allBtn" onclick="gm(this)"></button>
+        <button id="btn4" class="allBtn" onclick="gm(this)"></button>
+        <button id="btn5" class="allBtn" onclick="gm(this)"></button>
+        <button id="btn6" class="allBtn" onclick="gm(this)"></button>
+        <button id="btn7" class="allBtn" onclick="gm(this)"></button>
+        <button id="btn8" class="allBtn" onclick="gm(this)"></button>
+        <button id="btn9" class="allBtn" onclick="gm(this)"></button>
+    </div>
+
+    <!-- --- Audio of Tic Tac Toe Start --- -->
+    <audio type="audio/mp3" src="audio/O-sound.wav" id="Osound"></audio>
+    <audio type="audio/mp3" src="audio/X-sound.wav" id="Xsound"></audio>
+    <audio type="audio/mp3" src="audio/winSound.wav" id="winSound"></audio>
+    <!-- --- Audio of Tic Tac Toe End ---  -->
+
+
+    <!-- --- Show Winning Text Start --- -->
+    <div class="showWinner" id="showWin"></div>
+    <!-- --- Show Winning Text End ---  -->
+
+    <!-- --- Show Match Tie Start --- -->
+    <div class="matchTie showWinner" id="showTie"></div>
+    <!-- --- Show Match Tie End ---  -->
+
+    <!-- /* ---Horizontal Winning Line Start --- */ -->
+    <div class="winLine" id="WinningLine"></div>
+    <div class="winLine2" id="WinningLine2"></div>
+    <div class="winLine3" id="WinningLine3"></div>
+    <!-- /* --- Horizontal Winning Line End --- */ -->
+
+    <!-- /* --- Vertical Winning Line Start --- */ -->
+    <div class="vertical1" id="verticalWin1"></div>
+    <div class="vertical2" id="verticalWin2"></div>
+    <div class="vertical3" id="verticalWin3"></div>
+    <!-- /* --- Vertical Winning Line End --- */ -->
+
+    <!-- /* --- Diagonal Winning Line Start --- */ -->
+    <div class="diagonal1" id="diagonalWin1"></div>
+    <div class="diagonal2" id="diagonalWin2"></div>
+    <!-- /* --- Diagonal Winning Line Start --- */ -->
+
+    <!-- /* --- Reset Button Start --- */ -->
+    <div class="resetBtn">
+        <a href=""><button type="reset">Reset</button></a>
+    </div>
+    <!-- /* --- Reset Button End --- */ -->
+
+
+    <script>
+        let allBtn = document.getElementsByClassName('allBtn');
+        let Osound = document.getElementById('Osound');
+        let Xsound = document.getElementById('Xsound');
+        let winSound = document.getElementById('winSound');
+
+        let bool = false;
+
+        function gm(ins) {
+            if (bool == false) {
+                ins.innerHTML = "X";
+                Xsound.play();
+                bool = true;
+            } else {
+                ins.innerHTML = "O";
+                Osound.play();
+                bool = false;
+            }
+            ins.setAttribute("disabled", "disabled");
+            result();
+            matchTie();
+        }
+
+        function result() {
+            /* --- Horizontal Start --- */
+            if (btn1.innerHTML == 'X' && btn2.innerHTML == 'X' && btn3.innerHTML == 'X') {
+                WinningLine.classList.add('showHorizontal');
+                showWin.classList.add('showAnim');
+                showWin.innerHTML = "Player 'X' Winner";
+                finished();
+            } else if (btn1.innerHTML == 'O' && btn2.innerHTML == 'O' && btn3.innerHTML == 'O') {
+                WinningLine.classList.add('showHorizontal');
+                showWin.classList.add('showAnim');
+                showWin.innerHTML = " Player 'O' Winner";
+                finished();
+            } else if (btn4.innerHTML == 'X' && btn5.innerHTML == 'X' && btn6.innerHTML == 'X') {
+                WinningLine2.classList.add('showHorizontal');
+                showWin.classList.add('showAnim');
+                showWin.innerHTML = "Player 'X' Winner";
+                finished();
+            } else if (btn4.innerHTML == 'O' && btn5.innerHTML == 'O' && btn6.innerHTML == 'O') {
+                WinningLine2.classList.add('showHorizontal');
+                showWin.classList.add('showAnim');
+                showWin.innerHTML = " Player 'O' Winner";
+                finished();
+            } else if (btn7.innerHTML == 'X' && btn8.innerHTML == 'X' && btn9.innerHTML == 'X') {
+                WinningLine3.classList.add('showHorizontal');
+                showWin.classList.add('showAnim');
+                showWin.innerHTML = "Player 'X' Winner"
+                finished();
+            } else if (btn7.innerHTML == 'O' && btn8.innerHTML == 'O' && btn9.innerHTML == 'O') {
+                WinningLine3.classList.add('showHorizontal');
+                showWin.classList.add('showAnim');
+                showWin.innerHTML = " Player 'O' Winner";
+                finished();
+            }
+            /* ---Horizontal End---*/
+
+
+            /* --- Vertical Start --- */
+            else if (btn1.innerHTML == 'X' && btn4.innerHTML == 'X' && btn7.innerHTML == 'X') {
+                verticalWin1.classList.add('showVertical')
+                showWin.classList.add('showAnim');
+                showWin.innerHTML = "Player 'X' Winner"
+                finished();
+            } else if (btn1.innerHTML == 'O' && btn4.innerHTML == 'O' && btn7.innerHTML == 'O') {
+                verticalWin1.classList.add('showVertical')
+                showWin.classList.add('showAnim');
+                showWin.innerHTML = " Player 'O' Winner";
+                finished();
+            } else if (btn2.innerHTML == 'X' && btn5.innerHTML == 'X' && btn8.innerHTML == 'X') {
+                verticalWin2.classList.add('showVertical');
+                showWin.classList.add('showAnim');
+                showWin.innerHTML = "Player 'X' Winner"
+                finished();
+            } else if (btn2.innerHTML == 'O' && btn5.innerHTML == 'O' && btn8.innerHTML == 'O') {
+                verticalWin2.classList.add('showVertical');
+                showWin.classList.add('showAnim');
+                showWin.innerHTML = " Player 'O' Winner";
+                finished();
+            } else if (btn3.innerHTML == 'X' && btn6.innerHTML == 'X' && btn9.innerHTML == 'X') {
+                verticalWin3.classList.add('showVertical')
+                showWin.classList.add('showAnim');
+                showWin.innerHTML = "Player 'X' Winner"
+                finished();
+            } else if (btn3.innerHTML == 'O' && btn6.innerHTML == 'O' && btn9.innerHTML == 'O') {
+                verticalWin3.classList.add('showVertical')
+                showWin.classList.add('showAnim');
+                showWin.innerHTML = " Player 'O' Winner";
+                finished();
+            }
+            /* --- Vertical End --- */
+
+
+            /* --- Diagonal Start --- */
+            else if (btn1.innerHTML == 'X' && btn5.innerHTML == 'X' && btn9.innerHTML == 'X') {
+                diagonalWin1.classList.add('showDiagonal1');
+                showWin.classList.add('showAnim');
+                showWin.innerHTML = "Player 'X' Winner"
+                finished();
+            } else if (btn1.innerHTML == 'O' && btn5.innerHTML == 'O' && btn9.innerHTML == 'O') {
+                diagonalWin1.classList.add('showDiagonal1');
+                showWin.classList.add('showAnim');
+                showWin.innerHTML = " Player 'O' Winner";
+                finished();
+            } else if (btn3.innerHTML == 'X' && btn5.innerHTML == 'X' && btn7.innerHTML == 'X') {
+                diagonalWin2.classList.add('showDiagonal2')
+                showWin.classList.add('showAnim');
+                showWin.innerHTML = "Player 'X' Winner"
+                finished();
+            } else if (btn3.innerHTML == 'O' && btn5.innerHTML == 'O' && btn7.innerHTML == 'O') {
+                diagonalWin2.classList.add('showDiagonal2')
+                showWin.classList.add('showAnim');
+                showWin.innerHTML = " Player 'O' Winner";
+                finished();
+            }
+            /* --- Diagonal End --- */
+        }
+
+        function finished() {
+            winSound.play();
+            for (let i = 0; i <= allBtn.length; i++) {
+                allBtn[i].setAttribute("disabled", "disabled");
+            }
+        }
+
+        function matchTie() {
+            // for(let j = 0; j == allBtn.length; j++)
+            // {
+            //     if(allBtn[j] != "")
+            //     {
+            //         alert("Match Tie");
+            //     }
+            // }
+
+
+            if (btn1.innerHTML !== "" && btn2.innerHTML !== "" && btn3.innerHTML !== "" && btn4.innerHTML !== "" && btn5
+                .innerHTML !== "" && btn6.innerHTML !== "" && btn7.innerHTML !== "" && btn8.innerHTML !== "" && btn9
+                .innerHTML !== "") {
+                // alert("Match Tie");
+                showTie.classList.add("showAnim");
+                showTie.innerHTML = "Match Tie";
+            }
+        }
+    </script>
+</body>
+
+</html>

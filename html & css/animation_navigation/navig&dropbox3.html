@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropbox 3</title>
+    <style>
+        * {
+            box-sizing: border-box;
+
+        }
+
+        nav ul {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        nav ul li {
+            float: left;
+            list-style: none;
+            background-color: orange;
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 25%;
+            text-align: center;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            /* background-color: red; */
+            border-radius: 20px;
+            display: block;
+            font-size: 25px;
+            font-weight: 900;
+            color: black;
+        }
+
+        nav ul li a:hover {
+            background-color: brown;
+        }
+
+        nav ul ul li {
+            width: 100%;
+            top: 15px;
+            border: 2px solid black;
+            position: relative;
+        }
+
+        nav ul ul {
+            display: none;
+        }
+
+        nav ul li:hover>ul {
+            display: block;
+        }
+
+        nav ul ul ul {
+            position: absolute;
+            left: 100%;
+            width: 100%;
+            top: 0px;
+        }
+
+        img {
+            width: 700px;
+        }
+
+        .goku {
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Product</a>
+                <ul>
+                    <li><a href="">1</a></li>
+                    <li><a href="">2</a>
+                        <ul>
+                            <li><a href="">a</a></li>
+                            <li><a href="">b</a></li>
+                            <li><a href="">c</a></li>
+                            <li><a href="">d</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">3</a></li>
+                    <li><a href="">4</a></li>
+                </ul>
+            </li>
+            <li><a href="">Help</a></li>
+            <li><a href="">About</a></li>
+        </ul>
+    </nav>
+    <hr>
+    
+    <div class="goku">
+        <img src="ultra-instinct.gif" alt="">
+    </div>
+</body>
+
+</html>

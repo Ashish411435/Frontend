@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side Menu</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="animatedPop.css">
+    <link rel="stylesheet" href="test.css">
+
+    <style>
+        :root {
+            --colorBlack: black;
+            --colorWhite: white;
+            --colorBlue: blue;
+            --colorGreen: green;
+            --colorRedVariation: rgb(121, 15, 15);
+        }
+
+        body {
+            font-family: cursive;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background: rgb(6, 76, 101);
+            background: linear-gradient(90deg, rgba(6, 76, 101, 1) 1%, rgba(76, 197, 132, 1) 44%, rgba(19, 169, 207, 1) 69%, rgba(6, 98, 111, 1) 95%);
+            /* background: rgb(121, 15, 15); */
+            /* background: linear-gradient(90deg, rgba(121, 15, 15, 1) 16%, rgba(49, 20, 20, 1) 53%, rgba(129, 32, 32, 1) 88%); */
+            background: var(--colorBlack);
+        }
+
+        .menu-bar {
+            /* position: absolute; */
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            font-size: 30px;
+            border-radius: 5px;
+            width: 50px;
+            height: 45px;
+            justify-content: center;
+            text-align: center;
+            /* background: rgb(121, 15, 15); */
+            /* background: linear-gradient(90deg, rgba(121, 15, 15, 1) 16%, rgba(49, 20, 20, 1) 53%, rgba(129, 32, 32, 1) 88%); */
+            font-size: 35px;
+        }
+
+        .menu-bar i {
+            margin-top: 5px;
+            color: var(--colorWhite);
+        }
+
+        .side-menu {
+            width: 200px;
+            height: 100vh;
+            border: 5px solid linear-gradient(90deg, rgba(6, 76, 101, 1) 1%, rgba(76, 197, 132, 1) 44%, rgba(19, 169, 207, 1) 69%, rgba(6, 98, 111, 1) 95%);
+            /* visibility: hidden; */
+            position: relative;
+            left: -205px;
+            background: rgb(121, 15, 15);
+            background: linear-gradient(90deg, rgba(121, 15, 15, 1) 16%, rgba(49, 20, 20, 1) 53%, rgba(129, 32, 32, 1) 88%);
+            position: fixed;
+        }
+
+        .side-menu ul {
+            position: absolute;
+            top: 150px;
+            left: 30px;
+        }
+
+        .side-menu ul li {
+            width: 100px;
+            list-style: none;
+            padding: 0px;
+            margin-left: 0;
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid linear-gradient(90deg, rgba(6, 76, 101, 1) 1%, rgba(76, 197, 132, 1) 44%, rgba(19, 169, 207, 1) 69%, rgba(6, 98, 111, 1) 95%);
+        }
+
+        .side-menu ul li a {
+            text-decoration: none;
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .side-menu ul li a:hover {
+            color: rgb(172, 86, 86);
+            padding: 3px 3px 3px 6px;
+        }
+
+        #sideMenu a img {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            border-radius: 20%;
+        }
+
+        #sideMenu a i {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            color: white;
+            font-size: 33px;
+        }
+
+        #sideMenu a i:hover {
+            color: rgb(172, 86, 86);
+            /* padding: 3px 3px 0px 0px; */
+            padding: 3px 3px 4px 4px;
+        }
+
+        .para {
+            /* border: 1px solid red; */
+            width: 900px;
+            color: var(--colorWhite);
+            position: absolute;
+            top: 170px;
+            left: 210px;
+            display: flex;
+        }
+
+        .para h3 {
+            font-size: 62px;
+        }
+
+        .para p {
+            font-size: 25px;
+            color: rgb(184, 45, 45);
+        }
+
+        .changeLightTheme {
+            position: absolute;
+            bottom: 15px;
+            left: 10px;
+            border: 5px;
+        }
+
+        .changeLightTheme button {
+            background-color: black;
+            color: white;
+            border-radius: 8px;
+            font-size: 10px;
+        }
+
+        .changeDarkTheme {
+            position: absolute;
+            bottom: 15px;
+            right: 10px;
+            border: 5px;
+        }
+
+        .changeDarkTheme button {
+            background-color: black;
+            color: white;
+            border-radius: 8px;
+            font-size: 10px;
+        }
+
+        .extCss {
+            visibility: visible;
+            animation-name: animIn;
+            animation-duration: 200ms;
+            animation-fill-mode: forwards;
+        }
+
+        .extCss2 {
+            visibility: visible;
+            animation-name: animOut;
+            animation-duration: 200ms;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes animIn {
+            0% {
+                left: -205px;
+                opacity: 0;
+            }
+
+            100% {
+                left: 0px;
+                opacity: 1;
+            }
+
+        }
+
+        @keyframes animOut {
+            0% {
+                left: 0;
+                opacity: 1;
+            }
+
+            100% {
+                left: -205px;
+                opacity: 0;
+            }
+
+        }
+
+        .profilePic {
+            /* border: 3px solid green; */
+            width: 500px;
+            height: 300px;
+            position: absolute;
+            right: 0px;
+        }
+
+        .para2 {
+            width: 900px;
+            color: var(--colorWhite);
+            position: absolute;
+            /* border: 3px solid ; */
+            top: 450px;
+            left: 210px;
+        }
+
+        .profilePic img {
+            width: 350px;
+            height: 350px;
+            margin-left: 100px;
+            margin-bottom: 30px;
+            border-radius: 50%;
+        }
+
+        #insideBar i {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav-bar">
+            <ul>
+                <div class="menu-bar">
+                    <a href="#;" id="menu-bar" onclick="call()">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <li class="hover-color"><a href="#" class="btn">Home</a>
+                    <ul class="disNone">
+                        <li><a href="">Home1</a></li>
+                        <li><a href="">Home2</a></li>
+                        <li><a href="">Home3</a></li>
+                        <li><a href="">Home4</a></li>
+                    </ul>
+                </li>
+                <li class="hover-color"><a href="#" class="btn">Products</a>
+                    <ul class="disNone">
+                        <li class="hover-color"><a href="#;">Clothes</a></li>
+                        <li class="hover-color"><a href="#;">Shoes</a></li>
+                        <li class="hover-color"><a href="#;">Mobiles</a></li>
+                        <li class="hover-color"><a href="#;">Laptops</a></li>
+                    </ul>
+                </li>
+                <li class="hover-color"><a href="#;" class="btn">About</a>
+                    <ul class="disNone">
+                        <li><a href="">About1</a></li>
+                        <li><a href="">About2</a></li>
+                        <li><a href="">About3</a></li>
+                        <li><a href="">About4</a></li>
+                    </ul>
+                </li>
+                <li class="hover-color"><a href="#;" class="btn">Contact</a>
+                    <ul class="disNone">
+                        <li><a href="">Contact1</a></li>
+                        <li><a href="">Contact2</a></li>
+                        <li><a href="">Contact3</a></li>
+                        <li><a href="">Contact4</a></li>
+                    </ul>
+                </li>
+                <li class="hover-color"><a href="#;" class="btn">Help</a>
+                    <ul class="disNone">
+                        <li><a href="">Help1</a></li>
+                        <li><a href="">Help2</a></li>
+                        <li><a href="">Help3</a></li>
+                        <li><a href="">Help4</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="side-menu" id="sideMenu">
+        <a href="#;"><img src="images/A-logo.png" width="60px" height="60px" alt="" srcset=""></a>
+        <a href="#;" id="insideBar" onclick="call()">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </a>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Work</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Feedback</a></li>
+        </ul>
+        <a href="#;" class="changeLightTheme" onclick="themeResult('lightTheme')"><button>Light Theme</button></a>
+        <a href="#;" class="changeDarkTheme" onclick="themeResult('darkTheme')"><button>Dark Theme</button></a>
+    </div>
+
+    <div class="para">
+        <div>
+            <h3>Ashish Kamal</h3>
+            <p>Full Stack Web Developer</p>
+        </div>
+        <div class="profilePic">
+            <img src="images/kakashi-hatake.jpg" alt="">
+        </div>
+    </div>
+    <hr>
+    <hr>
+
+    <div class="para2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, in labore deserunt eveniet beatae corrupti
+            ipsam numquam ab voluptatibus minus quasi asperiores. Molestiae alias dolorum quasi ex, doloremque velit
+            quos. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe exercitationem id, aliquid a numquam
+            esse! Praesentium laborum minus modi iusto veniam maxime rem voluptatem error omnis! Sequi ut necessitatibus
+            accusamus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium deserunt impedit dolorem hic
+            ratione vel expedita odit doloribus reiciendis dolores ipsa repudiandae odio voluptatum veniam a aperiam
+            quisquam, commodi earum delectus cum magnam et! Possimus libero voluptatibus laboriosam ea harum velit! Et
+            blanditiis sapiente, quasi, vitae iure quo dolore ex sint provident doloremque aperiam nihil iusto voluptate
+            in. Quaerat laborum, fugit culpa voluptatibus voluptatem neque blanditiis architecto quae error labore nulla
+            ipsam! Odio corporis provident error. Enim eum totam autem eligendi dolore, voluptatibus voluptatum minima
+            excepturi molestiae, corporis voluptas recusandae nulla iste numquam exercitationem praesentium eius. Cum
+            molestiae doloremque eaque placeat accusamus velit! Alias quos ipsam aspernatur doloribus corrupti fugiat,
+            soluta consequatur? Laboriosam ut repellat distinctio doloribus iusto nemo ex esse veniam recusandae
+            eligendi animi ipsa, deleniti, consequuntur adipisci aut doloremque. Fugiat incidunt quidem enim odit,
+            aliquid expedita id a tempora, labore neque ea excepturi? Provident quasi libero aliquam architecto
+            corrupti, ipsum atque dolores aspernatur quisquam veritatis, corporis tempora doloribus magni accusamus!
+            Optio laboriosam corrupti nemo! Quaerat, deserunt odit similique veritatis necessitatibus iusto illum odio,
+            officiis, sint earum dolorem esse provident corrupti maxime quis! Eum provident iure sequi laborum
+            molestiae. Voluptatem voluptas asperiores libero accusamus quasi reprehenderit id quod ipsa cupiditate quis
+            quae vitae distinctio eos tenetur quaerat, veritatis rem consequatur ipsam? Atque officia consequuntur
+            tenetur dicta laboriosam itaque commodi voluptatem earum nihil magnam, totam pariatur? Beatae, molestias
+            perspiciatis ratione eveniet omnis nisi quisquam sit. Animi ex atque tempore nostrum, quis minus officia
+            culpa recusandae cupiditate unde fugit reprehenderit voluptatibus enim dolores itaque at quidem similique ab
+            maxime ut expedita magnam fuga. Ad quasi nihil dolore explicabo, ullam nemo non culpa cum quisquam quia
+            illum quod modi obcaecati soluta iusto et sapiente nisi ratione aut neque? Magni nemo quae, modi tenetur
+            architecto eligendi, voluptates aspernatur nihil incidunt aliquam possimus mollitia placeat, iure dolorem
+            nulla. Vitae architecto excepturi expedita mollitia eveniet fugiat velit corporis nobis possimus voluptate.
+            Magni repellendus nemo voluptate deleniti, cumque fugit delectus ipsa voluptatibus distinctio reiciendis
+            soluta mollitia, deserunt suscipit maiores iste! Praesentium, nobis numquam! Asperiores illum earum
+            repudiandae delectus eaque repellat dolorum! Nostrum ab doloremque veniam cum, est praesentium rem
+            blanditiis dolor.</p>
+    </div>
+
+    <script>
+        i = 0;
+
+        function call() {
+            if (i == 0) {
+                sideMenu.classList.add('extCss');
+                sideMenu.classList.remove('extCss2');
+                i = 1;
+            } else {
+                sideMenu.classList.add('extCss2');
+                sideMenu.classList.remove('extCss');
+                i = 0;
+            }
+        }
+
+
+        let myRoot = document.querySelector(':root');
+
+        function themeResult(val) {
+            if (val == 'lightTheme') {
+                myRoot.style.setProperty('--colorBlack', 'white');
+                myRoot.style.setProperty('--colorWhite', 'black');
+            }
+            if (val == 'darkTheme') {
+                myRoot.style.setProperty('--colorBlack', 'black');
+                myRoot.style.setProperty('--colorWhite', 'white');
+            }
+        }
+    </script>
+    <script src="test.js"></script>
+</body>
+
+</html>

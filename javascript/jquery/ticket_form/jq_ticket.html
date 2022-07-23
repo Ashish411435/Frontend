@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <style>
+        
+    </style>
+    </head>
+
+    <body>
+        <header>
+
+        </header>
+        <div style="display: flex;">
+            <div>
+                <!-- <img src="images/left-bg-img.jfif" style="border-radius: 30px;" width="350" alt=""> -->
+            </div>
+            <div id="formContainer" class="mainContainer">
+                <form action="#;" onsubmit="return bookTicket()">
+                    <div style="text-align: center;">
+                        <h1
+                            style="margin-bottom: 10px; color: rgb(158, 135, 6); font-weight: bold; font-size: 40px; border: 2px solid rgb(158, 135, 6); border-radius: 20px; text-align: center; display: inline-block; padding: 10px 20px;">
+                            Book Tickets</h1>
+                    </div>
+
+                    <div onkeydown="getTicket()" id="universalAlert"
+                        style="font-size: 18px; margin-bottom: 5px; color: red;"></div>
+                    <div class="inpDiv">
+                        <label for="myName">Enter Your Name : </label>
+                        <div>
+                            <input type="text" name="name" id="myName">
+                        </div>
+                    </div>
+                    <div class="inpDiv">
+                        <label for="myChild">No. Of Child : </label>
+                        <div>
+                            <input type="number" name="child" id="myChild" onkeydown="bookTicket()">
+                        </div>
+                        <div id="childAlert"></div>
+                    </div>
+                    <div class="inpDiv">
+                        <label for="myAdult">No. Of Adults : </label>
+                        <div>
+                            <input type="number" name="adult" id="myAdult" onkeydown="bookTicket()">
+                        </div>
+                        <div id="adultAlert"></div>
+                    </div>
+                    <div class="inpDiv">
+                        <label for="myDiscount">Apply Discount Coupon Here : </label>
+                        <div>
+                            <input type="text" name="discount" id="myDiscount" onkeydown="bookTicket()">
+                        </div>
+                        <div id="discountAlert"></div>
+                    </div>
+                    <div id="totalAmountAlert"></div>
+                    <div style="text-align: center;">
+                        <div id="btn">Get Ticket</div>
+                        <a href="" class="resetBtn">Reset</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Ticket Show -->
+        <div id="ticketShow">
+            <h1 id="ticketHeading">Book My Show</h1>
+
+            <div class="sty" style="display: flex; justify-content: space-around;">
+                <div id="onTicket_name" style="font-size: 25px; font-weight: bold;"></div>
+            </div>
+            <div class="sty" style="display: flex; justify-content: space-around;">
+                <div id="onTicket_noOfPerson" style="font-size: 25px; font-weight: bold; padding-top: 5px;"></div>
+            </div>
+            <div class="sty" style="display: flex; justify-content: space-around;">
+                <!-- <div>
+                <h3>Total Payable Amount : </h3>
+            </div> -->
+                <div id="onTicket_totalAmount" style="font-size: 25px; font-weight: bold; padding-top: 5px;"></div>
+            </div>
+
+            <div id="ticketHideBtn"><button style="padding: 10px; border-radius: 15px; border: none; outline: none; font-size: 20px; color: white; background-color: goldenrod;">Book Tickets</button></div>
+        </div>
+        <!-- End Ticket Show -->
+
+        <script src="jqueryFile/jquery-3.6.0.min.js"></script>
+        <script>
+            function bookTicket() {
+
+                /* Begin For child */
+                var no_of_child = $("#myChild").val();
+                if (no_of_child == "") {
+                    no_of_child = 0;
+                }
+                var childAmt = no_of_child * 100;
+                $("#childAlert").text(childAmt + " /- ");
+                /* End For child */
+
+                /* Begin For Adult */
+                var no_of_adult = $("#myAdult").val();
+                if (no_of_adult == "") {
+                    no_of_adult = 0;
+                }
+                var adultAmt = no_of_adult * 200;
+                $("#adultAlert").text(adultAmt + " /- ");
+                /* End For Adult */
+
+                var totalAmt = childAmt + adultAmt;
+
+                /* Begin Discount Section */
+                var discount = $("#myDiscount").val();
+                if (totalAmt >= 1000) {
+                    if (discount == 'discount10') {
+                        var discount10 = totalAmt * (10 / 100);
+                        var amt_after_discount = totalAmt - discount10;
+                        var totalPayable = amt_after_discount;
+
+                        $("#totalAmountAlert").val("Total Payable Amount : " + totalPayable);
+                        $("#discountAlert").text(" 10% Discount Applied ! ");
+                    } else if (discount == 'discount20') {
+                        var discount20 = totalAmt * (20 / 100);
+                        var amt_after_discount = totalAmt - discount20;
+                        var totalPayable = amt_after_discount;
+
+                        $("#totalAmountAlert").text("Total Payable Amount : " + totalPayable);
+
+                        $("#discountAlert").val(" 20% Discount Applied ! ");
+                    } else {
+                        var totalPayable = "Total Payable Amount : " + totalAmt;
+                         $("#totalAmountAlert").text("Total Payable Amount : " + totalAmt);
+                    }
+                } else {
+                    var totalPayable = "Total Payable Amount : " + totalAmt;
+                    $("#totalAmountAlert").text("Total Payable Amount : " + totalAmt) ;
+                }
+                /* End Discount Section */
+
+                /* On-ticket Info */
+                let onTicket_name = $("#myName").val();
+                let onTicket_total_persons = parseInt(no_of_child) + parseInt(no_of_adult);
+
+                $("#onTicket_name").text("Name : " + onTicket_name ); 
+
+                $("#onTicket_noOfPerson").text("Number of Person : " + onTicket_total_persons);
+
+                $("#onTicket_totalAmount").text(totalPayable);
+                /* End On-ticket Info */
+
+            }
+
+            // Show ticket
+            $("#btn").click(function () {
+
+                if ($("#myName").val() == "") {
+                    $("#universalAlert").text(" * Please Enter Your Name ");
+                    return false;
+                } else {
+                    $("#universalAlert").text("");
+                }
+                if ($("#myChild").val() == "" && $("#myAdult").val() == "") {
+                    $("#universalAlert").text(" * Please Enter Number of Person ");
+                    return false;
+                } else {
+                    $("#universalAlert").text("");
+                }
+                finallyGetTicket();
+            })
+
+            function finallyGetTicket() {
+                $("#ticketShow").addClass("show");
+            }
+
+            $("#ticketHideBtn").click(function(){
+                $("#ticketShow").removeClass("show");
+                $("#ticketShow").addClass("hide");
+            })
+        </script>
+    </body>
+
+</html>

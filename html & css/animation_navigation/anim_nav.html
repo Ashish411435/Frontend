@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: rgb(185, 184, 184);
+
+        }
+
+        /* Navigation */
+
+        nav ul {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        nav ul li {
+            float: left;
+            list-style: none;
+            width: 20%;
+            text-align: center;
+            border-left: 1px solid white;
+
+        }
+
+        nav ul li a {
+            background-color: grey;
+            border-radius: 5px;
+            display: block;
+            color: white;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            text-decoration: none;
+        }
+
+        /* Animation */
+        img {
+            width: 200px;
+        }
+
+        .car {
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            animation-name: car2;
+            animation-duration: 15s;
+            animation-delay: 1s;
+            animation-fill-mode: backwards;
+            animation-iteration-count: 2;
+
+        }
+
+        @keyframes car2 {
+            from {
+                left: 0px;
+
+            }
+
+            to {
+                left: 1100px;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Product</a></li>
+                <li><a href="">Enquiry</a></li>
+                <li><a href="">About</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+    <div class="car">
+        <img src="car.jpg" alt="">
+    </div>
+    
+</body>
+
+</html>

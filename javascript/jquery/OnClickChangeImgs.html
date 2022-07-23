@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: rgb(41, 41, 41);
+        }
+        #btnDiv{
+            text-align: center;
+            position: absolute;
+            top: 80%;
+            left: 50%;
+        }
+        #btn{
+            color: white;
+            background-color: black;
+            font-size: 25px;
+            padding: 10px;
+            border-radius: 20px;
+            outline: none;
+            border: 1px solid white;
+            box-shadow: 3px 3px white;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="images/img1.jpg" id="myimg" style="border: 1px solid white; border-radius: 10px;" width="300px" alt="">
+    </div>
+    <div id="btnDiv">
+        <button id="btn">Next</button>
+    </div>
+    
+    <script src="jqueryFile/jquery-3.6.0.min.js"></script>
+    <script>
+        var items = ["images/img2.jpg","images/img4.jpg","images/img5.jpg","images/img6.jpg","images/img7.jpg","images/img8.jpg"]
+        var arrlength = items.length;
+        var i = 0;
+
+        $("#btn").click(function(){
+            if(i < arrlength){
+                myimg.src = items[i];
+                i++;
+            }else{
+                myimg.src = items[1];
+                i=0;
+            }
+        });
+    </script>
+</body>
+</html>

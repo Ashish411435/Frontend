@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        nav{
+            width: 1200px;
+            margin: auto;
+        }
+        nav ul{
+            padding: 0px;
+            margin: 0px;
+        }
+        nav ul li{
+            float: left;
+            list-style: none;
+            text-align: center;
+            width: calc(100%/3);
+            border-left: 1px solid white;
+        }
+        nav ul li a{
+            display: block;
+            color: white;
+            padding: 20px;
+            background-color: tomato;
+        }
+        .dn{
+            display: none;
+        }
+        .db{
+            display: block;
+        }
+        nav ul ul li{
+            width: 100%;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#;" class="btn">Home</a>
+                <ul class="dn">
+                    <li><a href="">Dropdown</a></li>
+                </ul>
+            </li>
+            <li><a href="#;" class="btn">Home</a>
+                <ul class="dn">
+                    <li><a href="">Dropdown</a></li>
+                </ul>
+            </li>
+            <li><a href="#;" class="btn">Home</a>
+                <ul class="dn">
+                    <li><a href="">Dropdown</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <script>
+        var bt = document.getElementsByClassName('btn');
+        var disnone = document.getElementsByClassName('dn');
+
+        for(let i = 0; i<= bt.length; i++){
+            bt[i].addEventListener("click",tog)
+        }
+
+        function tog(){
+            let myitem = this.nextElementSibling.className;
+
+            for(let y = 0; y < disnone.length; y++){
+                disnone[y].className = 'dn';
+
+            if(myitem == 'dn'){
+                this.nextElementSibling.classList.add("db") ;
+            }
+
+            }            
+        }
+    </script>
+</body>
+</html>

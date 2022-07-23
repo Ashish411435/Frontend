@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Accordion2</title>
+
+    <style>
+        .para{
+            height: 0px;
+            overflow: hidden;
+            transition: all 1s ease-in-out;
+        }
+        .show{
+            height: 70px;
+        }
+        .hide{
+            height: 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="container">
+            <button class="btn">Click Me</button>
+            <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, fugit provident atque quisquam non veniam voluptatem at iure nam nisi quod repudiandae quia est rerum hic temporibus voluptatibus laudantium quo.</p>
+        </div>
+        <div class="container">
+            <button class="btn">Click Me</button>
+            <p class="para">Natus, in pariatur. Eos rem, illo officia aliquam eius repellat, quae in libero a accusamus deleniti distinctio perferendis. Amet temporibus velit quasi minima, itaque libero illum praesentium reiciendis assumenda id.</p>
+        </div>
+        <div class="container">
+            <button class="btn">Click Me</button>
+            <p class="para">Harum laborum aliquam aliquid quos, eius blanditiis ipsa repudiandae sapiente incidunt quia. Ullam, iste recusandae commodi pariatur, veniam quas eaque mollitia eos animi quam sapiente impedit officiis a explicabo maxime.</p>
+        </div>
+        <div class="container">
+            <button class="btn">Click Me</button>
+            <p class="para">Provident necessitatibus amet ea tempore modi ad natus qui libero veritatis similique facilis nulla, laborum, dignissimos, debitis esse enim quas? Vero molestias facilis velit corporis culpa pariatur quod esse ipsa.</p>
+        </div>
+    </div>
+
+    <script>
+        let btns = document.querySelectorAll('.btn');
+        let paraContent = document.querySelectorAll('.para'); 
+
+        for(let i = 0; i <= btns.length; i++)
+        {
+            btns[i].addEventListener('click', res);
+        }
+        function res(){
+            let item = this.nextElementSibling.classList;
+
+            for(let j = 0; j < paraContent.length; j++)
+            {
+                if(paraContent[j].classList.contains('show'))
+                {
+                    paraContent[j].classList.remove('show');
+                    paraContent[j].classList.add('hide');
+                }
+                else if(paraContent[j].classList.contains('hide'))
+                {
+                    paraContent[j].classList.remove('hide');
+                }
+            }
+            if(!item.contains('show') && !item.contains('hide'))
+            {
+                item.add('show');
+            }
+        }
+    </script>
+</body>
+</html>

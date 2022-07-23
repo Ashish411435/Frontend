@@ -1,0 +1,12 @@
+body {
+    background-color: rgb(250, 204, 196);
+}
+
+.img2{
+    border: 1px solid black;
+    
+}
+.img3{
+    border: 1px solid black;
+    float: right;
+}

@@ -1,0 +1,203 @@
+/* --- Horizontal Start --- */
+.winLine {
+    border: 3px solid white;
+    border-radius: 10px;
+    background-color: white;
+    width: 491px;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 102px;
+    left: 400px;
+    visibility: hidden;
+}
+
+.winLine2 {
+    border: 3px solid white;
+    border-radius: 10px;
+    background-color: white;
+    width: 491px;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 293px;
+    left: 400px;
+    visibility: hidden;
+}
+
+.winLine3 {
+    border: 3px solid white;
+    border-radius: 10px;
+    background-color: white;
+    width: 491px;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 482px;
+    left: 400px;
+    visibility: hidden;
+}
+
+.showHorizontal {
+    visibility: visible;
+    animation-name: horizontalLine;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes horizontalLine {
+    0% {
+        /* top: -30px; */
+        /* left: 355px; */
+        width: 10px;
+        opacity: 0;
+    }
+
+    100% {
+        /* top: 100px; */
+        /* left: 385px; */
+        width: 470px;
+        opacity: 1;
+    }
+}
+
+/* --- Horizontal End --- */
+
+
+
+/* --- Vertical Start --- */
+.vertical1 {
+    border: 3px solid white;
+    border-radius: 10px;
+    background-color: white;
+    width: 491px;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 60px;
+    left: 440px;
+    visibility: hidden;
+}
+
+.vertical2 {
+    border: 3px solid white;
+    border-radius: 10px;
+    background-color: white;
+    width: 491px;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 60px;
+    left: 632px;
+    visibility: hidden;
+}
+
+.vertical3 {
+    border: 3px solid white;
+    border-radius: 10px;
+    background-color: white;
+    width: 491px;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 60px;
+    left: 822px;
+    visibility: hidden;
+}
+
+.showVertical {
+    visibility: visible;
+    animation-name: verticalLine;
+    animation-duration: 600ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes verticalLine {
+    0% {
+        height: 10px;
+        opacity: 0;
+    }
+
+    100% {
+        height: 476px;
+        opacity: 1;
+    }
+}
+
+/* ---Vertical End --- */
+
+/* --- Diagonal End --- */
+
+.diagonal1 {
+    border: 3px solid white;
+    border-radius: 10px;
+    background-color: white;
+    width: 10px;
+    /* width: 700px; */
+    height: 10px;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 60px;
+    left: 400px;
+    /* top: 295px;
+    left: 288px; */
+    visibility: hidden;
+}
+
+.showDiagonal1 {
+    visibility: visible;
+    animation-name: diagonalLine1;
+    animation-fill-mode: forwards;
+    animation-duration: 600ms;
+}
+
+@keyframes diagonalLine1 {
+    0% {
+        top: 60px;
+        left: 400px;
+        width: 10px;
+    }
+
+    100% {
+        top: 295px;
+        left: 288px;
+        width: 700px;
+    }
+}
+
+.diagonal2 {
+    border: 3px solid white;
+    border-radius: 10px;
+    background-color: white;
+    width: 10px;
+    /* width: 700px; */
+    height: 10px;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 60px;
+    left: 871px;
+    /* top: 295px; */
+    /* left: 288px; */
+    visibility: hidden;
+}
+
+.showDiagonal2 {
+    visibility: visible;
+    animation-name: diagonalLine2;
+    animation-fill-mode: forwards;
+    animation-duration: 600ms;
+}
+
+@keyframes diagonalLine2 {
+    0% {
+        top: 60px;
+        left: 871px;
+        width: 10px;
+    }
+
+    100% {
+        top: 295px;
+        left: 288px;
+        width: 700px;
+    }
+}

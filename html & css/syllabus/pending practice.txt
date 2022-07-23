@@ -1,0 +1,5 @@
+Pending practice
+
+1. css display-flex
+2. css max-width & height, min-width & height,
+3. css  pseudo classes

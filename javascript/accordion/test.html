@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            border: 3px solid green;
+        }
+        .container {
+            border: 1px solid black;
+            padding: 0px;
+        }
+
+        .secOverlay {
+            margin: 0px;
+            border: 1px solid red;
+            height: 100%;
+        }
+        .paraContent{
+            border: 3px solid orange;
+            height: 0px;
+            overflow: hidden;
+            transition: 1s;
+        }
+        .container.active .paraContent{
+            height: 60px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="paraContent">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, a sint eligendi quasi vero
+                    cupiditate
+                    officia iure sapiente magnam, impedit, excepturi totam ad possimus praesentium nam repudiandae alias
+                    quibusdam nemo!</p>
+            </div>
+            <span class="d-flex">
+                <img src="images/testimonialsImg1.jpg" class="testimonial-img" alt="">
+                <p class="ml30 mt20 fs20 fwbold">
+                    Christina Pages / <span class="colorLightGreen">Designer - New Fashion</span>
+                </p>
+            </span>
+        </div>
+        <br>
+        <br>
+        <div class="container">
+            <div class="paraContent">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, a sint eligendi quasi vero
+                    cupiditate
+                    officia iure sapiente magnam, impedit, excepturi totam ad possimus praesentium nam repudiandae alias
+                    quibusdam nemo!</p>
+            </div>
+            <span class="d-flex">
+                <img src="images/testimonialsImg1.jpg" class="testimonial-img" alt="">
+                <p class="ml30 mt20 fs20 fwbold">
+                    Christina Pages / <span class="colorLightGreen">Designer - New Fashion</span>
+                </p>
+            </span>
+        </div>
+    </div>
+
+    <script>
+        let testBtn = document.getElementsByClassName('container');
+        for(let i = 0; i < testBtn.length; i++)
+        {
+            testBtn[i].addEventListener('click', func);
+        }
+        function func(){
+            let item = this.classList;
+            // for(let j = 0; j < )
+            item.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

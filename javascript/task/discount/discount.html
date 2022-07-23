@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount</title>
+    <style>
+
+        .container{
+            width: 500px;
+            margin: auto;
+            position: relative;
+            top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <label for="">Name : </label>
+            <br>
+            <input type="text" name="name" id="myname">
+        </div>
+        <br>
+        <div>
+            <label for="">Age 1 - 12 : </label>
+            <br>
+            <input type="number" name="child" id="mychild">
+        </div>
+        <br>
+        <div>
+            <label for="">Age 12-18 : </label>
+            <br>
+            <input type="number" name="teen" id="myteen">
+        </div>
+        <br>
+        <div>
+            <label for="">Above 18 : </label>
+            <br>
+            <input type="number" name="adult" id="myadult">
+        </div>
+        <br>
+        <div>
+            <input type="button" value="Get Total Payable Amount" onclick="totalPayable()" name="" id="">
+        </div>
+    </div>
+
+    <script>
+        function totalPayable(){
+            let name = document.getElementById("myname").value;
+            let child = parseInt(document.getElementById("mychild").value);
+            let teen = parseInt(document.getElementById("myteen").value);
+            let adult = parseInt(document.getElementById("myadult").value);
+            
+            var totalAmount = (child*50) + (teen*100) + (adult*150); 
+
+            if(totalAmount >= 1000)
+            {
+
+                var discount = (totalAmount * 10)/100;  
+                var finalAmount = totalAmount - discount;
+                document.write(name + " your total payable amount is = " + finalAmount);
+            }
+        }
+    </script>
+</body>
+</html>

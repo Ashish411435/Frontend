@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{ 
+            width: 570px;
+            height: 550px;
+            margin: auto;
+        }
+        .allbtn {
+            border: 1px solid black;
+            width: 150px;
+            height: 150px;
+            float: left;
+            font-size: 50px;
+            text-align: center;
+            line-height: 130px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section>
+        <button class="allbtn" id="btn1" onclick="btnClick(this)"></button>
+        <button class="allbtn" id="btn2" onclick="btnClick(this)"></button>
+        <button class="allbtn" id="btn3" onclick="btnClick(this)"></button>
+        <button class="allbtn" id="btn4" onclick="btnClick(this)"></button>
+        <button class="allbtn" id="btn5" onclick="btnClick(this)"></button>
+        <button class="allbtn" id="btn6" onclick="btnClick(this)"></button>
+        <button class="allbtn" id="btn7" onclick="btnClick(this)"></button>
+        <button class="allbtn" id="btn8" onclick="btnClick(this)"></button>
+        <button class="allbtn" id="btn9" onclick="btnClick(this)"></button>
+    </section>
+    
+    <script>
+        let allbtn = document.getElementsByClassName('allbtn');
+        
+        var bool = false;
+        function btnClick(val){
+            if(bool == false)
+            {
+                val.innerHTML = "X";
+                bool = true;
+            }
+            else{
+                val.innerHTML = "O";
+                bool = false;
+            }
+            val.setAttribute("disabled", "disabled");
+            result();
+        }
+        function result(){
+            if()
+        }
+    </script>
+</body>
+
+</html>

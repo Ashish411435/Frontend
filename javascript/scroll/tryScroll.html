@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .con1 {
+            border: 1px solid black;
+            height: 700px;
+            text-align: center;
+            line-height: 500px;
+        }
+
+        .img {
+            opacity: 0;
+            transition: 2s;
+            transform: translateX(-200px);
+        }
+
+        .img.active {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="con1">
+        <div class="hey">
+            <h1>Hey! There.</h1>
+        </div>
+    </div>
+    <div class="con1">
+        <h1>Hello How are YOU.</h1>
+    </div>
+    <div class="con1">
+        <div class="img">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod a fuga quam sequi hic aspernatur error,
+                deleniti sint voluptates perspiciatis numquam quae esse. Velit, sit?</p>
+        </div>
+    </div>
+    <div class="con1"></div>
+
+    <script>
+        document.addEventListener("scroll", scrollme);
+
+        function scrollme() {
+            let varyClass = document.querySelector('.img');
+            let myWindow = window.innerHeight;
+            let mydivTop = varyClass.getBoundingClientRect().top;
+            if (mydivTop < myWindow) {
+                varyClass.classList.add('active');
+            } else {
+                varyClass.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+</head>
+
+<body>
+  <div class="container">
+    <div>
+      <label for="">Enter First Number : </label>
+      <input type="number" name="firstNum" id="myFirstNum" required>
+    </div>
+    <br>
+    <div>
+      <label for="">Enter Second Number : </label>
+      <input type="number" name="secondNum" id="mySecondNum" required>
+    </div>
+    <br>
+
+    <div>
+      <input type="button" onclick="add()" value="Add ( + ) ">
+      <input type="button" onclick="subtract()" value="Subtract ( - )">
+      <input type="button" onclick="divide()" value="Divide ( / )">
+      <input type="button" onclick="multiply()" value="Multiply( * )">
+    </div>
+    <br>
+    <!-- <div>
+      <input type="button" onclick="getAnswer()" value="Get Answer" name="" id="">
+    </div> -->
+  </div>
+  
+
+  <script>
+    function add(){
+      let firstnum = parseInt(document.getElementById("myFirstNum").value);
+      let secondnum = parseInt(document.getElementById("mySecondNum").value);
+      var addition = firstnum + secondnum;
+      document.write(addition);
+    }
+    function subtract(){
+      let firstnum = parseInt(document.getElementById("myFirstNum").value);
+      let secondnum = parseInt(document.getElementById("mySecondNum").value);
+      document.write(firstnum - secondnum);
+    }
+    function divide(){
+      let firstnum = parseInt(document.getElementById("myFirstNum").value);
+      let secondnum = parseInt(document.getElementById("mySecondNum").value);
+      document.write(firstnum / secondnum);
+    }
+    function multiply(){
+      let firstnum = parseInt(document.getElementById("myFirstNum").value);
+      let secondnum = parseInt(document.getElementById("mySecondNum").value);
+      document.write(firstnum * secondnum);
+    }
+
+  </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="justCalc.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="heading">
+                <h1>Calculator</h1>
+            </div>
+            <input type="text" name="display" id="mydisplay">
+            <!-- <div class="btns"> -->
+                <table>
+                    <tr>
+                        <td><button onclick="getItems('')">AC</button></td>
+                        <td><button onclick="getItems()">(</button></td>
+                        <td><button onclick="getItems()">)</button></td>
+                        <td><button onclick="getItems()">%</button></td>
+                    </tr>
+                    <tr>
+                        <td><button>7</button></td>
+                        <td><button>8</button></td>
+                        <td><button>9</button></td>
+                        <td><button>X</button></td>
+                    </tr>
+                    <tr>
+                        <td><button>4</button></td>
+                        <td><button>5</button></td>
+                        <td><button>6</button></td>
+                        <td><button>-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button>1</button></td>
+                        <td><button>2</button></td>
+                        <td><button>3</button></td>
+                        <td><button>+</button></td>
+                    </tr>
+                    <tr>
+                        <td><button>.</button></td>
+                        <td><button>0</button></td>
+                        <td><button>/</button></td>
+                        <td><button class="equal-btn">=</button></td>
+                    </tr>
+                </table>
+            <!-- </div> -->
+        </div>
+
+    </div>
+
+    <script src="justCalc.js"></script>
+
+</body>
+
+</html>

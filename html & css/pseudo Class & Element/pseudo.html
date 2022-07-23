@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul li:first-child{
+            color: blue;
+        }
+        ul li:last-child{
+            color: blue;
+        }
+        ul li:nth-child(2){
+            color: blue;
+        }
+        p::first-line{
+            color: red;
+        }
+        p::first-letter{
+            font-size: 20px;
+            color: blue;
+            text-transform: uppercase;
+        }
+        ul li::before{
+            content:url();
+        }
+        ::marker{
+            color: chocolate;
+        }
+        ::selection{
+            background-color: orangered;
+        }
+        img{
+            width: 100%;
+            max-width: 200px;
+        }
+
+        @media screen and (max-width:1180px) {
+            p::first-line{
+            color: green;
+        }
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Hello1</li>
+        <li>Hello2</li>
+        <li>Hello3</li>
+        <li>Hello4</li>
+        <li>Hello5</li>
+    </ul>
+    <div class="list">
+        <p>
+            asdfja kljasdlf asdjfl asjdflja ldfalsd flas asdfja kljasdlf asdjfl asjdflja ldfalsd flasasdfja kljasdlf asdjfl asjdflja ldfalsd flas asdfja kljasdlf asdjfl asjdflja ldfalsd flas asdfja kljasdlf asdjfl asjdflja ldfalsd flas asdfja kljasdlf asdjfl asjdflja ldfalsd flas asdfja kljasdlf asdjfl asjdflja ldfalsd flas asdfja kljasdlf asdjfl asjdflja ldfalsd flas asdfja kljasdlf asdjfl asjdflja ldfalsd flas
+        </p>
+        <p>
+            asdfja kljasdlf asdjfl asjdflja ldfalsd flas asdfja kljasdlf asdjfl asjdflja ldfalsd flasasdfja kljasdlf asdjfl asjdflja ldfalsd flas asdfja kljasdlf asdjfl asjdflja ldfalsd flas asdfja kljasdlf asdjfl asjdflja ldfalsd flas asdfja kljasdlf asdjfl asjdflja ldfalsd flas asdfja kljasdlf asdjfl asjdflja ldfalsd flas asdfja kljasdlf asdjfl asjdflja ldfalsd flas asdfja kljasdlf asdjfl asjdflja ldfalsd flas
+        </p>
+        <p>
+            asdfja kljasdlf asdjfl asjdflja ldfalsd flas asdfja kljasdlf asdjfl asjdflja ldfalsd flasasdfja kljasdlf asdjfl asjdflja ldfalsd flas asdfja kljasdlf asdjfl asjdflja ldfalsd flas asdfja kljasdlf asdjfl asjdflja ldfalsd flas asdfja kljasdlf asdjfl asjdflja ldfalsd flas asdfja kljasdlf asdjfl asjdflja ldfalsd flas asdfja kljasdlf asdjfl asjdflja ldfalsd flas asdfja kljasdlf asdjfl asjdflja ldfalsd flas
+        </p>
+    </div>
+    <img src="images/aaron-cass-GJuhDRbMj7g-unsplash.jpg" alt="">
+</body>
+</html>

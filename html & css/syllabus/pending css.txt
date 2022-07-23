@@ -1,0 +1,23 @@
+CSS Pending 
+
+display           	  display:flex done
+max width          	  
+min width
+combinators         	  > + ~  
+CSS Pseudo class          :first-child?
+CSS Pseudo-element    	  ::first-line, ::first-letter ::before, ::after, ::marker, ::selection done
+image gallery		  done
+image sprites		  ? foricons old fashioned
+attribute selectors       [class*="col"], [alt="harman"]?
+css specificity		  ? .abc div, > + ~ done
+css important             ? done
+CSS Transitions		  ? done
+text Shadow Effects	  ? done
+box shadow		  ? done
+CSS Tooltip		  ? done
+object-fit Property       ? done
+object-position		  ?
+CSS Multiple Columns	  ? done
+CSS Variables		  ?
+CSS Media Queries	  @meia?
+css background		  done	  

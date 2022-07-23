@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            position: absolute;
+            left: 500px;
+            bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <img src="image/img1.jpg" id="myimg" width="300px" alt="">
+    <button onclick="res()">Next</button>
+    <script>
+        var items = ["image/img2.jpg","image/img4.jpg","image/img5.jpg","image/img6.jpg","image/img7.jpg","image/img8.jpg"]
+        var lgn = items.length;
+        let i = 0;
+        // myimg.src = items[4];
+
+        function res(){
+            if(i<lgn){
+                myimg.src = items[i];
+                i++;
+            }else{
+                myimg.src = items[1];
+                i=0;
+            }
+        }
+    </script>
+</body>
+</html>
