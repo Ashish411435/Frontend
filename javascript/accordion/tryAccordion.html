@@ -12,21 +12,24 @@
         .para{
             overflow: hidden;
             height: 0px;
+            transition: all 700ms;
         }
         button{
             margin-bottom: 10px;
         }
         .show{
-            animation-name: animDown;
-            animation-duration: 1s;
-            animation-fill-mode: forwards;
+            height: 50px !important;
+            transition: all 400ms;
+            /* animation-name: animDown;
+            animation-duration: 700ms;
+            animation-fill-mode: forwards; */
         }
         .hide{
-            animation-name: animUp;
-            animation-duration: 1s;
-            animation-fill-mode: forwards;
+            /* animation-name: animUp;
+            animation-duration: 700ms;
+            animation-fill-mode: forwards; */
         }
-        @keyframes animDown {
+        /* @keyframes animDown {
             0%{
                 height: 0px;
             }
@@ -41,7 +44,7 @@
             100%{
                 height: 0px;
             }
-        }
+        } */
     </style>
 </head>
 
@@ -58,35 +61,59 @@
         <button class="btn">Click Me</button>
         <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ab iure autem officia laborum qui placeat, ad neque saepe eaque, quis aut eum, officiis velit! Voluptatem aspernatur tempore velit itaque.</p>
     </div>
-
     <script>
         let btns = document.querySelectorAll('.btn');
         let paraContent = document.querySelectorAll('.para'); 
 
-        for(let i = 0; i <= btns.length; i++)
-        {
-            btns[i].addEventListener('click', res);
-        }
-        function res(){
-            let item = this.nextElementSibling.classList;
+        // for(let i = 0; i <= btns.length; i++)
+        // {
+        //     btns[i].addEventListener('click', res);
+        // }
+        
+        // function res(){
+        //     let item = this.nextElementSibling.classList;
 
-            for(let j = 0; j < paraContent.length; j++)
-            {
-                if(paraContent[j].classList.contains('show'))
-                {
-                    paraContent[j].classList.remove('show');
-                    paraContent[j].classList.add('hide');
+        //     for(let j = 0; j < paraContent.length; j++)
+        //     {
+        //         if(paraContent[j].classList.contains('show'))
+        //         {
+        //             paraContent[j].classList.remove('show');
+        //             paraContent[j].classList.add('hide');
+        //         }
+        //         else if(paraContent[j].classList.contains('hide'))
+        //         {
+        //             paraContent[j].classList.remove('hide');
+        //         }
+        //     }
+        //     if(!item.contains('show') && !item.contains('hide'))
+        //     {
+        //         item.add('show');
+        //     }
+        // }
+            // console.log(btns.length);
+
+            
+        for(let i = 0; i < btns.length; i++){
+            btns[i].addEventListener("click", function(){
+                let item = this.nextElementSibling;
+
+                for(let j = 0; j < paraContent.length; j++){
+                    if(i == j){
+                        item.classList.toggle('show');
+                    }else{
+                        paraContent[j].classList.remove('show');
+                        // paraContent[j].classList.remove('hide');
+                    }
                 }
-                else if(paraContent[j].classList.contains('hide'))
-                {
-                    paraContent[j].classList.remove('hide');
-                }
-            }
-            if(!item.contains('show') && !item.contains('hide'))
-            {
-                item.add('show');
-            }
+
+                // if(item.classList.contains('show')){
+                //     item.classList.remove('show');
+                // }else{
+                //     item.classList.add('show');
+                // }
+            });
         }
+
     </script>
 
 
